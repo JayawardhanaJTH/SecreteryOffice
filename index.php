@@ -380,7 +380,7 @@
 		<div class="event col-md-6">
 			<div class="row row-striped">
 				<div class="col-2 text-center">
-					<h class="display-4"> <span class="badge badge-success">30</span></h1>
+					<h1 class="display-4"> <span class="badge badge-success">30</span></h1>
 					<h2>Nov</h2>
 				</div>
 				<div class="col-10">
@@ -395,7 +395,7 @@
 			</div>
 			<div class="row row-striped">
 				<div class="col-2 text-center">
-					<h class="display-4"> <span class="badge badge-success">04</span></h1>
+					<h1 class="display-4"> <span class="badge badge-success">04</span></h1>
 					<h2>Dec</h2>
 				</div>
 				<div class="col-10">
@@ -410,7 +410,7 @@
 			</div>
 			<div class="row row-striped">
 				<div class="col-2 text-center">
-					<h class="display-4"> <span class="badge badge-success">24</span></h1>
+					<h1 class="display-4"> <span class="badge badge-success">24</span></h1>
 					<h2>Dec</h2>
 				</div>
 				<div class="col-10">

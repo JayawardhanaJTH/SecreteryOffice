@@ -449,7 +449,7 @@ session_start();
             </div>
             <div class="col-sm-3 col-12">
                 <div>
-                    <i class="fas fa-book-open mb-4" style="color: #95103b; font-size: 3rem"></i><br>
+                    <i class="fas fas fa-building mb-4" style="color: #95103b; font-size: 3rem"></i><br>
                     <span class="count" style="font-size: 1.5rem; font-weight: bold">10</span><span
                             style="font-size: 1.5rem; font-weight: bold">k</span>
                     <p class="mt-2" style="font-size: 1.5rem;">Office</p>

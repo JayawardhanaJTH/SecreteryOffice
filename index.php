@@ -125,7 +125,7 @@
 									<hr class="hrcart"></a>
 								<a href="checkout.html" class="nav-item nav-link chk">Contact
 									<hr class="hrchec"></a>
-								<a href="my-account.html" class="nav-item nav-link acc">About Us
+								<a href="./aboutUs.php" class="nav-item nav-link acc">About Us
 									<hr class="hracc"></a>
 								<!-- <div class="nav-item dropdown">
 									<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">More Pages</a>

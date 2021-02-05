@@ -740,3 +740,35 @@ table a, #comments a{background-color:inherit;}
 	.font-x2{font-size:1.4rem;}
 	.font-x3{font-size:1.6rem;}
 }
+
+
+/* Contact us page */
+.contact_forum{
+	border:1px solid #911105 ;
+	border-radius: 5px;
+}
+
+.topic_bar:hover{
+	cursor: default;
+	background-color: #911105;
+	color: white;
+}
+.topic{
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.contact_message{
+	position: relative;
+	background: url(../../images/contact.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+@media screen and (max-width:650px){
+	.topic{
+		font-size: 1.2em;
+	}
+
+	.contact_message{
+		background-size: cover;
+	}
+}

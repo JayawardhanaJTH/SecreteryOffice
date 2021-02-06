@@ -121,9 +121,9 @@
 									<hr class="hrproducts"></a>
 								<a href="product-detail.html" class="nav-item nav-link prode">Forums
 									<hr class="hrproductDetail"></a>
-								<a href="cart.html" class="nav-item nav-link cart">Downloads
+								<a href="#" class="nav-item nav-link cart">Downloads
 									<hr class="hrcart"></a>
-								<a href="checkout.html" class="nav-item nav-link chk">Contact
+								<a href="contact.html" class="nav-item nav-link chk">Contact
 									<hr class="hrchec"></a>
 								<a href="my-account.html" class="nav-item nav-link acc">About Us
 									<hr class="hracc"></a>

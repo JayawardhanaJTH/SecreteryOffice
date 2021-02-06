@@ -125,7 +125,7 @@
 									<hr class="hrcart"></a>
 								<a href="checkout.html" class="nav-item nav-link chk">Contact
 									<hr class="hrchec"></a>
-								<a href="my-account.html" class="nav-item nav-link acc">About Us
+								<a href="./aboutUs.php" class="nav-item nav-link acc">About Us
 									<hr class="hracc"></a>
 								<!-- <div class="nav-item dropdown">
 									<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">More Pages</a>
@@ -380,7 +380,7 @@
 		<div class="event col-md-6">
 			<div class="row row-striped">
 				<div class="col-2 text-center">
-					<h class="display-4"> <span class="badge badge-success">30</span></h1>
+					<h1 class="display-4"> <span class="badge badge-success">30</span></h1>
 					<h2>Nov</h2>
 				</div>
 				<div class="col-10">
@@ -395,7 +395,7 @@
 			</div>
 			<div class="row row-striped">
 				<div class="col-2 text-center">
-					<h class="display-4"> <span class="badge badge-success">04</span></h1>
+					<h1 class="display-4"> <span class="badge badge-success">04</span></h1>
 					<h2>Dec</h2>
 				</div>
 				<div class="col-10">
@@ -410,7 +410,7 @@
 			</div>
 			<div class="row row-striped">
 				<div class="col-2 text-center">
-					<h class="display-4"> <span class="badge badge-success">24</span></h1>
+					<h1 class="display-4"> <span class="badge badge-success">24</span></h1>
 					<h2>Dec</h2>
 				</div>
 				<div class="col-10">

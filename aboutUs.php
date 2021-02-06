@@ -115,7 +115,7 @@ session_start();
                     <!-- Main menu -->
                     <div class="collapse navbar-collapse justify-content-between " id="navbarCollapse">
                         <div class="navbar-nav nav-tabs mr-auto">
-                            <a href="index.html" class="nav-item nav-link active home">Home
+                            <a href="index.php" class="nav-item nav-link active home">Home
                                 <hr class="hrhome">
                             </a>
                             <a href="product-list.html" class="nav-item nav-link product">Calender
@@ -127,10 +127,10 @@ session_start();
                             <a href="cart.html" class="nav-item nav-link cart">Downloads
                                 <hr class="hrcart">
                             </a>
-                            <a href="checkout.html" class="nav-item nav-link chk">Contact
+                            <a href="contact.html" class="nav-item nav-link chk">Contact
                                 <hr class="hrchec">
                             </a>
-                            <a href="my-account.html" class="nav-item nav-link acc">About Us
+                            <a href="aboutUS.php" class="nav-item nav-link acc">About Us
                                 <hr class="hracc">
                             </a>
                             <!-- <div class="nav-item dropdown">
@@ -431,8 +431,7 @@ session_start();
                 <div class="col-2">
                 </div>
                 <div class="col-8">
-                    <p>Udemy is the leading global marketplace for teaching and learning, connecting millions of
-                        students to the skills they need to succeed.</p>
+                    <p></p>
                 </div>
                 <div class="col-">
                 </div>

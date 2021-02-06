@@ -740,3 +740,126 @@ table a, #comments a{background-color:inherit;}
 	.font-x2{font-size:1.4rem;}
 	.font-x3{font-size:1.6rem;}
 }
+
+
+/* Contact us page */
+.contact_forum{
+	border:1px solid #911105 ;
+	border-radius: 5px;
+}
+
+.topic_bar:hover{
+	cursor: default;
+	background-color: #911105;
+	color: white;
+}
+.topic{
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.contact_message{
+	position: relative;
+	background: url(../../images/contact.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+.card-container{
+	max-width: 750px;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.profile{
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 2em;
+	display: inline-block;
+	text-align: center;
+	position: relative;
+}
+.profile_img{
+	display: block;
+    height: 8em;
+    margin-right: auto;
+    border: .5em solid #f2f2f2;
+    border-radius: 100%;
+    box-shadow: 0 1px 0 0 rgb(0 0 0 / 10%);
+    max-width: 8em;
+    overflow: hidden;
+}
+.profile_text{
+	margin-top: -105px;
+    margin-left: 60px;
+    padding: 1px 5px 15px 55px;
+    background: whitesmoke;
+    border-radius: 3px;
+    box-shadow: 0 1px 2px rgb(0 0 0 / 10%);
+    text-align: left;
+}
+
+.profile_name{
+	margin-right: 12px;
+    margin-bottom: 4px;
+    margin-left: 0px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 3px;
+    font-size: 1.5em;
+    text-align: left;
+    color: #0d4d8a;
+    text-transform: capitalize;
+    margin-top: 12px;
+    font-weight: 400;
+}
+
+.profile_title{
+	color: #4a4a4a;
+    text-align: left;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.essential{
+	margin-left: 2em;
+	margin-right: 2em;
+	margin-right: auto;
+}
+.essential h4{
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.essential:nth-of-type(odd){
+	background: #ffb0b0;
+}
+.essential:nth-of-type(even){
+	background:#911105;
+	color: white;
+}
+.essential_text{
+	padding-left: 1em;
+	justify-content:left;
+}
+
+.essential_text h4, .essential h4{
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	font-size: 1.5em;
+}
+@media screen and (max-width:650px){
+	.topic{
+		font-size: 1.2em;
+	}
+
+	.contact_message{
+		background-size: cover;
+	}
+
+	.essential_text{
+		justify-content: left;
+	}
+	.essential_text h4, .essential h4{
+		font-size: 1.2em;
+	}
+}

@@ -763,6 +763,64 @@ table a, #comments a{background-color:inherit;}
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 }
+
+.card-container{
+	max-width: 750px;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.profile{
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 2em;
+	display: inline-block;
+	text-align: center;
+	position: relative;
+}
+.profile_img{
+	display: block;
+    height: 8em;
+    margin-right: auto;
+    border: .5em solid #f2f2f2;
+    border-radius: 100%;
+    box-shadow: 0 1px 0 0 rgb(0 0 0 / 10%);
+    max-width: 8em;
+    overflow: hidden;
+}
+.profile_text{
+	margin-top: -105px;
+    margin-left: 60px;
+    padding: 1px 5px 15px 55px;
+    background: whitesmoke;
+    border-radius: 3px;
+    box-shadow: 0 1px 2px rgb(0 0 0 / 10%);
+    text-align: left;
+}
+
+.profile_name{
+	margin-right: 12px;
+    margin-bottom: 4px;
+    margin-left: 0px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 3px;
+    font-size: 1.5em;
+    text-align: left;
+    color: #0d4d8a;
+    text-transform: capitalize;
+    margin-top: 12px;
+    font-weight: 400;
+}
+
+.profile_title{
+	color: #4a4a4a;
+    text-align: left;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+}
 @media screen and (max-width:650px){
 	.topic{
 		font-size: 1.2em;

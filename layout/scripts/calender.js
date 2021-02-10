@@ -54,9 +54,25 @@ let dateGenerate = function(){
         }
     }
 
-    for(let i = cmlastDayIndex+1 ; i <= 6; i++ ){
-        let temp = i - cmlastDayIndex;
-        days += '<div class="text-info">'+ temp +'</div>';
+    if((cmfirstDayIndex == 5 && cmlastDay == 31) || (cmfirstDayIndex == 6 && cmlastDay == 31)){
+
+        for(let i = cmlastDayIndex+1 ; i <= 6; i++ ){
+            let temp = i - cmlastDayIndex;
+            days += '<div class="text-info">'+ temp +'</div>';
+        }
+    }
+    else if(cmfirstDayIndex == 6 && cmlastDay == 30){
+
+        for(let i = cmlastDayIndex+1 ; i <= 6; i++ ){
+            let temp = i - cmlastDayIndex;
+            days += '<div class="text-info">'+ temp +'</div>';
+        }
+    }
+    else{
+        for(let i = cmlastDayIndex+1 ; i <= 13; i++ ){
+            let temp = i - cmlastDayIndex;
+            days += '<div class="text-info">'+ temp +'</div>';
+        }
     }
 
     monthDays.innerHTML = days;

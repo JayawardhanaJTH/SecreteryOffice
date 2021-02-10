@@ -1,197 +1,8 @@
-<?php
-	require "connection/connection.php";
-
-	$emailErr = '';
-	$passwordErr = '';
-
+<?php 
+	session_start();
+	include 'support/header.php';
 ?>
-<!DOCTYPE html>
 
-<html lang="eng">
-
-<head>
-
-	<!-- Site title -->
-	<title>Divisional Secretary Office - Login</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-	<!-- Favicon-->
-	<link rel="icon"
-		href="https://c0.klipartz.com/pngpicture/944/386/gratis-png-gobierno-de-la-gaceta-del-gobierno-de-sri-lanka-relaciones-entre-indonesia-y-sri-lanka-thumbnail.png"
-		sizes="32x32" />
-
-	<!-- Google Fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Source+Code+Pro:700,900&display=swap"
-		rel="stylesheet">
-
-	<!-- CSS Libraries -->
-	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"/>
-
-	<!-- CSS -->
-	<link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
-
-</head>
-
-<!-- Begin of body -->
-
-<body id="top">
-
-	<?php
-			if(isset($_POST['login_btn'])){
-				// get user entered email and password to variables
-				$email = $_POST['email'];
-				$password = $_POST['password'];
-
-				$emailErr = '';
-				$passwordErr = '';
-
-				if(empty($email)){
-					$emailErr = "Please input email";
-				}else if(!filter_var($email,FILTER_VALIDATE_EMAIL)){
-					$emailErr = "Invalid email format";
-				}
-				if(empty($password)){
-					$passwordErr = "Please input password";
-				}
-
-				if(!empty($email) && !empty($password)){
-
-					// avoid sql injection
-					$email = mysqli_real_escape_string($conn, trim($email));
-					$password = mysqli_real_escape_string($conn, trim($password));
-
-					// query to check is user valid or not
-					$query = "SELECT * FROM user_login WHERE email = '$email' AND password = '$password' ";
-					$result = $conn->query($query);
-				
-
-					if($result->num_rows > 0){
-						
-						while($row = $result->fetch_assoc()){
-							session_start();
-							$_SESSION['logged'] = true;
-							$_SESSION['username'] = $row['username'];
-
-							header("Location: index.php");
-						}
-					}
-					else{
-						echo "<script> alert('User is not Valid'); </script>"; 
-
-						$emailErr = "Invalid email or password";
-					}
-				}
-			}
-	?>
-	<!-- Top header -->
-	<div class="wrapper row0">
-		<header id="header" class="hoc clear text-md-left">
-			<!-- Start of header -->
-			<div class="row">
-				<div id="logo" class="col-md-2 text-center" >
-					<a href="index.html"><img src="images/logo.png" class="d-flex w-50"></a>
-				</div>
-				<div class="col-md-7 text-center">
-					<h1 class="p-2 font-x3" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
-						Divisional Secretary Office <br> Waththala</h1>
-				</div>
-				<div class="col-md-3 text-center " >
-						<div class="avilability " style="border:2px solid #95103B; border-radius: 10px;">
-							<h5 class="mt-3">Secretary | Available </h5>
-						</div>
-				</div>
-			</div>
-			<!-- <div class="three_quarter">
-				<ul class="nospace clear text-center">
-					<li class="one_third first">
-						<div style="margin-left: 50%;">
-							<a href="#">
-								<i class="fas fa-phone center"></i>
-							</a> 
-						</div>
-						<div class="block clear">
-							<span><strong>Give us acall:</strong> +94 112 1234 56</span>
-						</div>
-					</li>
-					<li class="one_third">
-						<div style="margin-left: 50%;">
-							<a href="#">
-								<i class="fas fa-envelope"></i>
-							</a> 
-						</div>
-						<div class="block clear">
-							<span><strong>Send us a mail:</strong> secretaryoffice@gmail.com</span>
-						</div>
-					</li>
-					<li class="one_third">
-						<div style="margin-left: 50%;">
-							<a href="#">
-								<i class="fas fa-clock"></i>
-							</a> 
-						</div>
-						<div class="block clear">
-							<span><strong> Mon. - Sat.:</strong> 09.00am - 16.00pm</span>
-						</div>
-					</li>
-				</ul>
-			</div> -->
-			<!-- End of header -->
-		</header>
-	</div>
-
-	<div class="wrapper row1">
-		<section>
-
-			<!-- Nav Bar Start -->
-			<div class="nav">
-				<div class="container-fluid">
-					<nav class="navbar navbar-expand-md bg-dark navbar-dark ">
-						<a href="#" class="navbar-brand">MENU</a>
-						<button type="button" class="navbar-toggler" data-toggle="collapse"
-							data-target="#navbarCollapse">
-							<span class="navbar-toggler-icon"></span>
-						</button>
-
-						<!-- Main menu -->
-						<div class="collapse navbar-collapse justify-content-between " id="navbarCollapse">
-							<div class="navbar-nav nav-tabs mr-auto">
-								<a href="index.php" class="nav-item nav-link active home">Home
-									<hr class="hrhome"></a>
-								<a href="contact.html" class="nav-item nav-link chk">Contact
-									<hr class="hrchec"></a>
-								<a href="aboutUs.php" class="nav-item nav-link acc">About Us
-									<hr class="hracc"></a>
-								<!-- <div class="nav-item dropdown">
-									<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">More Pages</a>
-									<div class="dropdown-menu">
-										<a href="wishlist.html" class="dropdown-item">Wishlist </a>
-										<a href="login.html" class="dropdown-item">Login & Register</a>
-										<a href="contact.html" class="dropdown-item">Contact Us</a>
-									</div>
-								</div> -->
-							</div>
-							<!-- User logins -->
-							<div class="navbar-nav nav-tabs ml-auto">
-								<div class="nav-item dropdown">
-									<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">User Account</a>
-									<div class="dropdown-menu">
-										<a href="login.html" class="dropdown-item">Login</a>
-										<a href="register.html" class="dropdown-item">Register</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</nav>
-				</div>
-			</div>
-			<!-- Nav Bar End -->
-
-		</section>
-	</div>
-    
     <div class="container-fluid p-3">
         <div class="row justify-content-center">
             <div class="login-main p-2 col-10 col-md-6" style="border: 2px solid maroon; border-radius: 0px 30px 0px 30px;">
@@ -200,7 +11,7 @@
                 </div>
                 <div class="login-form p-2">
 
-                    <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'])  ?>" method="POST" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                    <form action="php/login_exe.php" method="POST" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
                         <div class="form-group">
                             <label for="email">Email</label>
                             <div class="input-group">
@@ -209,7 +20,7 @@
                                 </div>
 								<input class="form-control" type="email" name="email" placeholder="Email">
 							</div>
-							<span class="text-danger font-weight-bold"> <?php echo $emailErr ?></span>
+							<span class="text-danger font-weight-bold"> </span>
                         </div>
                         <br>
                         <div class="form-group">
@@ -221,7 +32,7 @@
                                 <input class="form-control" type="password" id="password" name="password" placeholder="Password">
                                 
 							</div>
-							<span class="text-danger font-weight-bold"> <?php echo $passwordErr ?></span>
+							<span class="text-danger font-weight-bold"> </span>
 							<small class="form-text"><a href="#"> Forgot Password </a> / <a href="register.html"> Not a member register </a></small>
                         </div>
 

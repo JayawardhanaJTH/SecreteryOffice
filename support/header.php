@@ -107,17 +107,17 @@
 						<!-- Main menu -->
 						<div class="collapse navbar-collapse justify-content-between " id="navbarCollapse">
 							<div class="navbar-nav nav-tabs mr-auto">
-								<a href="index.html" class="nav-item nav-link active home">Home
+								<a href="index.php" class="nav-item nav-link active home">Home
 									<hr class="hrhome"></a>
 								<a href="product-list.html" class="nav-item nav-link product">Calender
 									<hr class="hrproducts"></a>
 								<a href="product-detail.html" class="nav-item nav-link prode">Forums
 									<hr class="hrproductDetail"></a>
-								<a href="cart.html" class="nav-item nav-link cart">Downloads
+								<a href="#" class="nav-item nav-link cart">Downloads
 									<hr class="hrcart"></a>
-								<a href="checkout.html" class="nav-item nav-link chk">Contact
+								<a href="contact.html" class="nav-item nav-link chk">Contact
 									<hr class="hrchec"></a>
-								<a href="../aboutUs.php" class="nav-item nav-link acc">About Us
+								<a href="aboutUs.php" class="nav-item nav-link acc">About Us
 									<hr class="hracc"></a>
 								<!-- <div class="nav-item dropdown">
 									<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">More Pages</a>
@@ -131,7 +131,15 @@
 							</div>
 							<!-- User logins -->
 							<div class="navbar-nav nav-tabs ml-auto">
-								<p class="nav-item nav-link text-white font-weight-bold" > Welcome <?php echo $_SESSION['username'] ?> </p>
+								<?php 
+									if(isset($_SESSION["logged"])){ 
+										?>
+								<p class="nav-item nav-link text-white font-weight-bold" >
+										 Welcome 
+										 <?php
+										echo $_SESSION['username']; 
+										}?> 
+									</p>
 							</div>
 
 							<div class="navbar-nav nav-tabs ml-auto">

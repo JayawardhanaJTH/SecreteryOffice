@@ -16,10 +16,10 @@
 			</div>
 			<div class="one_third">
 				<h6 class="heading">Contact Us</h6>
-				<ul class="nospace clear">
-					<li><i class="fas fa-phone-square"></i>  Give us a call : +94 112 1234 56</li>
+				<ul class="nospace clear ">
+					<li><i class="fas fa-phone-square"></i>  Give us a call : 0112 931 193</li>
 					<li><i class="fas fa-at"></i>  Send us a email : secretaryoffice@gmail.com</li>
-					<li><i class="fas fa-envelope"></i>  Send us a mail : 11/2 Colombo</li>
+					<li><i class="fas fa-envelope"></i>  Send us a mail : Divisional Secretary, Waththala</li>
 				</ul>
 			</div>
 			<div class="one_third">
@@ -56,20 +56,6 @@
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js" integrity="sha512-CEiA+78TpP9KAIPzqBvxUv8hy41jyI3f2uHi7DGp/Y/Ka973qgSdybNegWFciqh6GrN2UePx2KkflnQUbUhNIA==" crossorigin="anonymous"></script>
 	
-	<script src="layout/scripts/calender.js"></script>
-	<script>
-		$(document).ready(function() {
-			$("#news-slider").owlCarousel({
-				items:3,
-				itemsDesktop:[1199,2],
-				itemsDesktopSmall:[980,2],
-				itemsMobile:[600,1],
-				pagination:false,
-				navigationText:false,
-				autoPlay:true
-			});
-		});
-	</script>
 	<script>
 		var s = skrollr.init();
 	</script>

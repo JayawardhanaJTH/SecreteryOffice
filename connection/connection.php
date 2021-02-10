@@ -1,15 +1,15 @@
 <?php 
-    $hostname = 'localhost';
-    $dbPassword = '';
-    $dbUsername = 'root';
-    $database = 'divisional_secretary';
+        define('DB_HOST','localhost');
+        define('DB_USER','root');
+        define('DB_PASSWORD','');
+        define('DB_DATABASE','divisional_secretary');
     
     try {
-            $conn = new mysqli($hostname,$dbUsername,$dbPassword,$database);
+            $conn = new mysqli(DB_HOST,DB_USER,DB_PASSWORD,DB_DATABASE);
             
-            if($conn->connect_error){
+        if($conn->connect_error){
                 die ("Connection failed " .$conn->connect_error);
-            }
+        }
     } catch (Throwable $th) {
-            echo("Error on database server!");
+        echo("Error on database server!");
     }

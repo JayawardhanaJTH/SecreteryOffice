@@ -31,10 +31,6 @@
 	background-color: lightgray;
 }
 
-.event{
-	
-}
-
 .row-striped:nth-of-type(odd){
 	background-color: #efefef;
 	border-left: 4px #000000 solid;

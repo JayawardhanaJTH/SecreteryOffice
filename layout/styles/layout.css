@@ -847,7 +847,9 @@ table a, #comments a{background-color:inherit;}
 	.topic{
 		font-size: 1.2em;
 	}
-
+	.p_box2{
+		display: none;
+	}
 	.contact_message{
 		background-size: cover;
 	}
@@ -858,4 +860,20 @@ table a, #comments a{background-color:inherit;}
 	.essential_text h4, .essential h4{
 		font-size: 1.2em;
 	}
+}
+
+/* CSS for event */
+.event_topic{
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.event_form{
+	padding:1em;
+	border: solid #911105;
+	border-radius: 20px 0 20px 0;
+}
+
+.event_side_main{
+	box-shadow: -2px 2px 20px 2px rgba(0, 0, 0, 0.1);
+	width: 100%;
 }

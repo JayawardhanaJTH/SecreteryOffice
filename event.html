@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Favicon-->
+    <link rel="icon"
+    href="https://c0.klipartz.com/pngpicture/944/386/gratis-png-gobierno-de-la-gaceta-del-gobierno-de-sri-lanka-relaciones-entre-indonesia-y-sri-lanka-thumbnail.png"
+    sizes="32x32" />
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Source+Code+Pro:700,900&display=swap"
+    rel="stylesheet">
+
+<!-- CSS Libraries -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"/>
+
+<!-- CSS -->
+<link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<link href="layout/styles/dashboard.css" rel="stylesheet" type="text/css" media="all">
+
+</head>
+<body>
+    <div class="container mr-0">
+        <div>
+            <h1 class="font-weight-bold event_topic">Event planner</h1>
+            <p class="text-muted">Add events which organized by the secretary deviation</p>
+        </div>
+        <div class="row">
+            <div class="event_form col-md-8">
+                <div class="form-group">
+                    <label for="event_name">Event Name</label>
+                    <div class="input-group"> 
+                        <div class="input-group-prepend">
+                            <div class="input-group-text"><i class="fa fa-font"></i></div>
+                        </div>
+                        <input type="text" name="event_name" id="event_name" class="form-control"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="event_date">Event Date</label>
+                    <div class="input-group"> 
+                        <div class="input-group-prepend">
+                            <div class="input-group-text"><i class="fa fa-calendar-alt"></i></div>
+                        </div>
+                        <input type="date" name="event_date" id="event_date" class="form-control"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="event_date">Event Image</label>
+                    <div class="input-group"> 
+                        <div class="input-group-prepend">
+                            <div class="input-group-text"><i class="fa fa-image"></i></div>
+                        </div>
+                        <input type="file" name="event_date" id="event_date" class="form-control"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="event_description">Event Description</label>
+                    <div class="input-group"> 
+                        <textarea class="form-control" name="event_description" id="event_description" cols="0" rows="10"></textarea>
+                    </div>
+                </div>
+
+                <div>
+                    <input class="btn" type="submit" value="Save" name="save_event" id="event_save">
+                </div>
+            </div>
+
+            <div class="bg-light col ml-5 event_side_main ">
+                <div class="event_side">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

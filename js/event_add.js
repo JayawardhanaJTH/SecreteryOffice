@@ -3,7 +3,8 @@ function event_save(){
     var event_name = $("#event_name").val();
     var event_date = $("#event_date").val();
     var event_image = document.getElementById("event_image");
-    
+    var event_description = $("#event_description").val();
+
     if(event_name == ""){
         Swal.fire({
             icon: 'error',
@@ -16,6 +17,13 @@ function event_save(){
             icon: 'error',
             title: 'Oops..',
             text: 'Please Fill Event Date'
+        })
+    }
+    else if(event_description == ""){
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops..',
+            text: 'Please Fill Event Description'
         })
     }
     else if('files' in event_image){
@@ -34,7 +42,8 @@ function event_save(){
                 id:id,
                 event_name:event_name,
                 event_date:event_date,
-                file:u_files
+                file:u_files,
+                description:event_description
             }
 
             $.ajax({

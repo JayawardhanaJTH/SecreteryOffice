@@ -49,6 +49,7 @@
 	<script src="layout/scripts/jquery.backtotop.js"></script>
 	<script src="layout/scripts/jquery.mobilemenu.js"></script>
 	<script src="layout/scripts/scroll.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 	<!-- JavaScript Libraries -->
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>

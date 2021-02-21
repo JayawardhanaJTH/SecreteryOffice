@@ -1,10 +1,11 @@
-function event_save(){
+$("#event_save").click(function(){
     
     var event_name = $("#event_name").val();
     var event_date = $("#event_date").val();
     var event_image = document.getElementById("event_image");
     var event_description = $("#event_description").val();
 
+    
     if(event_name == ""){
         Swal.fire({
             icon: 'error',
@@ -36,7 +37,7 @@ function event_save(){
         }
         else{
             var u_files = $("#event_image")[0].files[0];
-    
+            
             id = "insert";
             var dt ={
                 id:id,
@@ -45,9 +46,9 @@ function event_save(){
                 file:u_files,
                 description:event_description
             }
-
+            
             $.ajax({
-                url: 'php/event_add.php',
+                url: 'php/event-add.php',
                 method: 'POST',
                 data: dt,
                 success:function(msg){
@@ -64,5 +65,7 @@ function event_save(){
                 }
             });
         }
+    }else{
+
     }
-}
+});

@@ -1,8 +1,24 @@
 <?php
     session_start();
     include 'support/header.php';
+    require_once("connection/connection.php");
+?>
+<?php
+    if(isset($_SESSION["EVENT_ID"])){
+        $id = $_SESSION["EVENT_ID"];
+        unset($_SESSION["EVENT_ID"]);
+?>
+    <div class="container">
+        <h1><?php echo $id ?></h1>
+    </div>
+
+<?php
+		include 'support/footer.php';
 ?>
 
+<?php
+    }else{
+?>
 <body>
     <div class="container">
         <div class="m-2 m-md-0">
@@ -63,67 +79,62 @@
                     </div>
 
                     <div class="upcoming_events p-2 mt-2">
-                        <a href="#" class="text-decoration-none">
+                    
+                        <?php
+                                $events = array();
+
+                                $sql = "SELECT * FROM events LIMIT 5";
+
+                                $result = mysqli_query($conn, $sql);
+                                
+                                while($row = mysqli_fetch_object($result)){
+                                    $events[] = $row;
+                                }
+                                
+                                if(count($events) > 0){
+
+                                    foreach($events as $event){
+
+                                        $date = $event->e_date;
+                                        $month = date('M', strtotime($date));
+                                        $day = date('d', strtotime($date));
+                                        $description = $event->e_description;
+                        ?>
+                        <a href="php/event-add.php?event_id=<?php echo $event->e_id; ?>" class="text-decoration-none">
                                 <div class=" row upcoming_event mb-2 border-bottom border-dark p-1">
                                     <div class="col-8">
-                                        <h1>Event Name</h1>
-                                        <p>Description</p>
+                                        <h1><?php echo $event->e_name ?></h1>
+                                        <p> <?php echo implode(' ',array_slice(explode(' ',$description),0,3)) ?>...</p>
                                     </div>
+
                                     <div class="col-3 badge badge-info">
-                                        <h1>Day</h1>
-                                        <h1>Month</h1>
+                                        <h1><?php echo $day ?></h1>
+                                        <h1><?php echo $month ?></h1>
                                   
                                 </div>
                             </div>
                         </a>
-                        <a href="#" class="text-decoration-none">
-                            <div class=" row upcoming_event mb-2 border-bottom border-dark p-1">
-                                <div class="col-8">
-                                    <h1>Event Name</h1>
-                                    <p>Description</p>
+                        <?php
+                                    }
+                                }else{
+
+                                
+                        ?>
+                                <div class=" row upcoming_event mb-2 border-bottom border-dark p-1">
+                                    <div class="col-8">
+                                        <h1>No Upcoming events to show</h1>
+                                        <p class="text-muted">No Upcoming events to show </p>
+                                    </div>
+
+                                    <div class="col-3 badge badge-info">
+                                        <h1></h1>
+                                        <h1></h1>
+                                  
                                 </div>
-                                <div class="col-3 badge badge-info">
-                                    <h1>Day</h1>
-                                    <h1>Month</h1>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" class="text-decoration-none">
-                            <div class=" row upcoming_event mb-2 border-bottom border-dark p-1">
-                                <div class="col-8">
-                                    <h1>Event Name</h1>
-                                    <p>Description</p>
-                                </div>
-                                <div class="col-3 badge badge-info">
-                                    <h1>Day</h1>
-                                    <h1>Month</h1>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" class="text-decoration-none">
-                            <div class=" row upcoming_event mb-2 border-bottom border-dark p-1">
-                                <div class="col-8">
-                                    <h1>Event Name</h1>
-                                    <p>Description</p>
-                                </div>
-                                <div class="col-3 badge badge-info">
-                                    <h1>Day</h1>
-                                    <h1>Month</h1>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" class="text-decoration-none">
-                            <div class=" row upcoming_event mb-2 border-bottom border-dark p-1">
-                                <div class="col-8">
-                                    <h1>Event Name</h1>
-                                    <p>Description</p>
-                                </div>
-                                <div class="col-3 badge badge-info">
-                                    <h1>Day</h1>
-                                    <h1>Month</h1>
-                                </div>
-                            </div>
-                        </a>
+                        <?php
+                                }
+                        ?>
+                        
                     </div>
                     
                 </div>
@@ -138,7 +149,12 @@
 	?>
 
 <?php
+    }
+
     if(isset($_SESSION["UPLOAD"])){
+        if($_SESSION["UPLOAD"] == "success"){
+            unset($_SESSION["UPLOAD"]);
+        
 ?>
     <script type="text/javascript">
         Swal.fire({
@@ -150,5 +166,20 @@
         });
     </script>
 <?php
+        }else if($_SESSION["UPLOAD"] == "unsuccess"){
+
+            unset($_SESSION["UPLOAD"]);
+?>
+    <script type="text/javascript">
+        Swal.fire({
+                position: 'top-end',
+                icon: 'error',
+                title: 'Event has not saved',
+                showConfirmButton: false,
+                timer: 2500
+            });
+    </script>
+<?php
+        }
     }
 ?>

@@ -35,12 +35,27 @@
                     exit();
                 }
                 else{
+                    $_SESSION["UPLOAD"] = "unsuccess";
+                    session_write_close();
                     die("Query failed: ".mysqli_error($conn));
                 }
             }
         }else{
             echo 'file error';
         }
+    }
+
+    if(isset($_GET["event_id"])){
+        $e_id = $_GET['event_id'];
+
+        $_SESSION["EVENT_ID"] = $e_id;
+        session_write_close();
+
+        header('location: /event.php');
+        exit();
+    }else{
+        header('location: /event.php');
+        exit();
     }
     
 ?>

@@ -4,20 +4,22 @@ $("#add_people").click(function (){
 
     var first_name = $("#first_name").val();
     var last_name = $("#last_name").val();
-    var full_name = $("#full_name").val();
     var email = $("#email").val();
+    var grama_niladhari_division =$("#grama_niladhari_division").val();
+    var gender = $("#gender").val();
     var contact_number = $("#contact_number").val();
-    var nic_num = $("#nic_num").val();
+    var address = $("#address").val();
 
     var id = "insert";
     var dt = {
         id:id,
         first_name:first_name,
         last_name:last_name,
-        full_name:full_name,
         email:email,
+        grama_niladhari_division:grama_niladhari_division,
+        gender:gender,
         contact_number:contact_number,
-        nic_num:nic_num
+        address:address
     }
 
     // alert(JSON.stringify(dt));
@@ -34,17 +36,23 @@ $("#add_people").click(function (){
             title: 'Oops...',
             text: 'Please Fill Last Name',
         })
-    }else if (full_name == ""){
-        Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: 'Please Fill Full Name',
-        })
     }else if (email == ""){
         Swal.fire({
             icon: 'error',
             title: 'Oops...',
             text: 'Please Fill Email',
+        })
+    }else if (grama_niladhari_division == ""){
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Please Select The Grama Niladhari Division',
+        })
+    }else if (gender == ""){
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Please Select Gender',
         })
     }else if (contact_number == ""){
         Swal.fire({
@@ -53,7 +61,7 @@ $("#add_people").click(function (){
             text: 'Please Fill Contact Number',
         })
     }
-    else if (nic_num == ""){
+    else if (address == ""){
         Swal.fire({
             icon: 'error',
             title: 'Oops...',
@@ -82,8 +90,7 @@ $("#add_people").click(function (){
 
 });
 
-$(document).ready(function (){
-    // alert("hhhhhhhhh");
+function people_load(){
     var id = "show";
 
     $.ajax({
@@ -98,5 +105,8 @@ $(document).ready(function (){
             alert("Request: "+JSON.stringify(request));
         }
     });
-    // });
+}
+
+$(document).ready(function (){
+    people_load();
 });

@@ -44,7 +44,8 @@ if ($_POST['id'] == "show") {
     $output .= "
         <table id=\"example1\" class=\"table hover table-bordered \">
             <thead class='text-center'>
-            <tr>              
+            <tr>    
+                <th hidden>Id</th>          
                 <th>First Name</th>
                 <th>Last Name</th>              
                 <th>Email</th>
@@ -73,6 +74,7 @@ if ($_POST['id'] == "show") {
 
         $output.= "
             <tr>
+                <td hidden>$pid</td>
                 <td>$first_name</td>
                 <td>$last_name</td>            
                 <td>$email</td>
@@ -82,7 +84,7 @@ if ($_POST['id'] == "show") {
                 <td class='text-center btn-group'><button 
                 onclick='getPeopleDetails($pid, \"$first_name\", \"$last_name\", \"$email\", \"$grama_niladhari_division\",
                 \"$gender\", \"$contact_number\", \"$address\")' title='Update People Details' class='btn '  type='button' data-toggle='modal' data-target='#people_details_update'><span><i class=\"fa fa-edit\"></i></span></button>
-                    <button onclick='delete_people($pid)' class=\"btn \"><span><i class=\"fas fa-user-times\"></i></span></span></button>
+                    <button onclick='delete_people($pid)' title='Delete People Details' class=\"btn \"><span><i class=\"fas fa-user-times\"></i></span></span></button>
                 </td>
             </tr>
         ";

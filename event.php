@@ -7,9 +7,48 @@
     if(isset($_SESSION["EVENT_ID"])){
         $id = $_SESSION["EVENT_ID"];
         unset($_SESSION["EVENT_ID"]);
+
+        $sql = "SELECT * FROM events WHERE e_id ='$id'";
+        $result = mysqli_query($conn,$sql);
+
+        if($result){
+            $event = mysqli_fetch_assoc($result);
+        
 ?>
     <div class="container">
-        <h1><?php echo $id ?></h1>
+        <div class="card">
+			<div class="card-header">
+				<h1 class="text-center" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"><?php echo $event["e_name"]; ?></h1>
+			</div>
+			<img src="/uploadFiles/<?php echo $event["e_image"]; ?>" alt="Event Image" class="card-img-top" style="transform: none;">
+                <div class="card-body">
+                    <div class="row" >
+						<h6  style="font-size: 1em; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Post date:<?php echo $event["e_postDate"]; ?> </h6>
+					</div>
+					<div class="card-text">
+						<p><?php echo $event["e_description"]; ?></p>
+					</div>
+                </div>
+				<div class="card-footer">
+					<h1 style="font-size: 1em; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Event Date: <?php echo $event["e_date"]; ?></h1>
+				
+				</div>
+        </div>
+		<div class="row m-1 justify-content-center">
+			<div class="col">
+				<a href="event.php?edit_id=<?php echo $event["e_id"]; ?>">
+					<input type="button" class="btn btn-success" style="background:green; "  value="Edit">
+				</a>
+			</div>
+		</div>
+		<div class="row m-1 justify-content-center">
+			<div class="col">
+				<form action="php/event-add.php" method="GET">
+                    <input type="hidden" name="delete_id" value="<?php echo $event["e_id"]; ?>">
+					<input  type="submit" class="btn btn-success"  value="Delete" name="event_delete" id="event_delete" onclick="return confirm('Are you sure to delete this event?');">
+                </form>
+			</div>
+		</div>
     </div>
 
 <?php
@@ -17,6 +56,9 @@
 ?>
 
 <?php
+        }else{
+            die("Error".mysqli_error());
+        }
     }else{
 ?>
 <body>
@@ -100,7 +142,7 @@
                                         $day = date('d', strtotime($date));
                                         $description = $event->e_description;
                         ?>
-                        <a href="php/event-add.php?event_id=<?php echo $event->e_id; ?>" class="text-decoration-none">
+                        <a href="php/event-add.php?view_id=<?php echo $event->e_id; ?>" class="text-decoration-none">
                                 <div class=" row upcoming_event mb-2 border-bottom border-dark p-1">
                                     <div class="col-8">
                                         <h1><?php echo $event->e_name ?></h1>
@@ -117,20 +159,13 @@
                         <?php
                                     }
                                 }else{
-
-                                
+   
                         ?>
                                 <div class=" row upcoming_event mb-2 border-bottom border-dark p-1">
                                     <div class="col-8">
                                         <h1>No Upcoming events to show</h1>
                                         <p class="text-muted">No Upcoming events to show </p>
-                                    </div>
-
-                                    <div class="col-3 badge badge-info">
-                                        <h1></h1>
-                                        <h1></h1>
-                                  
-                                </div>
+                                    </div>                 
                         <?php
                                 }
                         ?>
@@ -147,7 +182,7 @@
     <?php
 		include 'support/footer.php';
 	?>
-
+    
 <?php
     }
 
@@ -174,7 +209,42 @@
         Swal.fire({
                 position: 'top-end',
                 icon: 'error',
-                title: 'Event has not saved',
+                title: 'Event has been not saved',
+                showConfirmButton: false,
+                timer: 2500
+            });
+    </script>
+<?php
+        }
+    }
+?>
+
+<?php
+
+    if(isset($_SESSION["DELETE_ED"])){
+        if($_SESSION["DELETE_ED"] == "success"){
+            unset($_SESSION["DELETE_ED"]);
+        
+?>
+    <script type="text/javascript">
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Event has been deleted',
+            showConfirmButton: false,
+            timer: 2500
+        });
+    </script>
+<?php
+        }else if($_SESSION["DELETE_ED"] == "unsuccess"){
+
+            unset($_SESSION["DELETE_ED"]);
+?>
+    <script type="text/javascript">
+        Swal.fire({
+                position: 'top-end',
+                icon: 'error',
+                title: 'Event has been not deleted',
                 showConfirmButton: false,
                 timer: 2500
             });

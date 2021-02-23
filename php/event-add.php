@@ -45,17 +45,36 @@
         }
     }
 
-    if(isset($_GET["event_id"])){
-        $e_id = $_GET['event_id'];
+    if(isset($_GET["view_id"])){
+        $e_id = $_GET['view_id'];
 
         $_SESSION["EVENT_ID"] = $e_id;
         session_write_close();
 
         header('location: /event.php');
         exit();
-    }else{
-        header('location: /event.php');
-        exit();
+    }
+    
+    if(isset($_GET["event_delete"])){
+        $e_id = $_GET['delete_id'];
+
+        $sql = "DELETE FROM events WHERE e_id ='$e_id'";
+
+        if(mysqli_query($conn,$sql)){
+            $_SESSION["DELETE_ED"] = "success";
+            session_write_close();
+
+            header('location: /event.php');
+            exit();
+        }else{
+            echo mysqli_error();
+            
+            $_SESSION["DELETE_ED"] = "unsuccess";
+            session_write_close();
+
+            header('location: /event.php');
+            exit();
+        }
     }
     
 ?>

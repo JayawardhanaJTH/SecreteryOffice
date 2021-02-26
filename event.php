@@ -31,14 +31,14 @@
                 </div>
 				<div class="card-footer">
 					<h1 style="font-size: 1em; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Event Date: <?php echo $event["e_date"]; ?></h1>
-				
 				</div>
         </div>
 		<div class="row m-1 justify-content-center">
 			<div class="col">
-				<a href="event.php?edit_id=<?php echo $event["e_id"]; ?>">
-					<input type="button" class="btn btn-success" style="background:green; "  value="Edit">
-				</a>
+                <form action="php/event-add.php" method="GET">
+                    <input type="hidden" name="edit_id" value="<?php echo $event["e_id"]; ?>">
+					<input type="submit" class="btn btn-success" name="event_edit" id="event_edit" style="background:green; "  value="Edit">
+                </form>
 			</div>
 		</div>
 		<div class="row m-1 justify-content-center">
@@ -60,6 +60,26 @@
             die("Error".mysqli_error());
         }
     }else{
+
+        if(isset($_SESSION["EDIT"])){
+            if($_SESSION["EDIT"] == "success"){
+
+                $e_id = $_SESSION["EDIT_ID"];
+
+                $sql = "SELECT * FROM events WHERE e_id = '$e_id'";
+                $result = mysqli_query($conn,$sql);
+
+
+                $edit_event = mysqli_fetch_assoc($result);
+                unset($_SESSION["EDIT"]);
+                unset($_SESSION["EDIT_ID"]);
+
+            }else{
+                unset($_SESSION["EDIT"]);
+                unset($_SESSION["EDIT_ID"]);
+                die("Error on Edit".mysqli_error($conn));
+            }
+        }
 ?>
 <body>
     <div class="container">
@@ -77,7 +97,7 @@
                             <div class="input-group-prepend">
                                 <div class="input-group-text"><i class="fa fa-font"></i></div>
                             </div>
-                            <input type="text" name="event_name" id="event_name" class="form-control" required/>
+                            <input type="text" name="event_name" id="event_name" class="form-control" value="<?php if(isset($edit_event)){ echo $edit_event['e_name'];}?>" placeholder="Event Name" required/>
                         </div>
                     </div>
 
@@ -87,7 +107,7 @@
                             <div class="input-group-prepend">
                                 <div class="input-group-text"><i class="fa fa-calendar-alt"></i></div>
                             </div>
-                            <input type="date" name="event_date" id="event_date" class="form-control" required/>
+                            <input type="date" name="event_date" id="event_date" value="<?php if(isset($edit_event)){ echo $edit_event['e_date'];}?>" class="form-control" required/>
                         </div>
                     </div>
 
@@ -97,19 +117,26 @@
                             <div class="input-group-prepend">
                                 <div class="input-group-text"><i class="fa fa-image"></i></div>
                             </div>
-                            <input type="file" name="event_image" id="event_image" class="form-control" required/>
+                            <input type="file" name="event_image" value="<?php if(isset($edit_event)){ echo $edit_event['e_image'];}?>" id="event_image" class="form-control" required/>
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label for="event_description">Event Description</label>
                         <div class="input-group"> 
-                            <textarea class="form-control" name="event_description" id="event_description" cols="0" rows="10" ></textarea>
+                            <textarea class="form-control" name="event_description" id="event_description" cols="0" rows="10" ><?php if(isset($edit_event)){ echo $edit_event['e_description'];}?> </textarea>
                         </div>
                     </div>
 
                     <div>
-                        <input class="btn" type="submit" name="event_save" value="Save" id="event_save">
+                        <?php
+                            if(isset($edit_event)){
+                        ?>
+                        <input type="hidden" value="<?php echo $edit_event['e_id'] ?>" name="e_id">
+                        <?php
+                            }
+                        ?>
+                        <input class="btn" type="submit" name="<?php if(isset($edit_event)){ echo 'event_update';}else{ echo 'event_save';}?>" value="<?php if(isset($edit_event)){ echo 'Update';}else{ echo 'Save';}?>"  id="event_save">
                     </div>
                 </div>
             </form>

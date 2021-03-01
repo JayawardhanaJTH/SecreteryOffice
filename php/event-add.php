@@ -26,7 +26,7 @@
                     VALUES ('$event_name','$event_date','$event_image_name','$event_description')";
     
                 if(mysqli_query($conn,$sql)){
-                    move_uploaded_file($event_image_temp,"../uploadFiles/".$event_image_name);
+                    move_uploaded_file($event_image_temp,"../uploadFiles/images/".$event_image_name);
 
                     $_SESSION["UPLOAD"] = "success";
                     session_write_close();
@@ -71,7 +71,7 @@
                     WHERE e_id = '$event_id'";
     
                 if(mysqli_query($conn,$sql)){
-                    move_uploaded_file($event_image_temp,"../uploadFiles/".$event_image_name);
+                    move_uploaded_file($event_image_temp,"../uploadFiles/images/".$event_image_name);
 
                     $_SESSION["UPLOAD"] = "success";
                     session_write_close();
@@ -103,11 +103,15 @@
     if(isset($_GET["event_delete"])){
         $e_id = $_GET['delete_id'];
 
-        $sql = "DELETE FROM events WHERE e_id ='$e_id'";
+        $event_image_name = mysqli_fetch_assoc(mysqli_query($conn, "SELECT * FROM event WHERE  e_id = '$e_id'"));
 
+        $sql = "DELETE FROM events WHERE e_id ='$e_id'";
+        
         if(mysqli_query($conn,$sql)){
             $_SESSION["DELETE_ED"] = "success";
             session_write_close();
+
+            unlink("../uploadFiles/images/"+$event_image_name['e_image']);
 
             header('location: /event.php');
             exit();

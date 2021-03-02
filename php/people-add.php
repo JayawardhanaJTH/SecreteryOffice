@@ -23,9 +23,25 @@ if($_POST['id'] == "insert"){
     $gender = $_POST['gender'];
     $contact_number = $_POST['contact_number'];
     $address = $_POST['address'];
+    $password = $_POST['password'];
 
-    $sql = "INSERT INTO people( first_name, last_name, email, grama_niladhari_division, gender, contact_number, address) 
-	VALUES ('$first_name','$last_name','$email', '$grama_niladhari_division', '$gender', '$contact_number', '$address')";
+    $to = $email;
+    $mailSubject =  "Secretary Divisions Account Created..";
+    $emailBody = "Your <b>Username :</b> $email <br>";
+    $emailBody .= "Your <b>Password :</b> $password <br>Thank You !";
+
+    $header = "From: secraterywththala@gmail.com\r\nContent-Type: text/html;";
+
+    $sen = mail($to, $mailSubject, $emailBody, $header);
+
+    if ($sen){
+        echo "1";
+    }else{
+        echo "not send";
+    }
+
+    $sql = "INSERT INTO people( first_name, last_name, email, grama_niladhari_division, gender, contact_number, address, password) 
+	VALUES ('$first_name','$last_name','$email', '$grama_niladhari_division', '$gender', '$contact_number', '$address', '$password')";
 
 
     if (mysqli_query($conn, $sql)) {

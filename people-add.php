@@ -146,7 +146,7 @@
             </div>
             <div class="people-form p-2">
 
-                <form method="post" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                <form style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
                     <div class="form-group">
                         <label for="username">First Name</label>
                         <div class="input-group">
@@ -227,9 +227,24 @@
                             <input type="tel" id="address" name="address" class="form-control" placeholder="Address">
                         </div>
                     </div>
+                    <div class="form-group">
+                        <label for="address">Password</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text"><i class="fas fa-envelope"></i></div>
+                            </div>
+                            <input type="password" id="password" name="password" class="form-control" placeholder="Password" disabled>
+                            <div class="col-3">
+                                <input type="button"
+                                       class="btn form-control"
+                                       value="Generate" onClick="randomPassword(10);"
+                                       tabindex="2">
+                            </div>
+                        </div>
+                    </div>
                     <br>
                     <div>
-                        <input type="submit" class="btn" id="add_people" value="Add People">
+                        <input type="button" class="btn" id="add_people" value="Add People" >
                     </div>
                 </form>
             </div>

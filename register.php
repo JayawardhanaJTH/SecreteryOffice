@@ -38,7 +38,7 @@
 			<!-- Start of header -->
 			<div class="row">
 				<div id="logo" class="col-md-2 text-center" >
-					<a href="index.html"><img src="images/logo.png" class="d-flex w-50"></a>
+					<a href="index.php"><img src="images/logo.png" class="d-flex w-50"></a>
 				</div>
 				<div class="col-md-7 text-center">
 					<h1 class="p-2 font-x3" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
@@ -104,7 +104,7 @@
 						<!-- Main menu -->
 						<div class="collapse navbar-collapse justify-content-between " id="navbarCollapse">
 							<div class="navbar-nav nav-tabs mr-auto">
-								<a href="index.html" class="nav-item nav-link active home">Home
+								<a href="index.php" class="nav-item nav-link active home">Home
 									<hr class="hrhome"></a>
 								<a href="checkout.html" class="nav-item nav-link chk">Contact
 									<hr class="hrchec"></a>

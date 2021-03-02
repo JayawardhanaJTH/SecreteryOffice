@@ -41,7 +41,7 @@
 			<!-- Start of header -->
 			<div class="row">
 				<div id="logo" class="col-md-2 text-center" >
-					<a href="index.html"><img src="images/logo.png" class="d-flex w-50"></a>
+					<a href="index.php"><img src="images/logo.png" class="d-flex w-50"></a>
 				</div>
 				<div class="col-md-7 text-center">
 					<h1 class="p-2 font-x3" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">

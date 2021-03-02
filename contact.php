@@ -40,7 +40,7 @@
 			<!-- Start of header -->
 			<div class="row">
 				<div id="logo" class="col-md-2 text-center" >
-					<a href="index.html"><img src="images/logo.png" class="d-flex w-50"></a>
+					<a href="index.php"><img src="images/logo.png" class="d-flex w-50"></a>
 				</div>
 				<div class="col-md-7 text-center">
 					<h1 class="p-2 font-x3" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
@@ -114,7 +114,7 @@
 									<hr class="hrproductDetail"></a>
 								<a href="cart.html" class="nav-item nav-link cart">Downloads
 									<hr class="hrcart"></a>
-								<a href="contact.html" class="nav-item nav-link chk">Contact
+								<a href="contact.php" class="nav-item nav-link chk">Contact
 									<hr class="hrchec"></a>
 								<a href="aboutUs.php" class="nav-item nav-link acc">About Us
 									<hr class="hracc"></a>
@@ -123,7 +123,7 @@
 									<div class="dropdown-menu">
 										<a href="wishlist.html" class="dropdown-item">Wishlist </a>
 										<a href="login.html" class="dropdown-item">Login & Register</a>
-										<a href="contact.html" class="dropdown-item">Contact Us</a>
+										<a href="contact.php" class="dropdown-item">Contact Us</a>
 									</div>
 								</div> -->
 								

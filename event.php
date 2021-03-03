@@ -98,7 +98,7 @@
                             <div class="input-group-prepend">
                                 <div class="input-group-text"><i class="fa fa-font"></i></div>
                             </div>
-                            <input type="text" name="event_name" id="event_name" class="form-control" value="<?php if(isset($edit_event)){ echo $edit_event['e_name'];}?>" placeholder="Event Name" required/>
+                            <input type="text" name="event_name" id="event_name" class="form-control" value="<?php if(isset($edit_event)){ echo $edit_event['e_name'];}?>" placeholder="Event Name"/>
                         </div>
                     </div>
 
@@ -108,7 +108,7 @@
                             <div class="input-group-prepend">
                                 <div class="input-group-text"><i class="fa fa-calendar-alt"></i></div>
                             </div>
-                            <input type="date" name="event_date" id="event_date" value="<?php if(isset($edit_event)){ echo $edit_event['e_date'];}?>" class="form-control" required/>
+                            <input type="date" name="event_date" id="event_date" value="<?php if(isset($edit_event)){ echo $edit_event['e_date'];}?>" class="form-control" />
                         </div>
                     </div>
 
@@ -118,7 +118,7 @@
                             <div class="input-group-prepend">
                                 <div class="input-group-text"><i class="fa fa-image"></i></div>
                             </div>
-                            <input type="file" name="event_image" value="<?php if(isset($edit_event)){ echo $edit_event['e_image'];}?>" id="event_image" class="form-control" required/>
+                            <input type="file" name="event_image" value="<?php if(isset($edit_event)){ echo $edit_event['e_image'];}?>" id="event_image" class="form-control" />
                         </div>
                     </div>
 
@@ -204,9 +204,6 @@
             </div>
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="js/event_add.js"></script>
-    <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script> 
     <?php
 		include 'support/footer.php';
 	?>
@@ -214,33 +211,30 @@
 <?php
     }
 
+    if(isset($_SESSION["event_error"])){
+            unset($_SESSION["event_error"]);
+?>
+    <script type="text/javascript">
+        error_popup('The file extension is not jpeg or png ');
+    </script>
+<?php
+        }
+?>
+
+<?php
     if(isset($_SESSION["UPLOAD"])){
         if($_SESSION["UPLOAD"] == "success"){
             unset($_SESSION["UPLOAD"]);
-        
 ?>
     <script type="text/javascript">
-        Swal.fire({
-            position: 'top-end',
-            icon: 'success',
-            title: 'Event has been saved',
-            showConfirmButton: false,
-            timer: 2500
-        });
+        success_popup('Event has been saved');
     </script>
 <?php
         }else if($_SESSION["UPLOAD"] == "unsuccess"){
-
             unset($_SESSION["UPLOAD"]);
 ?>
     <script type="text/javascript">
-        Swal.fire({
-                position: 'top-end',
-                icon: 'error',
-                title: 'Event has been not saved',
-                showConfirmButton: false,
-                timer: 2500
-            });
+        error_popup('Event has been not saved');
     </script>
 <?php
         }
@@ -255,13 +249,7 @@
         
 ?>
     <script type="text/javascript">
-        Swal.fire({
-            position: 'top-end',
-            icon: 'success',
-            title: 'Event has been deleted',
-            showConfirmButton: false,
-            timer: 2500
-        });
+        success_popup('Event has been deleted');
     </script>
 <?php
         }else if($_SESSION["DELETE_ED"] == "unsuccess"){
@@ -269,13 +257,7 @@
             unset($_SESSION["DELETE_ED"]);
 ?>
     <script type="text/javascript">
-        Swal.fire({
-                position: 'top-end',
-                icon: 'error',
-                title: 'Event has been not deleted',
-                showConfirmButton: false,
-                timer: 2500
-            });
+        error_popup('Event has been not deleted');
     </script>
 <?php
         }

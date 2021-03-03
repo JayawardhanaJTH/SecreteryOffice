@@ -174,7 +174,7 @@
 				<form action="#" method="post">
 					<fieldset>
 						<legend>Quick Search:</legend>
-						<input type="text" placeholder="Enter search term&hellip;">
+						<input class="text-white" type="text" placeholder="Enter search term&hellip;">
 						<button type="submit"><i class="fas fa-search"></i></button>
 					</fieldset>
 				</form>

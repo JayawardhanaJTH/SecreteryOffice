@@ -7,19 +7,35 @@
         $errors = array();
         if(isset($_FILES["event_image"])){
 
-            $event_name = $_POST['event_name'];
-            $event_date = $_POST['event_date'];
+            try{
 
+                $event_name = $_POST['event_name'];
+                $event_date = $_POST['event_date'];
+                
+                
+                $event_image_name = $_FILES['event_image']['name'];
+                $event_image_temp = $_FILES['event_image']['tmp_name'];
+                $event_image_ext = pathinfo($event_image_name, PATHINFO_EXTENSION);
+                $event_description = $_POST['event_description'];
+                
+                $extensions= array("jpeg","jpg","png");
+            }
+            catch(Exception $ex){
+                $errors[]="File not selected";
+                $_SESSION["event_error"] = $errors;
+                session_write_close();
 
-            $event_image_name = $_FILES['event_image']['name'];
-            $event_image_temp = $_FILES['event_image']['tmp_name'];
-            $event_image_ext = pathinfo($event_image_name, PATHINFO_EXTENSION);
-            $event_description = $_POST['event_description'];
-            
-            $extensions= array("jpeg","jpg","png");
+                header ("location: ../event.php" );
+                exit();
+            }
             
             if(in_array($event_image_ext,$extensions)=== false){
                 $errors[]="extension not allowed, please choose a JPEG or PNG file.";
+                $_SESSION["event_error"] = $errors;
+                session_write_close();
+
+                header ("location: ../event.php" );
+                exit();
             }else{
             
                 $sql = "INSERT INTO events(e_name, e_date, e_image, e_description) 
@@ -37,11 +53,18 @@
                 else{
                     $_SESSION["UPLOAD"] = "unsuccess";
                     session_write_close();
-                    die("Query failed: ".mysqli_error($conn));
+
+                    header ("location: ../event.php" );
+                    exit();
                 }
             }
         }else{
-            echo 'file error';
+            $errors[]="File not selected";
+            $_SESSION["event_error"] = $errors;
+            session_write_close();
+
+            header ("location: ../event.php" );
+            exit();
         }
     }
 

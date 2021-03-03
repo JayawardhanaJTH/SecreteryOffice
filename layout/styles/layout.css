@@ -498,9 +498,10 @@ input:focus, textarea:focus, *:required:focus{border-color:#95103B;}
 
 
 /* Search Form */
-#searchform{color:rgba(255,255,255,.5); background:#AA5670;}
+#searchform{color:rgb(255, 255, 255); background:#AA5670;}
 #searchform:hover{color:#95103B;}
-#searchform input{color:#FFFFFF; background:#AA5670;}
+#searchform input{color:#ffffff; background:#AA5670;}
+#searchform input::placeholder{color:#ffffff;}
 #searchform button{color:#FFFFFF; background:transparent;}
 
 

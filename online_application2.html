@@ -34,91 +34,21 @@
 <body>
     <div class="container p-1">
         <div class="border p-2">
-            <h1>Business Registration Form</h1>
+            <h1>Requirement Application</h1>
             <form action="#" method="POST">
                 <ol>
                     <li>
                         <div class="form-group">
-                            <label for="bName">Name of the business</label>
-                            <label for="bName">(ව්‍යාපාපාරයේ නාමය)</label>
-                            <input type="text" name="bName" id="bName" class="form-control">
+                            <label for="fullName">Full Name</label>
+                            <label for="fullName">(සම්පූර්ණ නම)</label>
+                            <input type="text" name="fullName" id="fullName" class="form-control">
                         </div>
                     </li>
                     <li>
                         <div class="form-group">
-                            <label for="bform">The general form of the business</label>
-                            <label for="bform">(ව්‍යාපාපාරයේ සාමාන්‍ය ස්වරූපය)</label>
-                            <input type="text" name="bform" id="bform" class="form-control">
-                        </div>
-                    </li>
-                    <li>
-                        <div class="form-group">
-                            <label for="bAddress">Address of the place of business</label>
-                            <label for="bAddress">(ව්‍යාපාපාරික ස්ථානයේ ලිපිනය)</label>
-                            <input type="text" name="bAddress" id="bAddress" class="form-control">
-                        </div>
-                    </li>
-                    <li>
-                        <div class="form-group">
-                            <label for="bDate">Date of commencement of business</label>
-                            <label for="bDate">(ව්‍යාපාපාරය ආරම්භ කළ දිනය)</label>
-                            <input type="text" name="bDate" id="bDate" class="form-control">
-                        </div>
-                    </li>
-                    <li>
-                        <div class="form-group">
-                            <label for="bCount">Number of employees</label>
-                            <label for="bCount">(සේවයේ නියුතු සංඛ්‍යාව)</label>
-                            <input type="text" name="bCount" id="bCount" class="form-control">
-                        </div>
-                    </li>
-                    <li>
-                        <div class="form-group">
-                            <label for="bSubName">If the owner/ owners are engaged in another business, the business name<label>
-                            <label for="bSubName">(අයිතිකරු/ අයිතිකරුවන් වෙනත් ව්‍යාපාරයක යෙදී සිටියි නම් එහි නම)</label>
-                            <input type="text" name="bSubName" id="bSubName" class="form-control">
-                        </div>
-                    </li>
-                    <li>
-                        <div class="form-group">
-                            <label for="bOwnerAddress">Address of the owner</label>
-                            <label for="bOwnerAddress">(අයිතිකරුගේ ලිපිනය)</label>
-                            <input type="text" name="bOwnerAddress" id="bOwnerAddress" class="form-control">
-                        </div>
-                    </li>
-                    <li>
-                        <div class="form-group">
-                            <label for="bContact">Phone number where the owner can be contact</label>
-                            <label for="bContact">(අයිතිකරු සම්බන්ධ කරගත හැකි දුරකතන අංකය)</label>
-                            <input type="text" name="bContact" id="bContact" class="form-control">
-                        </div>
-                    </li>
-                    <li>
-                        <div class="form-group">
-                            <label for="bCitizenship">Citizenship of the owners</label>
-                            <label for="bCitizenship">(අයිතිකරුවන්ගේ පුරවැසිභාවය)</label>
-                            <input type="text" name="bCitizenship" id="bCitizenship" class="form-control">
-                        </div>
-                    </li>
-                    <li>
-                        <div class="form-group">
-                            <label for="bEmail">Email of the owners</label>
-                            <label for="bEmail">(අයිතිකරුවන්ගේ විද්‍යුත් ලිපිනය)</label>
-                            <input type="email" name="bEmail" id="bEmail" class="form-control">
-                        </div>
-                    </li>
-                    <li>
-                        <div class="form-group">
-                            <label for="bOwnership">Ownership of the place of business</label>
-                            <label for="bOwnership">(ව්‍යාපාපාරික ස්ථානයේ අයිතිය)</label>
-                            <input type="text" name="bOwnership" id="bOwnership" class="form-control">
-                        </div>
-                    </li>
-                    <li>
-                        <div class="form-group">
-                            <label for="bDivision">Grama Niladhari division</label>
-                            <label for="bDivision">(ග්‍රාම නිලධාරී වසම)</label>
-                            <select name="bDivision" id="bDivision" class="form-control">
+                            <label for="division">Grama Niladari Area</label>
+                            <label for="division">(ග්‍රාම නිලධාරී වසම)</label>
+                            <select name="division" id="division" class="form-control">
                                 <option value="">Select Grama Niladhari Division</option>
                                 <option value="164 Pamunugama">164 Pamunugama</option>
                                 <option value="164/A Maha Pamunugama">164/A Maha Pamunugama</option>
@@ -133,20 +63,63 @@
                             </select>
                         </div>
                     </li>
+                    <li>
+                        <div class="form-group">
+                            <label for="address">Address</label>
+                            <label for="address">(ලිපිනය)</label>
+                            <input type="text" name="address" id="address" class="form-control">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form-group">
+                            <label for="contact">Telephone number</label>
+                            <label for="contact">(දුරදුරකතන අංකය)</label>
+                            <input type="text" name="contact" id="contact" class="form-control">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <label for="email">(විදයුත් ලිපිනය)</label>
+                            <input type="text" name="email" id="email" class="form-control">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form-group">
+                            <label for="requirement">Requirement<label>
+                            <label for="requirement">(අවශ්‍යතාවය)</label>
+                            <input type="text" name="requirement" id="requirement" class="form-control">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form-group">
+                            <label for="nic">ID No</label>
+                            <label for="nic">(ජාතික හැදුහැදුනුම්පත් අංකය)</label>
+                            <input type="text" name="nic" id="nic" class="form-control">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form-group">
+                            <label for="gender">Gender</label>
+                            <label for="gender">(ස්ත්‍රී/ පුරුෂ භාවය)</label>
+                            <div class="form-check ml-5">
+                                <input class="form-check-input" type="radio" name="gender" id="gender" value="male">
+                                <label class="form-check-label" for="exampleRadios1">
+                                  Male
+                                </label>
+                            </div>
+                            <div class="form-check ml-5">
+                                <input class="form-check-input" type="radio" name="gender" id="gender" value="female">
+                                <label class="form-check-label" for="exampleRadios2">
+                                  Female
+                                </label>
+                            </div>
+                        </div>
+                    </li>
                 </ol>
+
                 <div >
-                    <p class="text-dark">I hereby confirm that I have inspected the above business and that the business is eligible for registration.</p>
-                </div>
-                <div class="row justify-content-between">
-                    <div class="col-md-6">
-                        <p>Checked by:</p>
-                    </div>
-                    <div class="col-md-3">
-                        <p>Date:</p>
-                    </div>
-                    <div class="col-md-3">
-                        <p>Time:</p>
-                    </div>
+                    <p class="text-dark">I hereby confirm that I have inspected the above requirement of citizen who lives in Wattala division.</p>
                 </div>
                 <div class="row justify-content-center">
                     <div class="col-6">
@@ -162,7 +135,7 @@
                 </div>
 
                 <div class="form-group">
-                    <input type="submit" value="Save" name="form1_save" id="form1_save" class="btn">
+                    <input type="button" value="Save" name="form2_save" id="form2_save" class="btn">
                 </div>
             </form>
         </div>

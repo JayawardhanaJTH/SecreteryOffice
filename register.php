@@ -7,7 +7,6 @@
     require "connection/connection.php";
     include "support/header.php";
 ?>
-    
     <div class="container-fluid p-3">
         <div class="row justify-content-center">
             <div class="login-main p-2 col-10 col-md-6" style="border: 2px solid maroon; border-radius: 0px 30px 0px 30px;">

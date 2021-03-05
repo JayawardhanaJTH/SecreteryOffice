@@ -60,6 +60,8 @@
     <script src="js/event_add.js"></script>
     <script src="js/downloads_add.js"></script>
     <script src="js\popup_msgs.js"></script>
+    <script src="layout\scripts\activeLinks.js"></script>
+	
     <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script> 
 	
 	<script>

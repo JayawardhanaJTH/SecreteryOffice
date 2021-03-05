@@ -1,11 +1,11 @@
 <?php
     session_start();
-    require "connection/connection.php";
-    include "support/header.php";
     if(!isset($_SESSION['logged'])){
 		header("location: login.php");
 		
 	}
+    require "connection/connection.php";
+    include "support/header.php";
 ?>
         <div class="d-flex">
         <div class="p_box row m-1 justify-content-center align-items-center">

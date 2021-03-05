@@ -1,10 +1,10 @@
 <?php
     session_start();
-    require "connection/connection.php";
-    include "support/header.php";
     if(!isset($_SESSION['logged'])){
 		header("location: login.php");
 	}
+    require "connection/connection.php";
+    include "support/header.php";
 ?>
         <link href="layout/styles/dashboard.css" rel="stylesheet" type="text/css" media="all">
 

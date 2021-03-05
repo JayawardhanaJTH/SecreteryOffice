@@ -72,17 +72,17 @@
 						<!-- Main menu -->
 						<div class="collapse navbar-collapse justify-content-between " id="navbarCollapse">
 							<div class="navbar-nav nav-tabs mr-auto">
-								<a href="index.php" class="nav-item nav-link active home">Home
+								<a href="index.php" class="nav-item nav-link home " id="home" onclick="activeLink('home')">Home
 									<hr class="hrhome"></a>
-								<a href="downloads.php" class="nav-item nav-link product">Downloads
+								<a href="downloads.php" class="nav-item nav-link product" id="downloads" onclick="activeLink('downloads')">Downloads
 									<hr class="hrproducts"></a>
-								<a href="online_application_home.php" class="nav-item nav-link prode">Online Forums
+								<a href="online_application_home.php" class="nav-item nav-link prode" id="forms" onclick="activeLink('forms')">Online Forums
 									<hr class="hrproductDetail"></a>
-								<a href="dashboard.php" class="nav-item nav-link cart">Dashboard
+								<a href="dashboard.php" class="nav-item nav-link cart" id="dashboard" onclick="activeLink('dashboard')">Dashboard
 									<hr class="hrcart"></a>
-								<a href="contact.php" class="nav-item nav-link chk">Contact
+								<a href="contact.php" class="nav-item nav-link chk" id="contact" onclick="activeLink('contact')">Contact
 									<hr class="hrchec"></a>
-								<a href="aboutUs.php" class="nav-item nav-link acc">About Us
+								<a href="aboutUs.php" class="nav-item nav-link acc" id="about" onclick="activeLink('about')">About Us
 									<hr class="hracc"></a>
 								
 							</div>

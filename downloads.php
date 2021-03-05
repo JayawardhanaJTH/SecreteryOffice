@@ -109,7 +109,7 @@
     <div class="container border p-1 mb-2">
         <h5 class="text-center">Add File</h5>
 
-        <form action="/php/downloads_add.php" method="POST" enctype="multipart/form-data" class="m-1">
+        <form action="/php/downloads_add.php" method="POST" enctype="multipart/form-data" class="m-1" onsubmit="return validateForm_down()">
             <div class="form-group">
                 <label for="fileName">File Name</label>
                 <input type="text" name="fileName" id="fileName" class="form-control" value="<?php if(isset($fileEdit)){ echo $fileEdit['name'];}?>">
@@ -131,7 +131,7 @@
                 <?php
                     }
                 ?>
-                <input type="submit" value="<?php if(isset($fileEdit)){ echo 'Upload';}else{echo 'Save';}?>" name="<?php if(isset($fileEdit)){ echo 'edit_file';}else{echo 'save_file';}?>" id="save_file" class="btn">
+                <input type="submit" value="<?php if(isset($fileEdit)){ echo 'Upload';}else{echo 'Save';}?>" name="<?php if(isset($fileEdit)){ echo 'edit_file';}else{echo 'save_file';}?>" class="btn">
             </div>
         </form>
     </div>

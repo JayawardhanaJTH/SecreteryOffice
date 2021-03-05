@@ -89,7 +89,7 @@
             <p class="text-muted">Add events which organized by the secretary deviation</p>
         </div>
         <div class="row m-2 m-lg-0 justify-content-md-center">
-            <form method="post" action="php/event-add.php" enctype="multipart/form-data" class="event_form col-lg-8" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+            <form method="post" action="php/event-add.php" enctype="multipart/form-data"  onsubmit="return validateForm()" class="event_form col-lg-8" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
                 <div>
 
                     <div class="form-group ">
@@ -137,7 +137,7 @@
                         <?php
                             }
                         ?>
-                        <input class="btn" type="submit" name="<?php if(isset($edit_event)){ echo 'event_update';}else{ echo 'event_save';}?>" value="<?php if(isset($edit_event)){ echo 'Update';}else{ echo 'Save';}?>"  id="event_save">
+                        <input class="btn" type="submit" name="<?php if(isset($edit_event)){ echo 'event_update';}else{ echo 'event_save';}?>" value="<?php if(isset($edit_event)){ echo 'Update';}else{ echo 'Save';}?>" >
                     </div>
                 </div>
             </form>

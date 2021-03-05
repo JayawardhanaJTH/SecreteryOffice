@@ -35,9 +35,9 @@
             $_SESSION["FORM_SUBMITTED"] = false;
             session_write_close();
             
-            die ("Connection failed ".mysqli_query($conn, $sql) .$conn->connect_error);
-            // header('location: ../online_application.php');
-            // exit();
+            // die ("Connection failed ".mysqli_query($conn, $sql) .$conn->connect_error);
+            header('location: ../online_application.php');
+            exit();
         }
     }
 
@@ -52,16 +52,15 @@
         $nic = $_POST['nic'];
         $gender = $_POST['gender'];
 
-        $sql = "INSERT INTO business_registration(b_name, b_form, b_address, b_date, b_emp_count, b_sub_name, 
-                                b_owner_address, b_contact, b_citizenship, b_email, b_ownership, b_grama_division, submitted_by)
-            VALUES ('$bName','$bForm','$bAddress','$bDate','$bCount','$bSubName','$bOwnerAddress','$bContact',
-                            '$bCitizenship','$bEmail','$bOwnership','$bDivision',1)";
+        $sql = "INSERT INTO requirement_application(full_name, division, address, contact,
+                     email, requirement, nic, gender, submitted_by)
+            VALUES ('$fullName','$division','$address','$contact','$email','$requirement','$nic','$gender',1)";
     
         if(mysqli_query($conn, $sql)){
             $_SESSION["FORM_SUBMITTED"] = true;
             session_write_close();
 
-            header('location: ../online_application.php');
+            header('location: ../online_application2.php');
             exit();
         }
         else{

@@ -5,6 +5,7 @@
 		header("location: login.php");
 		
 	}
+	require_once("connection/connection.php");
 	include 'support/header.php';
 ?>
 	<!-- Carousel -->
@@ -200,81 +201,49 @@
 				</div>
 			</div>
 		</div>
-		<div class="event col-md-6">
-			<div class="row row-striped">
-				<div class="col-2 text-center">
-					<h1 class="display-4"> <span class="badge badge-success">30</span></h1>
-					<h2>Nov</h2>
+		
+			<div class="event col-md-6">
+		<?php
+				$events = array();
+
+				$sql = "SELECT * FROM events LIMIT 5";
+
+				$result = mysqli_query($conn, $sql);
+				
+				while($row = mysqli_fetch_object($result)){
+					$events[] = $row;
+				}
+				
+				if(count($events) > 0){
+
+					foreach($events as $event){
+
+						$date = $event->e_date;
+						$month = date('M', strtotime($date));
+						$day = date('d', strtotime($date));
+						$dayName = date('D', strtotime($date));
+						$description = $event->e_description;
+		?>
+				<div class="row row-striped">
+					<div class="col-2 text-center">
+						<h1 class="display-4"> <span class="badge badge-success"><?php echo $day ?></span></h1>
+						<h2><?php echo $month ?></h2>
+					</div>
+					<div class="col-10">
+						<h1><a href="php/event-add.php?view_id=<?php echo $event->e_id; ?>"> <?php echo $event->e_name ?></a></h1>
+						<ul class="list-inline">
+							<li class="list-inline-item"><i class="fas fa-calendar"></i> <?php echo $dayName ?></li>
+							<!-- <li class="list-inline-item"><i class="fas fa-clock"></i>  08:30 - 13:30</li> -->
+							<!-- <li class="list-inline-item"><i class="fas fa-location-arrow"></i>  Colombo</li> -->
+						</ul>
+						<p><a href="php/event-add.php?view_id=<?php echo $event->e_id; ?>"> Event details</a></p>
+					</div>
 				</div>
-				<div class="col-10">
-					<h1><a href="#"> Event </a></h1>
-					<ul class="list-inline">
-						<li class="list-inline-item"><i class="fas fa-calendar"></i>  Monday</li>
-						<li class="list-inline-item"><i class="fas fa-clock"></i>  08:30 - 13:30</li>
-						<li class="list-inline-item"><i class="fas fa-location-arrow"></i>  Colombo</li>
-					</ul>
-					<p><a href="#"> Event details</a></p>
-				</div>
-			</div>
-			<div class="row row-striped">
-				<div class="col-2 text-center">
-					<h1 class="display-4"> <span class="badge badge-success">04</span></h1>
-					<h2>Dec</h2>
-				</div>
-				<div class="col-10">
-					<h1>Event</h1>
-					<ul class="list-inline">
-						<li class="list-inline-item"><i class="fas fa-calendar"></i>  Friday</li>
-						<li class="list-inline-item"><i class="fas fa-clock"></i>  10:00 - 15:30</li>
-						<li class="list-inline-item"><i class="fas fa-location-arrow"></i>  Kalutara</li>
-					</ul>
-					<p><a href="#"> Event details</a></p>
-				</div>
-			</div>
-			<div class="row row-striped">
-				<div class="col-2 text-center">
-					<h1 class="display-4"> <span class="badge badge-success">24</span></h1>
-					<h2>Dec</h2>
-				</div>
-				<div class="col-10">
-					<h1>Event</h1>
-					<ul class="list-inline">
-						<li class="list-inline-item"><i class="fas fa-calendar"></i>  Thursday</li>
-						<li class="list-inline-item"><i class="fas fa-clock"></i>  08:30 - 16:00</li>
-						<li class="list-inline-item"><i class="fas fa-location-arrow"></i>  Colombo</li>
-					</ul>
-					<p><a href="#"> Event details</a></p>
-				</div>
-			</div>
-			<div class="row row-striped">
-				<div class="col-2 text-center">
-					<h1 class="display-4"> <span class="badge badge-success">24</span></h1>
-					<h2>Dec</h2>
-				</div>
-				<div class="col-10">
-					<h1>Event</h1>
-					<ul class="list-inline">
-						<li class="list-inline-item"><i class="fas fa-calendar"></i>  Thursday</li>
-						<li class="list-inline-item"><i class="fas fa-clock"></i>  08:30 - 16:00</li>
-						<li class="list-inline-item"><i class="fas fa-location-arrow"></i>  Colombo</li>
-					</ul>
-					<p><a href="#"> Event details</a></p>
-				</div>
-			</div>
-			<div class="row row-striped">
-				<div class="col-2 text-center">
-					<h1 class="display-4"> <span class="badge badge-success">24</span></h1>
-					<h2>Dec</h2>
-				</div>
-				<div class="col-10">
-					<h1>Event</h1>
-					<ul class="list-inline">
-						<li class="list-inline-item"><i class="fas fa-calendar"></i>  Thursday</li>
-						<li class="list-inline-item"><i class="fas fa-clock"></i>  08:30 - 16:00</li>
-						<li class="list-inline-item"><i class="fas fa-location-arrow"></i>  Colombo</li>
-					</ul>
-					<p><a href="#"> Event details</a></p>
-				</div>
+				<?php
+					}
+				}
+
+				?>
 			</div>
 		</div>
 	</div>

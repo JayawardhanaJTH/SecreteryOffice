@@ -53,41 +53,6 @@
 						</div>
 				</div>
 			</div>
-			<!-- <div class="three_quarter">
-				<ul class="nospace clear text-center">
-					<li class="one_third first">
-						<div style="margin-left: 50%;">
-							<a href="#">
-								<i class="fas fa-phone center"></i>
-							</a> 
-						</div>
-						<div class="block clear">
-							<span><strong>Give us acall:</strong> +94 112 1234 56</span>
-						</div>
-					</li>
-					<li class="one_third">
-						<div style="margin-left: 50%;">
-							<a href="#">
-								<i class="fas fa-envelope"></i>
-							</a> 
-						</div>
-						<div class="block clear">
-							<span><strong>Send us a mail:</strong> secretaryoffice@gmail.com</span>
-						</div>
-					</li>
-					<li class="one_third">
-						<div style="margin-left: 50%;">
-							<a href="#">
-								<i class="fas fa-clock"></i>
-							</a> 
-						</div>
-						<div class="block clear">
-							<span><strong> Mon. - Sat.:</strong> 09.00am - 16.00pm</span>
-						</div>
-					</li>
-				</ul>
-			</div> -->
-			<!-- End of header -->
 		</header>
 	</div>
 
@@ -109,24 +74,16 @@
 							<div class="navbar-nav nav-tabs mr-auto">
 								<a href="index.php" class="nav-item nav-link active home">Home
 									<hr class="hrhome"></a>
-								<a href="product-list.html" class="nav-item nav-link product">Calender
+								<a href="downloads.php" class="nav-item nav-link product">Downloads
 									<hr class="hrproducts"></a>
-								<a href="product-detail.html" class="nav-item nav-link prode">Forums
+								<a href="online_application_home.php" class="nav-item nav-link prode">Online Forums
 									<hr class="hrproductDetail"></a>
-								<a href="#" class="nav-item nav-link cart">Downloads
+								<a href="dashboard.php" class="nav-item nav-link cart">Dashboard
 									<hr class="hrcart"></a>
-								<a href="contact.html" class="nav-item nav-link chk">Contact
+								<a href="contact.php" class="nav-item nav-link chk">Contact
 									<hr class="hrchec"></a>
 								<a href="aboutUs.php" class="nav-item nav-link acc">About Us
 									<hr class="hracc"></a>
-								<!-- <div class="nav-item dropdown">
-									<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">More Pages</a>
-									<div class="dropdown-menu">
-										<a href="wishlist.html" class="dropdown-item">Wishlist </a>
-										<a href="login.html" class="dropdown-item">Login & Register</a>
-										<a href="contact.html" class="dropdown-item">Contact Us</a>
-									</div>
-								</div> -->
 								
 							</div>
 							<!-- User logins -->

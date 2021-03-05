@@ -2,6 +2,10 @@
     session_start();
     include 'support/header.php';
     require_once("connection/connection.php");
+    if(!isset($_SESSION['logged'])){
+		header("location: login.php");
+		
+	}
 ?>
     <div class="container p-1">
         <div class="border p-2">

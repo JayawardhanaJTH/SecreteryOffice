@@ -127,3 +127,5 @@
     include "support/footer.php";
 ?>
 <script src="js/people-add.js"></script>
+<script src="js\people-update.js"></script>
+<script src="jjs\people-delete.js"></script>

@@ -7,7 +7,7 @@
     require "connection/connection.php";
     include "support/header.php";
 ?>
-
+<link href="layout/styles/dashboard.css" rel="stylesheet" type="text/css" media="all">
 <div class="d-flex">
     <div class="p_box row m-1 justify-content-center align-items-center">
 
@@ -122,8 +122,8 @@
 <!---->
 <!--    </div>-->
 </div>
-<script src="layout/scripts/alertBox.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <?php
     include "support/footer.php";
 ?>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ <script src="layout/scripts/alertBox.js"></script>

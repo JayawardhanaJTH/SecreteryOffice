@@ -6,7 +6,7 @@
     <div class="container p-1">
         <div class="border p-2">
             <h1>Business Registration Form</h1>
-            <form action="online_application_add.php" method="POST">
+            <form action="php/online_application_add.php" method="POST">
                 <ol>
                     <li>
                         <div class="form-group">
@@ -26,14 +26,14 @@
                         <div class="form-group">
                             <label for="bAddress">Address of the place of business</label>
                             <label for="bAddress">(ව්‍යාපාපාරික ස්ථානයේ ලිපිනය)</label>
-                            <input type="text" name="bAddress" id="bAddress" class="form-control">
+                            <input type="address" name="bAddress" id="bAddress" class="form-control">
                         </div>
                     </li>
                     <li>
                         <div class="form-group">
                             <label for="bDate">Date of commencement of business</label>
                             <label for="bDate">(ව්‍යාපාපාරය ආරම්භ කළ දිනය)</label>
-                            <input type="text" name="bDate" id="bDate" class="form-control">
+                            <input type="date" name="bDate" id="bDate" class="form-control">
                         </div>
                     </li>
                     <li>
@@ -138,7 +138,7 @@
             </form>
         </div>
     </div>
-    <script src="js/online_application_add.js"></script>
     <?php
 		include 'support/footer.php';
-	?>
+    ?>
+    <script src="js\online_application_add.js"></script>

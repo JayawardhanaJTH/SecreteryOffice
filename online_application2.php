@@ -6,7 +6,7 @@
     <div class="container p-1">
         <div class="border p-2">
             <h1>Requirement Application</h1>
-            <form action="online_application_add.php" method="POST">
+            <form action="php/online_application_add.php" method="POST">
                 <ol>
                     <li>
                         <div class="form-group">
@@ -111,7 +111,7 @@
             </form>
         </div>
     </div>
-    <script src="js/online_application_add.js"></script>
     <?php
 		include 'support/footer.php';
-	?>
+    ?>
+    <script src="js/online_application_add.js"></script>

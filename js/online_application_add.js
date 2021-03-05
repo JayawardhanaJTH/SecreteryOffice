@@ -1,11 +1,11 @@
-$('form1_save').click(function(){
+$("#form1_save").click(function(){
 
     var bName = $('#bName').val();
     var bform = $('#bForm').val();
     var bAddress = $('#bAddress').val();
     var bDate = $('#bDate').val();
     var bCount = $('#bCount').val();
-    var bSubName = $('#bSubName').val();
+    // var bSubName = $('#bSubName').val();
     var bOwnerAddress = $('#bOwnerAddress').val();
     var bContact = $('#bContact').val();
     var bCitizenship = $('#bCitizenship').val();
@@ -28,9 +28,9 @@ $('form1_save').click(function(){
     else if(bCount == ""){
         error_popup('Please Fill Business Employee Count');
     }
-    else if(bSubName == ""){
-        error_popup('Please Fill Sub Business');
-    }
+    // else if(bSubName == ""){
+    //     error_popup('Please Fill Sub Business');
+    // }
     else if(bOwnerAddress == ""){
         error_popup('Please Fill Business Owner Address');
     }
@@ -51,7 +51,7 @@ $('form1_save').click(function(){
     }
 });
 
-$('form2_save').click(function(){
+$('#form2_save').click(function(){
 
     var fullName = $('#fullName').val();
     var division = $('#division').val();

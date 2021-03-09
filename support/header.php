@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 
 <html lang="eng">
@@ -74,12 +75,25 @@
 							<div class="navbar-nav nav-tabs mr-auto">
 								<a href="index.php" class="nav-item nav-link home " id="home" onclick="activeLink('home')">Home
 									<hr class="hrhome"></a>
+							<?php
+								if(isset($_SESSION['logged'])){
+							?>
 								<a href="downloads.php" class="nav-item nav-link product" id="downloads" onclick="activeLink('downloads')">Downloads
 									<hr class="hrproducts"></a>
 								<a href="online_application_home.php" class="nav-item nav-link prode" id="forms" onclick="activeLink('forms')">Online Forums
 									<hr class="hrproductDetail"></a>
-								<a href="dashboard.php" class="nav-item nav-link cart" id="dashboard" onclick="activeLink('dashboard')">Dashboard
-									<hr class="hrcart"></a>
+
+								<?php
+									if(isset($_SESSION['TYPE'])){
+										if($_SESSION['TYPE'] == '1' || $_SESSION['TYPE'] == '2'){
+								?>
+									<a href="dashboard.php" class="nav-item nav-link cart" id="dashboard" onclick="activeLink('dashboard')">Dashboard
+										<hr class="hrcart"></a>
+								<?php
+										}
+									}
+								}
+								?>
 								<a href="contact.php" class="nav-item nav-link chk" id="contact" onclick="activeLink('contact')">Contact
 									<hr class="hrchec"></a>
 								<a href="aboutUs.php" class="nav-item nav-link acc" id="about" onclick="activeLink('about')">About Us
@@ -90,7 +104,7 @@
 							<div class="navbar-nav nav-tabs ml-auto">
 								<?php 
 									if(isset($_SESSION["logged"])){ 
-										?>
+								?>
 								<p class="nav-item nav-link text-white font-weight-bold" >
 										 Welcome 
 										 <?php
@@ -98,6 +112,10 @@
 										}?> 
 									</p>
 							</div>
+							
+							<?php 
+								if(isset($_SESSION["logged"])){ 
+							?>	
 
 							<div class="navbar-nav nav-tabs ml-auto">
 								<div class="nav-item dropdown">
@@ -106,13 +124,22 @@
 											<a href="logout.php" class="dropdown-item">Logout</a>
 										</div>
 								</div>
-								<!-- <div class="nav-item dropdown">
+
+								<?php
+									}else{
+								?>
+
+								<div class="nav-item dropdown">
 									<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">User Account</a>
 									<div class="dropdown-menu">
 										<a href="login.php" class="dropdown-item">Login</a>
-										<a href="register.php" class="dropdown-item">Register</a>
 									</div>
-								</div> -->
+								</div>
+
+								<?php
+									}
+								?>
+
 							</div>
 						</div>
 					</nav>

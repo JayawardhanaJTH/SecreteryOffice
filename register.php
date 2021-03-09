@@ -8,8 +8,6 @@
     }
     require "connection/connection.php";
     include "support/header.php";
-
-    echo $_SESSION['TYPE'];
 ?>
     <div class="container-fluid p-3">
         <div class="row justify-content-center">

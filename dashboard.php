@@ -92,7 +92,7 @@
 				</div>
 				
 				<div class="col-md-6 col-sm-12 mb-3">
-					<a href="#">
+					<a href="approvals.html">
 
 						<div class="card">
 							<div class="card-header text-center">
@@ -100,7 +100,7 @@
 							</div>
 							<div class="card-body text-center">
 								<div class="details">
-									<p>About application approvals details</p>
+									<p>About applications and users approvals details</p>
 								</div>
 							</div>
 						</div>
@@ -116,7 +116,7 @@
 							</div>
 							<div class="card-body text-center">
 								<div class="details">
-									<p>About essential details of office</p>
+									<p>About Secretary Division Details</p>
 								</div>
 							</div>
 						</div>

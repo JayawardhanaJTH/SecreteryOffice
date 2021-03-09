@@ -48,7 +48,7 @@
                 <img src="images/people.png" alt="Background image" class="card-img">
                 <div class="card-img-overlay">
                     <div class="card-body ">
-                        <h4>Edit detail</h4>
+                        <h4>Edit details</h4>
                         <div>
                             <p>
                                 Here 'Grama sewaka' will correct details about the people who are in his/ her division
@@ -71,7 +71,7 @@
                 <img src="images/people.png" alt="Background image" class="card-img">
                 <div class="card-img-overlay">
                     <div class="card-body ">
-                        <h4>View detail</h4>
+                        <h4>View details</h4>
                         <div>
                             <p>
                                 Here can see people details in category wise. User can search and find about the people.
@@ -86,7 +86,7 @@
                 </div>
             </div>
             <div class="card m-2 overflow-hidden">
-                <img src="images/people.png" alt="Background image" class="card-img">
+                <!-- <img src="images/people.png" alt="Background image" class="card-img">
                 <div class="card-img-overlay">
                     <div class="card-body ">
                         <h4>Notice</h4>
@@ -101,26 +101,11 @@
                             </div>
                         </a>
                     </div>
-                </div>
+                </div> -->
             </div>
 
         </div>
     </div>
-<!--    <div class="p_box2">-->
-<!--        <div>-->
-<!--            hello-->
-<!--        </div>-->
-<!--        <div>-->
-<!--            hello-->
-<!--        </div>-->
-<!--        <div>-->
-<!--            hello-->
-<!--        </div>-->
-<!--        <div>-->
-<!--            hello-->
-<!--        </div>-->
-<!---->
-<!--    </div>-->
 </div>
 <?php
     include "support/footer.php";

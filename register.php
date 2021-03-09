@@ -15,7 +15,7 @@
                 </div>
                 <div class="login-form p-2">
 
-                    <form action="#" method="POST" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                    <form action="php/register_add.php" onsubmit="return validateRegistration()" method="POST" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
                         <div class="form-group">
                             <label for="username">First Name</label>
                             <div class="input-group">
@@ -65,9 +65,9 @@
                             <label for="phone">NIC number</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
-                                    <div class="input-group-text"><i class="fas fa-phone"></i></div>
+                                    <div class="input-group-text"><i class="fas fa-id-card"></i></div>
                                 </div>
-                                <input type="tel" id="phone" name="phone" class="form-control" placeholder="123456678V">
+                                <input type="tel" id="nic" name="nic" class="form-control" placeholder="123456678V">
                             </div>
                         </div>
                         <div class="form-group">
@@ -94,17 +94,17 @@
                         <div >
                             <label for="radio1"><u> Profession </u></label>
                             <div class="custom-control custom-radio">
-                                <input type="radio" id="radio1" name="customRadio" class="custom-control-input" >
-                                <label class="custom-control-label" for="radio1" style="cursor: pointer;">Secretary</label>
+                                <input type="radio" id="customRadio" name="customRadio" value="Secretary" class="form-check-input" >
+                                <label class="form-check-label" for="radio1" style="cursor: pointer;">Secretary</label>
                             </div>
                             <div class="custom-control custom-radio">
-                                <input type="radio" id="radio3" name="customRadio" class="custom-control-input">
-                                <label class="custom-control-label" for="radio3" style="cursor: pointer;">Grama Niladhari</label>
+                                <input type="radio" id="customRadio" name="customRadio" value="Grama Niladhari" class="form-check-input">
+                                <label class="form-check-label" for="radio2" style="cursor: pointer;">Grama Niladhari</label>
                             </div>
                         </div>
                         <br>
                         <div>
-                            <input type="submit" class="btn btn-success" value="Login">
+                            <input type="submit" class="btn btn-success" value="Login" name="register" id="register">
                         </div>
                     </form>
                 </div>
@@ -114,4 +114,27 @@
 
     <?php
     include "support/footer.php";
+?>
+<script src="js\register.js"></script>
+
+<?php
+
+    if(isset($_SESSION["REGISTERED"])){
+        if($_SESSION["REGISTERED"]){
+            unset($_SESSION["REGISTERED"]);
+        
+?>
+    <script type="text/javascript">
+        success_popup('User Registered');
+    </script>
+<?php
+        }else{
+            unset($_SESSION["REGISTERED"]);
+?>
+    <script type="text/javascript">
+        error_popup('User Registration Error');
+    </script>
+<?php
+        }
+    }
 ?>

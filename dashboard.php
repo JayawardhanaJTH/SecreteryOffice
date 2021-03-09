@@ -60,7 +60,7 @@
 					</a>
 				</div>
 				<div class="col-md-6 col-sm-12 mb-3">
-					<a href="#">
+					<a href="event.php">
 
 						<div class="card">
 							<div class="card-header text-center">
@@ -90,24 +90,7 @@
 						</div>
 					</a>
 				</div>
-				<div class="col-md-6 col-sm-12 mb-3">
-					<a href="#">
-
-						<div class="card">
-							<div class="card-header text-center">
-								<span>
-									<h1><i class="fa fa-newspaper"> News</i></h1>
-								</span>
-							</div>
-							<div class="card-body text-center">
-								<div class="details">
-									<p>About updated news</p>
-								</div>
-							</div>
-						</div>
-					</a>
-				</div>
-				<div class="w-100"></div>
+				
 				<div class="col-md-6 col-sm-12 mb-3">
 					<a href="#">
 
@@ -123,6 +106,7 @@
 						</div>
 					</a>
 				</div>
+				<div class="w-100"></div>
 				<div class="col-md-6 col-sm-12 mb-3">
 					<a href="#">
 
@@ -138,7 +122,6 @@
 						</div>
 					</a>
 				</div>
-				<div class="w-100"></div>
 				<div class="col-md-6 col-sm-12 mb-3">
 					<a href="#">
 

@@ -45,15 +45,22 @@
 
                             $_SESSION['logged'] = true;
                             $_SESSION['username'] = $user['username'];
-                            
+                            $_SESSION['TYPE'] = $user['type'];
                             session_write_close();
 
                             header("Location: ../index.php");
                             exit();
                         }
-						
-							
-						
+						else{
+							echo "<script> alert('User is not Valid'); </script>"; 
+
+							$emailErr = "Invalid email or password";
+
+							session_write_close();
+
+							header("Location: ../login.php");
+							exit();
+						}	
 					}
 					else{
 						echo "<script> alert('User is not Valid'); </script>"; 

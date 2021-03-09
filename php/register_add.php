@@ -27,7 +27,12 @@
         $sql = "INSERT INTO user(firstname, lastname, username, email, contact, password, type) 
             VALUES ('$firstname', '$lastname', '$username' , '$email', '$phone', '$password' ,'$type')";
         
+        $sql2 = "INSERT INTO user_login(username, email, password, type) 
+                VALUES ('$username','$email','$password','$type')";
+
         if(mysqli_query($conn, $sql)){
+            mysqli_query($conn, $sql2);
+            
             $_SESSION['REGISTERED'] = true;
             session_write_close();
 

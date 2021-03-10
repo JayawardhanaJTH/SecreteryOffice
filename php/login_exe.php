@@ -35,8 +35,10 @@
 
 					// query to check is user valid or not
 					$query = "SELECT * FROM user_login WHERE email = '$email' AND password = '$password' ";
+					$query2 = "SELECT * FROM people WHERE email = '$email' AND password = '$password' ";
+					
 					$result = mysqli_query($conn,$query);
-				
+					$result2 = mysqli_query($conn,$query2);
 
 					if($result){
 						if(mysqli_num_rows($result) == 1){
@@ -46,6 +48,20 @@
                             $_SESSION['logged'] = true;
                             $_SESSION['username'] = $user['username'];
                             $_SESSION['TYPE'] = $user['type'];
+                            session_write_close();
+
+                            header("Location: ../index.php");
+                            exit();
+                        }
+						else if(mysqli_num_rows($result2) == 1){
+                            session_regenerate_id();
+                            $user = mysqli_fetch_assoc($result2);
+
+                            $_SESSION['logged'] = true;
+                            $_SESSION['username'] = $user['first_name'];
+                            $_SESSION['TYPE'] = '0';
+                            $_SESSION['USER_ID'] = $user['pid'];
+
                             session_write_close();
 
                             header("Location: ../index.php");
@@ -62,16 +78,7 @@
 							exit();
 						}	
 					}
-					else{
-						echo "<script> alert('User is not Valid'); </script>"; 
-
-						$emailErr = "Invalid email or password";
-
-                        session_write_close();
-
-                        header("Location: ../login.php");
-                        exit();
-					}
+					
 				}
                 else{
                     session_write_close();

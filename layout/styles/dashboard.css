@@ -151,9 +151,7 @@
 }
 
 /* people_details.php styles */
-.p_box{
-    width: 1000px;
-}
+
 .p_button{
     background-color: saddlebrown;
     padding: 10px;
@@ -174,10 +172,4 @@
 .card-img{
     opacity: 0.2;
     display: block;
-}
-
-@media screen and (max-width: 480px){
-    .p_box2{
-        display: none;
-    }
 }

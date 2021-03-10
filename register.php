@@ -73,6 +73,27 @@
                             </div>
                         </div>
                         <div class="form-group">
+                            <label for="grama_niladhari_division">Grama Niladhari Division</label>
+                            <div class="input-group-prepend">
+                                <div class="input-group-text"><i class="fas fa-user"></i></div>
+                                <div class="input-group">
+                                    <select id="grama_niladhari_division"  name="grama_niladhari_division"class="form-control">
+                                        <option value="">Select Grama Niladhari Division</option>
+                                        <option value="164 Pamunugama">164 Pamunugama</option>
+                                        <option value="164/A Maha Pamunugama">164/A Maha Pamunugama</option>
+                                        <option value="165/A Bopitiya">165/A Bopitiya</option>
+                                        <option value="165 Bopitiya">165 Bopitiya</option>
+                                        <option value="166 Nugape">166 Nugape</option>
+                                        <option value="167 Uswetakriyyawa">167 Uswetakriyyawa</option>
+                                        <option value="168 Palliyawatta">168 Palliyawatta</option>
+                                        <option value="169 Hekiththa">169 Hekiththa</option>
+                                        <option value="169/A kurunduheena">169/A kurunduheena</option>
+                                        <option value="176 Wattala">176 Wattala</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
                             <label for="password">Password</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
@@ -96,17 +117,13 @@
                         <div >
                             <label for="radio1"><u> Profession </u></label>
                             <div class="custom-control custom-radio">
-                                <input type="radio" id="customRadio" name="customRadio" value="Secretary" class="form-check-input" >
-                                <label class="form-check-label" for="radio1" style="cursor: pointer;">Secretary</label>
-                            </div>
-                            <div class="custom-control custom-radio">
                                 <input type="radio" id="customRadio" name="customRadio" value="Grama Niladhari" class="form-check-input">
                                 <label class="form-check-label" for="radio2" style="cursor: pointer;">Grama Niladhari</label>
                             </div>
                         </div>
                         <br>
                         <div>
-                            <input type="submit" class="btn btn-success" value="Login" name="register" id="register">
+                            <input type="submit" class="btn btn-success" value="Register" name="register" id="register">
                         </div>
                     </form>
                 </div>

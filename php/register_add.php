@@ -14,7 +14,7 @@
         $password = $_POST['password'];
         $rePassword = $_POST['repassword'];
         $profision = $_POST['customRadio'];
-
+        $division = $_POST['grama_niladhari_division'];
         $type = 0;
 
         if($profision == 'Secretary'){
@@ -24,14 +24,14 @@
             $type = 2;
         }
 
-        $sql = "INSERT INTO user(firstname, lastname, username, email, contact, password, type) 
-            VALUES ('$firstname', '$lastname', '$username' , '$email', '$phone', '$password' ,'$type')";
+        $sql = "INSERT INTO user(firstname, lastname, username, email, contact, password, type, division) 
+            VALUES ('$firstname', '$lastname', '$username' , '$email', '$phone', '$password' ,'$type','$division')";
         
-        $sql2 = "INSERT INTO user_login(username, email, password, type) 
-                VALUES ('$username','$email','$password','$type')";
+        // $sql2 = "INSERT INTO user_login(username, email, password, type) 
+        //         VALUES ('$username','$email','$password','$type')";
+        // mysqli_query($conn, $sql2);
 
         if(mysqli_query($conn, $sql)){
-            mysqli_query($conn, $sql2);
             
             $_SESSION['REGISTERED'] = true;
             session_write_close();

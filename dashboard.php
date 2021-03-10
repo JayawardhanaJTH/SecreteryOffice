@@ -92,7 +92,7 @@
 				</div>
 				
 				<div class="col-md-6 col-sm-12 mb-3">
-					<a href="approvals.html">
+					<a href="approvals.php">
 
 						<div class="card">
 							<div class="card-header text-center">

@@ -134,6 +134,9 @@
 									<div class="dropdown-menu">
 										<a href="login.php" class="dropdown-item">Login</a>
 									</div>
+									<div class="dropdown-menu">
+										<a href="register.php" class="dropdown-item">Register as Grama Niladhari</a>
+									</div>
 								</div>
 
 								<?php

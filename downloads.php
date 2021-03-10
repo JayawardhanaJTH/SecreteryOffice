@@ -98,6 +98,7 @@
         </div>
     </div>
 <?php
+if($_SESSION['TYPE'] == '1' || $_SESSION['TYPE'] == '2'){
     if(isset($_GET['file_edit'])){
         $id = $_GET['file_edit'];
 
@@ -141,6 +142,7 @@
     </div>
 
 <?php
+    }
     include "support/footer.php";
 ?>
 

@@ -133,10 +133,9 @@
 									<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">User Account</a>
 									<div class="dropdown-menu">
 										<a href="login.php" class="dropdown-item">Login</a>
-									</div>
-									<div class="dropdown-menu">
 										<a href="register.php" class="dropdown-item">Register as Grama Niladhari</a>
 									</div>
+									
 								</div>
 
 								<?php

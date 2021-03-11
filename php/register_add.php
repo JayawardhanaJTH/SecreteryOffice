@@ -24,12 +24,8 @@
             $type = 2;
         }
 
-        $sql = "INSERT INTO user(firstname, lastname, username, email, contact, password, type, division) 
-            VALUES ('$firstname', '$lastname', '$username' , '$email', '$phone', '$password' ,'$type','$division')";
-        
-        // $sql2 = "INSERT INTO user_login(username, email, password, type) 
-        //         VALUES ('$username','$email','$password','$type')";
-        // mysqli_query($conn, $sql2);
+        $sql = "INSERT INTO user(firstname, lastname, username, email, contact, nic, password, type, division) 
+            VALUES ('$firstname', '$lastname', '$username' , '$email', '$phone', '$nic' , '$password' ,'$type','$division')";
 
         if(mysqli_query($conn, $sql)){
             

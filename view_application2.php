@@ -106,8 +106,8 @@
             if($_SESSION['TYPE'] == '1' || $_SESSION['TYPE'] == '2'){
     ?>
     <div class="m-3 text-center">
-        <a  href="php/submit_application.php?type=2&status=true&id=1"><input type="submit" value="Approve" name ="approve" id= "approve" class="btn btn-success" style="background:green;"></a>
-        <a  href="php/submit_application.php?type=2&status=false&id=1"><input type="submit" href="" value="Reject" name ="reject" id= "reject" class="btn btn-danger"></a>
+        <a  href="php/submit_application.php?type=2&status=true&id=<?php echo $id ?>"><input type="submit" value="Approve" name ="approve" id= "approve" class="btn btn-success" style="background:green;"></a>
+        <a  href="php/submit_application.php?type=2&status=false&id=<?php echo $id ?>"><input type="submit" href="" value="Reject" name ="reject" id= "reject" class="btn btn-danger"></a>
     </div>
     <?php
             }

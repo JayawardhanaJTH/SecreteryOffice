@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 10, 2021 at 05:14 PM
+-- Generation Time: Mar 11, 2021 at 07:34 PM
 -- Server version: 10.1.33-MariaDB
 -- PHP Version: 7.2.6
 
@@ -68,17 +68,20 @@ CREATE TABLE `business_registration` (
   `grama_niladhari_approval` int(11) DEFAULT '0',
   `secretary_approval` int(11) DEFAULT '0',
   `submitted_by` int(11) NOT NULL,
-  `date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `approved_date` datetime DEFAULT NULL,
+  `grama_niladhari_sign` varchar(200) DEFAULT NULL,
+  `secretary_sign` varchar(200) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `business_registration`
 --
 
-INSERT INTO `business_registration` (`f_id`, `b_name`, `b_form`, `b_address`, `b_date`, `b_emp_count`, `b_sub_name`, `b_owner_address`, `b_contact`, `b_citizenship`, `b_email`, `b_ownership`, `b_grama_division`, `grama_niladhari_approval`, `secretary_approval`, `submitted_by`, `date`) VALUES
-(19, 'Abhiru', 'Software company', '0', '2021-03-27', 5, 'aaa', 'Deepthi', '2147483647', 'Sri lankan', 'tiranharsha2323@gmail.com', 'Own business', '165 Bopitiya', 0, 0, 1, '2021-03-10 21:01:45'),
-(20, 'aaa', 'aaa', '0', '2021-03-27', 5, '', 'Deepthi', '2147483647', 'Sri lankan', 'tiranharsha2323@gmail.com', 'aaa', '168 Palliyawatta', 0, 0, 1, '2021-03-10 21:01:45'),
-(31, 'aaa', 'aaa', 'Deepthi', '2021-03-18', 5, 'aaa', 'Deepthi', '+10769036197', 'Sri lankan', 'tiranharsha2323@gmail.com', 'aaa', '164/A Maha Pamunugama', 0, 0, 1, '2021-03-10 21:01:45');
+INSERT INTO `business_registration` (`f_id`, `b_name`, `b_form`, `b_address`, `b_date`, `b_emp_count`, `b_sub_name`, `b_owner_address`, `b_contact`, `b_citizenship`, `b_email`, `b_ownership`, `b_grama_division`, `grama_niladhari_approval`, `secretary_approval`, `submitted_by`, `date`, `approved_date`, `grama_niladhari_sign`, `secretary_sign`) VALUES
+(19, 'Abhiru', 'Software company', '0', '2021-03-27', 5, 'aaa', 'Deepthi', '2147483647', 'Sri lankan', 'tiranharsha2323@gmail.com', 'Own business', '165 Bopitiya', 1, 1, 1, '2021-03-10 21:01:45', '2021-03-11 07:16:12', 'IT18208672', 'Samantha'),
+(20, 'aaa', 'aaa', '0', '2021-03-27', 5, '', 'Deepthi', '2147483647', 'Sri lankan', 'tiranharsha2323@gmail.com', 'aaa', '168 Palliyawatta', 0, 0, 1, '2021-03-10 21:01:45', NULL, NULL, NULL),
+(31, 'aaa', 'aaa', 'Deepthi', '2021-03-18', 5, 'aaa', 'Deepthi', '+10769036197', 'Sri lankan', 'tiranharsha2323@gmail.com', 'aaa', '164/A Maha Pamunugama', 1, 3, 1, '2021-03-10 21:01:45', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -147,17 +150,19 @@ CREATE TABLE `requirement_application` (
   `gender` varchar(20) NOT NULL,
   `grama_approval` int(11) NOT NULL DEFAULT '0',
   `submitted_by` int(11) NOT NULL,
-  `date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `approved_date` datetime DEFAULT NULL,
+  `grama_niladhari_sign` varchar(200) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `requirement_application`
 --
 
-INSERT INTO `requirement_application` (`f_id`, `full_name`, `division`, `address`, `contact`, `email`, `requirement`, `nic`, `gender`, `grama_approval`, `submitted_by`, `date`) VALUES
-(1, '0', '165/A Bopitiya', 'Deepthi', '2147483647', 'tiranharsha2323@gmail.com', 'To register company', '962841180v', 'Male', 0, 1, '2021-03-09 20:21:44'),
-(2, 'Tiran Harsha', '166 Nugape', 'Deepthi', '2147483647', 'tiranharsha2323@gmail.com', 'To register company', '962841180v', 'Male', 0, 1, '2021-03-09 20:21:44'),
-(3, 'Tiran Harsha', '166 Nugape', 'Deepthi', '+10769036197', 'tiranharsha2323@gmail.com', 'To register company', '962841180v', 'Male', 0, 1, '2021-03-09 20:21:44');
+INSERT INTO `requirement_application` (`f_id`, `full_name`, `division`, `address`, `contact`, `email`, `requirement`, `nic`, `gender`, `grama_approval`, `submitted_by`, `date`, `approved_date`, `grama_niladhari_sign`) VALUES
+(1, '0', '165/A Bopitiya', 'Deepthi', '2147483647', 'tiranharsha2323@gmail.com', 'To register company', '962841180v', 'Male', 1, 1, '2021-03-09 20:21:44', '2021-03-11 00:00:00', 'IT18208672'),
+(2, 'Tiran Harsha', '166 Nugape', 'Deepthi', '2147483647', 'tiranharsha2323@gmail.com', 'To register company', '962841180v', 'Male', 3, 1, '2021-03-09 20:21:44', NULL, NULL),
+(3, 'Tiran Harsha', '166 Nugape', 'Deepthi', '+10769036197', 'tiranharsha2323@gmail.com', 'To register company', '962841180v', 'Male', 0, 1, '2021-03-09 20:21:44', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -172,6 +177,7 @@ CREATE TABLE `user` (
   `username` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
   `contact` varchar(11) NOT NULL,
+  `nic` varchar(200) NOT NULL,
   `password` varchar(50) NOT NULL,
   `type` int(11) NOT NULL,
   `division` varchar(200) NOT NULL,
@@ -183,13 +189,13 @@ CREATE TABLE `user` (
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id`, `firstname`, `lastname`, `username`, `email`, `contact`, `password`, `type`, `division`, `approved`, `date`) VALUES
-(1, 'Samantha', 'Perera', 'samantha', 'samantha@gmail.com', '761234567', 'samantha123@gmail.com', 2, '', 1, '2021-03-10 21:21:01'),
-(2, 'Janage Tiran', 'Jayawardana', 'IT18216974', 'samantha@gmail.com', '2147483647', 'samantha123@', 2, '', 0, '2021-03-10 21:21:01'),
-(3, 'Janage Tiran', 'Jayawardana', 'IT18208672', 'samantha@gmail.com', '2147483647', 'samantha123@', 2, '', 0, '2021-03-10 21:21:01'),
-(4, 'Janage Tiran', 'Jayawardana', 'Tiran Harsha', 'samantha@gmail.com', '2147483647', 'CC', 2, '164 Pamunugama', 0, '2021-03-10 21:21:01'),
-(5, 'Tiran', 'Harsha', 'IT18216974', 'samantha@gmail.com', '+1076903619', 'AA', 2, '167 Uswetakriyyawa', 0, '2021-03-10 21:21:01'),
-(6, 'Aruna', 'Harsha', 'IT18208672', 'samantha@gmail.com', '+1076903619', 'gg', 2, '165/A Bopitiya', 0, '2021-03-10 21:21:01');
+INSERT INTO `user` (`id`, `firstname`, `lastname`, `username`, `email`, `contact`, `nic`, `password`, `type`, `division`, `approved`, `date`) VALUES
+(1, 'Samantha', 'Perera', 'samantha', 'tiran2323@gmail.com', '761234567', '962841180V', 'samantha123@gmail.com', 2, '', 1, '2021-03-10 21:21:01'),
+(2, 'Janage Tiran', 'Jayawardana', 'IT18216974', 'tiranharsha2323@gmail.com', '2147483647', '962841180V', 'samantha123@', 2, 'ASAS', 1, '2021-03-10 21:21:01'),
+(3, 'Janage Tiran', 'Jayawardana', 'IT18208672', 'samantha@gmail.com', '2147483647', '', 'samantha123@', 2, '', 0, '2021-03-10 21:21:01'),
+(4, 'Janage Tiran', 'Jayawardana', 'Tiran Harsha', 'samantha@gmail.com', '2147483647', '', 'CC', 2, '164 Pamunugama', 0, '2021-03-10 21:21:01'),
+(5, 'Tiran', 'Harsha', 'IT18216974', 'samantha@gmail.com', '+1076903619', '', 'AA', 2, '167 Uswetakriyyawa', 0, '2021-03-10 21:21:01'),
+(6, 'Aruna', 'Harsha', 'IT18208672', 'samantha@gmail.com', '+1076903619', '', 'gg', 2, '165/A Bopitiya', 0, '2021-03-10 21:21:01');
 
 -- --------------------------------------------------------
 
@@ -211,7 +217,8 @@ CREATE TABLE `user_login` (
 
 INSERT INTO `user_login` (`id`, `username`, `email`, `password`, `type`) VALUES
 (1, 'Samantha', 'samantha@gmail.com', 'samantha123@', 1),
-(6, 'IT18208672', 'samantha@gmail.com', 'gg', 2);
+(6, 'IT18208672', 'samantha@gmail.com', 'gg', 2),
+(7, 'IT18216974', 'tiranharsha2323@gmail.com', 'samantha123@', 2);
 
 --
 -- Indexes for dumped tables
@@ -287,7 +294,7 @@ ALTER TABLE `events`
 -- AUTO_INCREMENT for table `people`
 --
 ALTER TABLE `people`
-  MODIFY `pid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `pid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `requirement_application`
@@ -299,12 +306,6 @@ ALTER TABLE `requirement_application`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
---
--- AUTO_INCREMENT for table `user_login`
---
-ALTER TABLE `user_login`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --

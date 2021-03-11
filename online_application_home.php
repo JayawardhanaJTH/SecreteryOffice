@@ -78,10 +78,14 @@
 
                             if($grama == '1'){
                                 $g_status = "Approved";
+                            }else if($grama == '3'){
+                                $g_status = "Rejected";
                             }
 
                             if($sec == '1'){
                                 $s_status = "Approved";
+                            }else if($sec == '3'){
+                                $s_status = "Rejected";
                             }
                     ?>
                     <div class="col-md-6 col-sm-12 mb-3">
@@ -110,6 +114,8 @@
 
                             if($grama == '1'){
                                 $g_status = "Approved";
+                            }else if($grama == '3'){
+                                $g_status = "Rejected";
                             }
                     ?>
                     <div class="col-md-6 col-sm-12 mb-3">

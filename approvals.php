@@ -11,7 +11,13 @@
 
 ?>
 <?php
-    $sql1  = "SELECT * FROM business_registration WHERE grama_niladhari_approval= '0'";
+ 
+    if($_SESSION['TYPE'] == '1'){
+        $sql1  = "SELECT * FROM business_registration WHERE grama_niladhari_approval= '1' && secretary_approval='0'";
+    }else{
+        $sql1  = "SELECT * FROM business_registration WHERE grama_niladhari_approval= '0'";
+    }
+
     $sql2  = "SELECT * FROM requirement_application WHERE grama_approval= '0'";
     $sql3  = "SELECT * FROM user WHERE approved= '0'";
 
@@ -25,7 +31,14 @@
 ?>
 <link href="layout/styles/dashboard.css" rel="stylesheet" type="text/css" media="all">
 <div class="text-center">
+
     <h1>Business Application Requests</h1>
+    <?php
+        if($business == null){
+            echo "No data to show";
+        } 
+        else{
+    ?>
     <div class="p_box row m-1 justify-content-center align-items-center">
 
             <?php
@@ -46,7 +59,7 @@
                                <br>
                                Submitted Date : <?php echo $obj['date']; ?>
 							   <br>
-							   Status : Grama Niladhari - Not Approved
+							   Status : Grama Niladhari - <?php if ($obj['grama_niladhari_approval']){ echo 'Approved';}else {echo 'Not Approved';} ?>
 						   <br>
                             Status : Secretary - Not Approved 
                             </p>
@@ -63,6 +76,10 @@
                 }
         ?>
     </div>
+    <?php
+        }
+        if($_SESSION['TYPE'] == '2'){
+    ?>
     <h1>Requirement Application Requests</h1>
     <div class="p_box row m-1 justify-content-center align-items-center">
             <?php
@@ -97,9 +114,13 @@
         <?php
                 }
         ?>
-</div>
-<h1>Grama Niladhari Registration Requests</h1>
-<div class="p_box row m-1 justify-content-center align-items-center">
+    </div>
+    <?php
+        }
+        if($_SESSION['TYPE'] == '1'){
+    ?>
+    <h1>Grama Niladhari Registration Requests</h1>
+    <div class="p_box row m-1 justify-content-center align-items-center">
             <?php
                 foreach($user_req as $obj){
             ?>
@@ -128,6 +149,9 @@
                 }
         ?>
     </div>
+    <?php
+        }
+    ?>
 </div>
 <?php
     include "support/footer.php";

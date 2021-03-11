@@ -122,20 +122,20 @@
                         <p>Checked by:</p>
                     </div>
                     <div class="col-md-3">
-                        <p>Date:</p>
+                        <p>Approved Date:<?php if($data['secretary_approval']=='1'){echo date("Y-m-d",strtotime($data['approved_date']));} ; ?></p>
                     </div>
-                    <div class="col-md-3">
-                        <p>Time:</p>
-                    </div>
+                    <!-- <div class="col-md-3">
+                        <p>Approved Time:<?php if($data['secretary_approval']=='1'){echo date("h:i:sa",strtotime($data['approved_date']));} ; ?></p>
+                    </div> -->
                 </div>
                 <div class="row justify-content-center">
                     <div class="col-5 ml-md-5">
-                        <p>-------------------<br>
+                        <p><b><?php if($data['secretary_approval']=='1'){echo $data['secretary_sign'];} ; ?></b><br>
                         Divisional secretary<br>
                         ප්‍රාදේශීය ලේකම්</p>
                     </div>
                     <div class="col-5 ml-md-5 ">
-                        <p>-------------------<br>
+                        <p><b><?php if($data['grama_niladhari_approval']=='1'){echo $data['grama_niladhari_sign'];} ; ?></b><br>
                         Grama Niladhari <br>
                          ග්‍රාම නිලධාරී</p>
                     </div>
@@ -147,7 +147,7 @@
         ?>
         <div class="m-3 text-center">
             <a  href="php/submit_application.php?type=1&status=true&id=<?php echo $id ?>"><input type="submit" value="Approve" name ="approve" id= "approve" class="btn btn-success" style="background:green;"></a>
-            <a  href="php/submit_application.php?type=1&status=false&id=<?php echo $id ?>"><input type="submit" href="" value="Reject" name ="reject" id= "reject" class="btn btn-danger"></a>
+            <a  href="php/submit_application.php?type=1&status=false&id=<?php echo $id ?>"><input type="submit" value="Reject" name ="reject" id= "reject" class="btn btn-danger"></a>
         </div>
         <?php
                 }

@@ -7,8 +7,8 @@ require_once("../connection/connection.php");
     $user_type = $_SESSION['TYPE'];
 
     if($form_type == '1'){
-        $status = '-1';
-        if($submit_status == true){
+        $status = '3';
+        if($submit_status == 'true'){
             $status = '1';
         }
 
@@ -32,6 +32,10 @@ require_once("../connection/connection.php");
             mysqli_query($conn, $sql);
 
             if($status == '1'){
+                $date = date('Y-m-d h:i:sa');
+                $name = $_SESSION['username'];
+                $sql = "UPDATE business_registration SET secretary_sign = '$name',approved_date='$date' WHERE f_id ='$form_id'";
+                mysqli_query($conn, $sql);
 
                 $to = $email;
                 $mailSubject =  "Business registration Application Approved By Secretary.";
@@ -64,6 +68,10 @@ require_once("../connection/connection.php");
 
             if($status == '1'){
 
+                $name = $_SESSION['username'];
+                $sql = "UPDATE business_registration SET grama_niladhari_sign = '$name' WHERE f_id ='$form_id'";
+                mysqli_query($conn, $sql);
+
                 $to = $email;
                 $mailSubject =  "Business registration Application Approved By Grama Niladhari.";
                 $emailBody = "Dear <b> $username </b> your Application is Approved. <br>
@@ -90,12 +98,12 @@ require_once("../connection/connection.php");
             }
         }
         else{
-            header("location: support/error.php");
+            header("location: ../support/error.php");
         }
     }
     else if($form_type == '2'){
-        $status = '-1';
-        if($submit_status == true){
+        $status = '3';
+        if($submit_status == 'true'){
             $status = '1';
         }
 
@@ -119,6 +127,11 @@ require_once("../connection/connection.php");
             mysqli_query($conn, $sql);
 
             if($status == '1'){
+
+                $date = date("Y-m-d");
+                $name = $_SESSION['username'];
+                $sql = "UPDATE requirement_application SET grama_niladhari_sign = '$name',approved_date='$date' WHERE f_id ='$form_id'";
+                mysqli_query($conn, $sql);
 
                 $to = $email;
                 $mailSubject =  "Requirement Application Approved By Grama Niladhari.";
@@ -144,12 +157,12 @@ require_once("../connection/connection.php");
             }
         }
         else{
-            header("location: support/error.php");
+            header("location: ../support/error.php");
         }
     }
     else if($form_type == '3'){
-        $status = '-1';
-        if($submit_status == true){
+        $status = '3';
+        if($submit_status == 'true'){
             $status = '1';
         }
 
@@ -162,14 +175,15 @@ require_once("../connection/connection.php");
             $result = mysqli_query($conn,$query);
             $user = mysqli_fetch_assoc($result);
 
+            $id = $user['id'];
             $username = $user['username'];
             $email = $user['email'];
             $password = $user['password'];
 
             if($status == '1'){
 
-                $sql2 = "INSERT INTO user_login(username, email, password, type) 
-                    VALUES ('$username','$email','$password','2')";
+                $sql2 = "INSERT INTO user_login(id,username, email, password, type) 
+                    VALUES ('$id','$username','$email','$password','2')";
     
                 mysqli_query($conn, $sql2);
 
@@ -199,10 +213,10 @@ require_once("../connection/connection.php");
             }
         }
         else{
-            header("location: support/error.php");
+            header("location: ../support/error.php");
         }
     }
     else{
-        header("location: support/error.php");
+        header("location: ../support/error.php");
     }
 ?>

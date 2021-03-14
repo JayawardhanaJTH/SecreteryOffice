@@ -57,7 +57,7 @@
 							$status = mysqli_fetch_assoc($result);
 							$text = "Not Available";
 
-							if($status == '1'){
+							if($status['status'] == '1'){
 								$text = "Available";
 							}
 						?>

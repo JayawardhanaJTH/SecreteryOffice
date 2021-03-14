@@ -48,6 +48,17 @@
                             $_SESSION['logged'] = true;
                             $_SESSION['username'] = $user['username'];
                             $_SESSION['TYPE'] = $user['type'];
+
+							if($user['type'] == '2'){
+								$uer_id = $user['id'];
+
+								$sql = "SELECT division FROM user WHERE id = '$uer_id'";
+
+								$result3 = mysqli_query($conn,$sql);
+								$grama_niladhari = mysqli_fetch_assoc($result3);
+
+								$_SESSION['DIVISION'] = $grama_niladhari['division'];
+							}
                             session_write_close();
 
                             header("Location: ../index.php");

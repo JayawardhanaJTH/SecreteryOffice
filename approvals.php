@@ -11,22 +11,24 @@
 
 ?>
 <?php
- 
     if($_SESSION['TYPE'] == '1'){
         $sql1  = "SELECT * FROM business_registration WHERE grama_niladhari_approval= '1' && secretary_approval='0'";
     }else{
-        $sql1  = "SELECT * FROM business_registration WHERE grama_niladhari_approval= '0'";
+        $division = $_SESSION['DIVISION'];
+        
+        $sql1  = "SELECT * FROM business_registration WHERE grama_niladhari_approval= '0' && b_grama_division = '$division'";
+        $sql2  = "SELECT * FROM requirement_application WHERE grama_approval= '0' && division = '$division'";
+        
+        $result_requirement = mysqli_query($conn, $sql2);
+        $requirement = mysqli_fetch_all($result_requirement,MYSQLI_ASSOC);
     }
 
-    $sql2  = "SELECT * FROM requirement_application WHERE grama_approval= '0'";
     $sql3  = "SELECT * FROM user WHERE approved= '0'";
 
     $result_business = mysqli_query($conn, $sql1);
-    $result_requirement = mysqli_query($conn, $sql2);
     $result_user = mysqli_query($conn, $sql3);
 
     $business = mysqli_fetch_all($result_business,MYSQLI_ASSOC);
-    $requirement = mysqli_fetch_all($result_requirement,MYSQLI_ASSOC);
     $user_req = mysqli_fetch_all($result_user,MYSQLI_ASSOC);
 ?>
 <link href="layout/styles/dashboard.css" rel="stylesheet" type="text/css" media="all">

@@ -50,7 +50,18 @@
 				</div>
 				<div class="col-md-3 text-center " >
 						<div class="avilability " style="border:2px solid #95103B; border-radius: 10px;">
-							<h5 class="mt-3">Secretary | Available </h5>
+						<?php
+							$sql = "SELECT status FROM availability";
+							$result = mysqli_query($conn, $sql);
+
+							$status = mysqli_fetch_assoc($result);
+							$text = "Not Available";
+
+							if($status == '1'){
+								$text = "Available";
+							}
+						?>
+							<h5 class="mt-3">Secretary | <?php echo $text ?> </h5>
 						</div>
 				</div>
 			</div>

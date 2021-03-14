@@ -74,6 +74,9 @@
 						</div>
 					</a>
 				</div>
+				<?php
+					if($_SESSION['TYPE'] == '1'){
+				?>
 				<div class="w-100"></div>
 				<div class="col-md-6 col-sm-12 mb-3">
 					<a href="#">
@@ -90,25 +93,8 @@
 						</div>
 					</a>
 				</div>
-				
 				<div class="col-md-6 col-sm-12 mb-3">
-					<a href="approvals.php">
-
-						<div class="card">
-							<div class="card-header text-center">
-								<h1><i class="fa fa-check-circle"> Approvals</i></h1>
-							</div>
-							<div class="card-body text-center">
-								<div class="details">
-									<p>About applications and users approvals details</p>
-								</div>
-							</div>
-						</div>
-					</a>
-				</div>
-				<div class="w-100"></div>
-				<div class="col-md-6 col-sm-12 mb-3">
-					<a href="#">
+					<a href="details.php">
 
 						<div class="card">
 							<div class="card-header text-center">
@@ -122,16 +108,20 @@
 						</div>
 					</a>
 				</div>
+				<?php
+					}
+				?>
+				<div class="w-100"></div>
 				<div class="col-md-6 col-sm-12 mb-3">
-					<a href="#">
+					<a href="approvals.php">
 
 						<div class="card">
 							<div class="card-header text-center">
-								<h1><i class="fa fa-map-marker"> Availability</i></h1>
+								<h1><i class="fa fa-check-circle"> Approvals</i></h1>
 							</div>
 							<div class="card-body text-center">
 								<div class="details">
-									<p>About secretary availability</p>
+									<p>About applications and users approvals details</p>
 								</div>
 							</div>
 						</div>

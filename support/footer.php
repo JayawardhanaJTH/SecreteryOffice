@@ -84,7 +84,9 @@
 		});
 	</script> -->
 
-	
+	<div onload="activeLink('<?php echo $page; ?>')">
+
+	</div>
 </body>
 
 </html>

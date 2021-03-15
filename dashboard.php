@@ -3,6 +3,7 @@
     if(!isset($_SESSION['logged'])){
 		header("location: login.php");
 	}
+	$page = "dashboard";
     require "connection/connection.php";
     include "support/header.php";
 ?>

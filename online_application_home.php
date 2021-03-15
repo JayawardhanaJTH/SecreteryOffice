@@ -4,6 +4,7 @@
         header("location: login.php");
 		
 	}
+    $page = "forms";
     require "connection/connection.php";
     include "support/header.php";
 ?>

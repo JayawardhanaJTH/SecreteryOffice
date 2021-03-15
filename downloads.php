@@ -3,9 +3,9 @@
     if(!isset($_SESSION['logged'])){
 		header("location: login.php");
 	}
-    include 'support/header.php';
+    $page = "downloads";
     require_once("connection/connection.php");
-
+    include 'support/header.php';
 ?>
     <div class="container">
         <!-- download items section -->
@@ -39,16 +39,22 @@
                                 <span class="download_icon text-primary"><i class="fa fa-download"></i></span>
                             </a>
                         </div>
-                        <div class="col text-center">
-                            <a href="downloads.php?file_edit=<?php echo $file['id'] ?>" class="text-decoration-none text-dark" data-toggle="tooltip" data-placement="top" title="Edit">
-                                <span class="download_icon text-success"><i class="fa fa-edit"></i></span>
-                            </a>
-                        </div>
-                        <div class="col text-center">
-                            <a href="/php/downloads_add.php?file_delete=<?php echo $file['id'] ?>" class="text-decoration-none text-dark" data-toggle="tooltip" data-placement="top" title="Delete">
-                                <span class="download_icon text-danger"><i class="fa fa-trash-alt"></i></span>
-                            </a>
-                        </div>
+                        <?php
+                            if($_SESSION['TYPE'] == '1'){
+                        ?>
+                            <div class="col text-center">
+                                <a href="downloads.php?file_edit=<?php echo $file['id'] ?>" class="text-decoration-none text-dark" data-toggle="tooltip" data-placement="top" title="Edit">
+                                    <span class="download_icon text-success"><i class="fa fa-edit"></i></span>
+                                </a>
+                            </div>
+                            <div class="col text-center">
+                                <a href="/php/downloads_add.php?file_delete=<?php echo $file['id'] ?>" class="text-decoration-none text-dark" data-toggle="tooltip" data-placement="top" title="Delete">
+                                    <span class="download_icon text-danger"><i class="fa fa-trash-alt"></i></span>
+                                </a>
+                            </div>
+                        <?php
+                            }
+                        ?>
                     </div>
                 </div>
                 <?php
@@ -75,16 +81,22 @@
                                 <span class="download_icon text-primary"><i class="fa fa-download"></i></span>
                             </a>
                         </div>
-                        <div class="col text-center">
-                            <a href="downloads.php?file_edit=<?php echo $file['id'] ?>" class="text-decoration-none text-dark" data-toggle="tooltip" data-placement="top" title="Edit">
-                                <span class="download_icon text-success"><i class="fa fa-edit"></i></span>
-                            </a>
-                        </div>
-                        <div class="col text-center">
-                            <a href="/php/downloads_add.php?file_delete=<?php echo $file['id'] ?>" class="text-decoration-none text-dark" data-toggle="tooltip" data-placement="top" title="Delete">
-                                <span class="download_icon text-danger"><i class="fa fa-trash-alt"></i></span>
-                            </a>
-                        </div>
+                        <?php
+                            if($_SESSION['TYPE'] == '1'){
+                        ?>
+                            <div class="col text-center">
+                                <a href="downloads.php?file_edit=<?php echo $file['id'] ?>" class="text-decoration-none text-dark" data-toggle="tooltip" data-placement="top" title="Edit">
+                                    <span class="download_icon text-success"><i class="fa fa-edit"></i></span>
+                                </a>
+                            </div>
+                            <div class="col text-center">
+                                <a href="/php/downloads_add.php?file_delete=<?php echo $file['id'] ?>" class="text-decoration-none text-dark" data-toggle="tooltip" data-placement="top" title="Delete">
+                                    <span class="download_icon text-danger"><i class="fa fa-trash-alt"></i></span>
+                                </a>
+                            </div>
+                        <?php
+                            }
+                        ?>
                     </div>
                 </div>
                 <?php

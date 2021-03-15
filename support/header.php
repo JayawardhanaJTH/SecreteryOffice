@@ -34,7 +34,7 @@
 
 <!-- Begin of body -->
 
-<body id="top">
+<body id="top" onload="activeLink('<?php echo $page; ?>')">
 
 	<!-- Top header -->
 	<div class="wrapper row0">

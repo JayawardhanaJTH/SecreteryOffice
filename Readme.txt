@@ -5,5 +5,14 @@ Database name - divisional_secretary
 Use 'divisional_secretary.sql' file to create tables
 
 Login details 
-	email - samantha@gmail.com 	
-	password - samantha123@
+	secretary
+		email - samantha@gmail.com 	
+		password - samantha123@
+	grama niladhari
+		email - aruna@gmail.com 	
+		password - aruna123
+	people
+		email - tiran2323@gmail.com 	
+		password - tiran123
+
+To send emails need to edit php.ini and sendmail.ini files

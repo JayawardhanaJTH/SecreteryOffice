@@ -4,6 +4,7 @@
     if(!isset($_SESSION['logged'])){
         header("location: login.php");
 	}
+    $page = "about";
     require "connection/connection.php";
     include "support/header.php";
 ?>

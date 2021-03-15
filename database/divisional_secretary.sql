@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 11, 2021 at 07:34 PM
+-- Generation Time: Mar 15, 2021 at 11:22 AM
 -- Server version: 10.1.33-MariaDB
 -- PHP Version: 7.2.6
 
@@ -42,8 +42,26 @@ CREATE TABLE `applications` (
 --
 
 INSERT INTO `applications` (`id`, `name`, `description`, `upload_Name`, `downloads`, `upload_date`) VALUES
-(1, 'Test', 'This is test file', 'Using Student Support Portal.pdf', 13, '2021-03-02 21:35:06'),
-(5, 'Test2', 'This is test2 file', 'simple-array-sum-English.pdf', 0, '2021-03-03 21:47:23');
+(1, 'Application for get income tax', 'à¶†à¶¯à·à¶ºà¶¸à·Š à·ƒà·„à¶­à·’à¶šà¶ºà¶šà·Š à¶½à¶¶à· à¶œà·à¶±à·“à¶¸ à·ƒà¶¯à·„à· à¶…à¶ºà¶¯à·”à¶¸à·Š à¶´à¶­', 'à¶†à¶¯à¶ºà¶¸_à·ƒà·„à¶­à¶š_à¶…à¶ºà¶¯à¶¸à¶´à¶­.pdf', 13, '2021-03-02 21:35:06'),
+(5, 'Application for cutting down trees', 'à¶šà·œà·ƒà·Š à¶œà·ƒà·Š à¶šà·à¶´à·“à¶¸ à·ƒà¶¯à·„à· à¶…à¶ºà¶¯à·”à¶¸à·Š à¶´à¶­', 'à¶šà·ƒà¶œà·ƒ_à¶šà¶´à¶¸_à¶…à¶ºà¶¯à¶¸à¶´à¶­.pdf', 0, '2021-03-03 21:47:23');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `availability`
+--
+
+CREATE TABLE `availability` (
+  `id` int(11) NOT NULL DEFAULT '1',
+  `status` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `availability`
+--
+
+INSERT INTO `availability` (`id`, `status`) VALUES
+(1, 0);
 
 -- --------------------------------------------------------
 
@@ -79,9 +97,7 @@ CREATE TABLE `business_registration` (
 --
 
 INSERT INTO `business_registration` (`f_id`, `b_name`, `b_form`, `b_address`, `b_date`, `b_emp_count`, `b_sub_name`, `b_owner_address`, `b_contact`, `b_citizenship`, `b_email`, `b_ownership`, `b_grama_division`, `grama_niladhari_approval`, `secretary_approval`, `submitted_by`, `date`, `approved_date`, `grama_niladhari_sign`, `secretary_sign`) VALUES
-(19, 'Abhiru', 'Software company', '0', '2021-03-27', 5, 'aaa', 'Deepthi', '2147483647', 'Sri lankan', 'tiranharsha2323@gmail.com', 'Own business', '165 Bopitiya', 1, 1, 1, '2021-03-10 21:01:45', '2021-03-11 07:16:12', 'IT18208672', 'Samantha'),
-(20, 'aaa', 'aaa', '0', '2021-03-27', 5, '', 'Deepthi', '2147483647', 'Sri lankan', 'tiranharsha2323@gmail.com', 'aaa', '168 Palliyawatta', 0, 0, 1, '2021-03-10 21:01:45', NULL, NULL, NULL),
-(31, 'aaa', 'aaa', 'Deepthi', '2021-03-18', 5, 'aaa', 'Deepthi', '+10769036197', 'Sri lankan', 'tiranharsha2323@gmail.com', 'aaa', '164/A Maha Pamunugama', 1, 3, 1, '2021-03-10 21:01:45', NULL, NULL, NULL);
+(19, 'Abhiru', 'Software company', '0', '2021-03-27', 5, 'aaa', 'Deepthi', '2147483647', 'Sri lankan', 'tiranharsha2323@gmail.com', 'Own business', '165 Bopitiya', 1, 1, 1, '2021-03-10 21:01:45', '2021-03-11 07:16:12', 'IT18208672', 'Samantha');
 
 -- --------------------------------------------------------
 
@@ -109,6 +125,32 @@ INSERT INTO `events` (`e_id`, `e_name`, `e_date`, `e_image`, `e_description`, `e
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `income`
+--
+
+CREATE TABLE `income` (
+  `id` int(11) NOT NULL,
+  `application_id` int(11) NOT NULL,
+  `application_type` int(11) NOT NULL,
+  `amount` double NOT NULL,
+  `date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `income`
+--
+
+INSERT INTO `income` (`id`, `application_id`, `application_type`, `amount`, `date`) VALUES
+(3, 34, 1, 120, '2021-03-15 14:16:10'),
+(5, 36, 1, 120, '2021-03-15 14:16:10'),
+(6, 5, 1, 120, '2021-03-15 14:52:50'),
+(7, 6, 2, 120, '2021-03-15 14:54:58'),
+(8, 7, 2, 120, '2021-03-15 14:59:54'),
+(9, 8, 2, 120, '2021-03-15 15:01:28');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `people`
 --
 
@@ -129,7 +171,7 @@ CREATE TABLE `people` (
 --
 
 INSERT INTO `people` (`pid`, `first_name`, `last_name`, `email`, `grama_niladhari_division`, `gender`, `contact_number`, `address`, `password`) VALUES
-(1, 'Janage Tiran', 'Jayawardana', 'it18216974@my.sliit.lk', '', '', 2147483647, '12379', 'Chcoohho'),
+(1, 'Janage Tiran', 'Jayawardana', 'tiran2323@gmail.com', '164/A Maha Pamunugama', 'male', 2147483647, '12379', 'tiran123'),
 (6, 'Tiran', 'Harsha', 'tiranharsha2323@gmail.com', '164/A Maha Pamunugama', 'male', 2147483647, 'Deepthi', '9FJ_kF<*2j');
 
 -- --------------------------------------------------------
@@ -160,9 +202,10 @@ CREATE TABLE `requirement_application` (
 --
 
 INSERT INTO `requirement_application` (`f_id`, `full_name`, `division`, `address`, `contact`, `email`, `requirement`, `nic`, `gender`, `grama_approval`, `submitted_by`, `date`, `approved_date`, `grama_niladhari_sign`) VALUES
-(1, '0', '165/A Bopitiya', 'Deepthi', '2147483647', 'tiranharsha2323@gmail.com', 'To register company', '962841180v', 'Male', 1, 1, '2021-03-09 20:21:44', '2021-03-11 00:00:00', 'IT18208672'),
-(2, 'Tiran Harsha', '166 Nugape', 'Deepthi', '2147483647', 'tiranharsha2323@gmail.com', 'To register company', '962841180v', 'Male', 3, 1, '2021-03-09 20:21:44', NULL, NULL),
-(3, 'Tiran Harsha', '166 Nugape', 'Deepthi', '+10769036197', 'tiranharsha2323@gmail.com', 'To register company', '962841180v', 'Male', 0, 1, '2021-03-09 20:21:44', NULL, NULL);
+(3, 'Tiran Harsha', '166 Nugape', 'Deepthi', '+10769036197', 'tiranharsha2323@gmail.com', 'To register company', '962841180v', 'Male', 0, 1, '2021-03-09 20:21:44', NULL, NULL),
+(5, 'Janage Tiran Harsha Jayawardana', '164 Pamunugama', 'Deepthi', '+10769036197', 'it18216974@my.sliit.lk', 'To register company', '962841180v', 'Male', 0, 1, '2021-03-15 14:52:49', NULL, NULL),
+(6, 'Tiran Harsha', '165/A Bopitiya', 'Deepthi', '+10769036197', 'tiranharsha2323@gmail.com', 'To register company', '962841180v', 'Male', 0, 1, '2021-03-15 14:54:58', NULL, NULL),
+(7, 'Tiran Harsha', '164/A Maha Pamunugama', 'Deepthi', '+10769036197', 'tiranharsha2323@gmail.com', 'To register company', '962841180v', 'Male', 0, 1, '2021-03-15 14:59:52', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -191,11 +234,11 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`id`, `firstname`, `lastname`, `username`, `email`, `contact`, `nic`, `password`, `type`, `division`, `approved`, `date`) VALUES
 (1, 'Samantha', 'Perera', 'samantha', 'tiran2323@gmail.com', '761234567', '962841180V', 'samantha123@gmail.com', 2, '', 1, '2021-03-10 21:21:01'),
-(2, 'Janage Tiran', 'Jayawardana', 'IT18216974', 'tiranharsha2323@gmail.com', '2147483647', '962841180V', 'samantha123@', 2, 'ASAS', 1, '2021-03-10 21:21:01'),
+(2, 'Janage Tiran', 'Jayawardana', 'IT18216974', 'tiranharsha2323@gmail.com', '2147483647', '962841180V', 'samantha123@', 2, 'ASAS', 0, '2021-03-10 21:21:01'),
 (3, 'Janage Tiran', 'Jayawardana', 'IT18208672', 'samantha@gmail.com', '2147483647', '', 'samantha123@', 2, '', 0, '2021-03-10 21:21:01'),
 (4, 'Janage Tiran', 'Jayawardana', 'Tiran Harsha', 'samantha@gmail.com', '2147483647', '', 'CC', 2, '164 Pamunugama', 0, '2021-03-10 21:21:01'),
 (5, 'Tiran', 'Harsha', 'IT18216974', 'samantha@gmail.com', '+1076903619', '', 'AA', 2, '167 Uswetakriyyawa', 0, '2021-03-10 21:21:01'),
-(6, 'Aruna', 'Harsha', 'IT18208672', 'samantha@gmail.com', '+1076903619', '', 'gg', 2, '165/A Bopitiya', 0, '2021-03-10 21:21:01');
+(6, 'Aruna', 'Harsha', 'IT18208672', 'samantha@gmail.com', '+1076903619', '', 'gg', 2, '165/A Bopitiya', 1, '2021-03-10 21:21:01');
 
 -- --------------------------------------------------------
 
@@ -217,8 +260,7 @@ CREATE TABLE `user_login` (
 
 INSERT INTO `user_login` (`id`, `username`, `email`, `password`, `type`) VALUES
 (1, 'Samantha', 'samantha@gmail.com', 'samantha123@', 1),
-(6, 'IT18208672', 'samantha@gmail.com', 'gg', 2),
-(7, 'IT18216974', 'tiranharsha2323@gmail.com', 'samantha123@', 2);
+(6, 'Aruna', 'aruna@gmail.com', 'aruna123', 2);
 
 --
 -- Indexes for dumped tables
@@ -228,6 +270,12 @@ INSERT INTO `user_login` (`id`, `username`, `email`, `password`, `type`) VALUES
 -- Indexes for table `applications`
 --
 ALTER TABLE `applications`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `availability`
+--
+ALTER TABLE `availability`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -242,6 +290,12 @@ ALTER TABLE `business_registration`
 --
 ALTER TABLE `events`
   ADD PRIMARY KEY (`e_id`);
+
+--
+-- Indexes for table `income`
+--
+ALTER TABLE `income`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `people`
@@ -282,13 +336,19 @@ ALTER TABLE `applications`
 -- AUTO_INCREMENT for table `business_registration`
 --
 ALTER TABLE `business_registration`
-  MODIFY `f_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `f_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
 -- AUTO_INCREMENT for table `events`
 --
 ALTER TABLE `events`
   MODIFY `e_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `income`
+--
+ALTER TABLE `income`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `people`
@@ -300,7 +360,7 @@ ALTER TABLE `people`
 -- AUTO_INCREMENT for table `requirement_application`
 --
 ALTER TABLE `requirement_application`
-  MODIFY `f_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `f_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `user`

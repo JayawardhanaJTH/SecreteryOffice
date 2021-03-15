@@ -1,6 +1,7 @@
 Req: Mysql, Apache server 
 
 Database name - divisional_secretary
+Database file can be found in Database folder
 
 Use 'divisional_secretary.sql' file to create tables
 

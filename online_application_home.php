@@ -144,5 +144,26 @@
         ?>
     </div>
 <?php
-    include "support/footer.php";
+include "support/footer.php";
+
+    if(isset($_SESSION["FORM_SUBMITTED"])){
+        if($_SESSION["FORM_SUBMITTED"] == true){
+            unset($_SESSION["FORM_SUBMITTED"]);
+        
+?>
+    <script type="text/javascript">
+        success_popup('Form has been Submitted');
+    </script>
+<?php
+    }else{
+
+        unset($_SESSION["FORM_SUBMITTED"]);
+?>
+    <script type="text/javascript">
+        error_popup('Form has been not submitted');
+    </script>
+<?php
+    }
+}
+
 ?>

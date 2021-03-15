@@ -4,8 +4,8 @@
 		header("location: login.php");
 		
 	}
-    include 'support/header.php';
     require_once("connection/connection.php");
+    include 'support/header.php';
 ?>
     <div class="container p-1">
         <div class="border p-2">
@@ -50,7 +50,7 @@
                             <div class="form-group">
                                 <label for="contact">Telephone number</label>
                                 <label for="contact">(දුරකතන අංකය)</label>
-                                <input type="text" name="contact" id="contact" class="form-control">
+                                <input type="text" name="contact" id="Contact" class="form-control">
                             </div>
                         </li>
                     </div>
@@ -112,7 +112,45 @@
                          ග්‍රාම නිලධාරී</p>
                     </div>
                 </div>
-
+<!-- Payment Section -->
+<hr>
+                    <h1>Payment Section</h1>
+                    <div class="row no-gutters">
+                    
+                            <div class="form-group col-md-4 mr-md-5 ">
+                                <label for="card_num">Credit card details</label>
+                                <div class="input-group">
+                                    <input class="form-control" type="number" id="card_num" name="card_num" placeholder="1234 1234 1234 1234" required>
+                                </div>
+                                <span><i class="fab fa-cc-visa display-4"></i> <i class="fab fa-cc-mastercard display-4"></i> <i class="fab fa-cc-amex display-4"></i></span>
+                            </div>
+                       
+                       
+                            <div class="form-group col-md-6">
+                                <label for="name">Card holder name</label>
+                               
+                                <input type="text" name="name" id="name" placeholder="Card holder name" class="form-control" required>
+                            </div>
+                        
+                    </div>
+                    <div class="row no-gutters">
+                        
+                            <div class="form-group col-md-3 mr-md-5">
+                                <label for="card_date">Credit card expire date</label>
+                                <div class="input-group">
+                                    <input class="form-control" type="text" id="card_date" name="card_date" placeholder="MM/YY" required>
+                                </div>
+                            </div>
+                        
+                        
+                            <div class="form-group col-md-3">
+                                <label for="name">Amount</label>
+                                Rs.
+                                <input type="hidden" name="amount" id="amount" value="120.00" class="form-control" >
+                                <input type="text" name="amount" id="amount" value="120.00" class="form-control" disabled >
+                            </div>
+                       
+                    </div>
                 <div class="form-group">
                     <input type="submit" value="Save" name="form2_save"  class="btn">
                 </div>

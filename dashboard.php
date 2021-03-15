@@ -31,7 +31,18 @@
 				<div class="card">
 					<div class="card-body">
 						<h1>Total income of this month</h1>
-						<h1>Rs : 12334</h1>
+						<?php
+                        $sql = "select sum(amount) as total from income";
+                        $rs = mysqli_query($conn, $sql);
+						
+						$total = '0';
+
+						if ($row = mysqli_fetch_array($rs)) {
+                            $total = $row["total"];
+                            echo "<h5>Rs : $total</h5>";
+                        }
+                        ?>
+						
 					</div>
 				</div>
 	
@@ -79,7 +90,7 @@
 				?>
 				<div class="w-100"></div>
 				<div class="col-md-6 col-sm-12 mb-3">
-					<a href="#">
+					<a href="income.php">
 
 						<div class="card">
 							<div class="card-header text-center">

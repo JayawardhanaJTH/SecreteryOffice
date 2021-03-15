@@ -3,8 +3,8 @@
     if(!isset($_SESSION['logged'])){
 		header("location: login.php");
 	}
-    include 'support/header.php';
     require_once("connection/connection.php");
+    include 'support/header.php';
 
 ?>
 <?php

@@ -87,6 +87,7 @@
             
             if(in_array($event_image_ext,$extensions)=== false){
                 $errors[]="extension not allowed, please choose a JPEG or PNG file.";
+                echo 'extension not allowed, please choose a JPEG or PNG file.';
             }else{
             
                 $sql = "UPDATE events 
@@ -106,6 +107,7 @@
                     $_SESSION["UPLOAD"] = "unsuccess";
                     session_write_close();
                     die("Query failed: ".mysqli_error($conn));
+                    echo 'file error';
                 }
             }
         }else{
@@ -119,7 +121,7 @@
         $_SESSION["EVENT_ID"] = $e_id;
         session_write_close();
 
-        header('location: /event.php');
+        header('location: ../event.php');
         exit();
     }
     
@@ -136,7 +138,7 @@
 
             unlink("../uploadFiles/images/"+$event_image_name['e_image']);
 
-            header('location: /event.php');
+            header('location: ../event.php');
             exit();
         }else{
             echo mysqli_error();
@@ -144,7 +146,7 @@
             $_SESSION["DELETE_ED"] = "unsuccess";
             session_write_close();
 
-            header('location: /event.php');
+            header('location: ../event.php');
             exit();
         }
     }
@@ -157,7 +159,7 @@
         
         session_write_close();
 
-        header('location: /event.php');
+        header('location: ../event.php');
         exit();
         
     }

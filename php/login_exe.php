@@ -48,6 +48,7 @@
                             $_SESSION['logged'] = true;
                             $_SESSION['username'] = $user['username'];
                             $_SESSION['TYPE'] = $user['type'];
+							$_SESSION['USER_ID'] = $user['id'];
 
 							if($user['type'] == '2'){
 								$uer_id = $user['id'];

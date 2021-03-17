@@ -4,8 +4,8 @@
 		header("location: login.php");
 		
 	}
-    include 'support/header.php';
     require_once("connection/connection.php");
+    include 'support/header.php';
 ?>
 <?php
     $id = $_GET['id'];
@@ -116,6 +116,13 @@
                 <div class="text-center mb-5">
 
                     <p class="text-dark">I hereby confirm that I have inspected the above business and that the business is eligible for registration.</p>
+                </div>
+                <div class="row justify-content-between mb-5">
+        
+                    <div class="col-md-3">
+                        <p>Submitted Date:<?php echo date("Y-m-d",strtotime($data['date'])); ?></p>
+                    </div>
+                   
                 </div>
                 <div class="row justify-content-between mb-5">
                     <div class="col-md-6">

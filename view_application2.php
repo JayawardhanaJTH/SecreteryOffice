@@ -4,8 +4,8 @@
 		header("location: login.php");
 		
 	}
-    include 'support/header.php';
     require_once("connection/connection.php");
+    include 'support/header.php';
 ?>
 <?php
     $id = $_GET['id'];
@@ -87,9 +87,23 @@
                 <div class="text-center mb-5" >
                     <p class="text-dark">I hereby confirm that I have inspected the above requirement of citizen who lives in Wattala division.</p>
                 </div>
+                <div class="row justify-content-between mb-5">
+        
+                    <div class="col-md-3">
+                        <p>Submitted Date:<?php echo date("Y-m-d",strtotime($data['date'])); ?></p>
+                    </div>
+                   
+                </div>
+
+                <div class="row justify-content-between mb-5">
+                    <div class="col-md-3">
+                        <p>Approved Date:<?php if($data['grama_approval']=='1'){echo date("Y-m-d",strtotime($data['approved_date']));} ; ?></p>
+                    </div>
+                </div>
+                
                 <div class="row justify-content-center">
                     <div class="col-5 ml-md-5">
-                        <p><?php if($data['grama_approval']=='1'){echo $data['grama_niladhari_sign'];} ; ?><br>
+                        <p><b><?php if($data['grama_approval']=='1'){echo $data['grama_niladhari_sign'];} ; ?></b><br>
                         Grama Niladhari <br>
                          ග්‍රාම නිලධාරී</p>
                     </div>

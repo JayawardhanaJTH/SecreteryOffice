@@ -131,14 +131,14 @@
             header('Content-Length: ' . filesize('../uploadFiles/applications/' . $file['upload_Name']));
 
             readfile($path);
-
+// echo 'DB - '.$file['downloads'];
             $downloads = $file['downloads'] + 1;
-
+// echo ' Add - '.$downloads;
             $update_sql = "UPDATE applications SET downloads='$downloads' WHERE id='$id'";
 
             mysqli_query($conn, $update_sql);
 
-            $_SESSION['file_download'] = false;
+            $_SESSION['file_download'] = true;
             session_write_close();
 
             // echo $downloads;

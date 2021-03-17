@@ -50,7 +50,8 @@
             session_write_close();
             
             // die ("Connection failed ".mysqli_query($conn, $sql) .$conn->connect_error);
-            header('location: ../online_application.php');
+            header('location: ../online_application_home.php');
+            echo $conn->connect_error;
             exit();
         }
     }
@@ -97,7 +98,8 @@
             session_write_close();
             
             // die ("Connection failed ".mysqli_query($conn, $sql) .$conn->connect_error);
-            header('location: ../online_application2.php');
+            header('location: ../online_application_home.php');
+            echo $conn->connect_error;
             exit();
         }
     }

@@ -121,11 +121,11 @@
         </div>
     </div>
 </div>
-<script src="layout/scripts/alertBox.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <?php
     include "support/footer.php";
 ?>
-<script src="js/people-add.js"></script>
+<script src="layout/scripts/alertBox.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="js\people-add.js"></script>
 <script src="js\people-update.js"></script>
 <script src="jjs\people-delete.js"></script>

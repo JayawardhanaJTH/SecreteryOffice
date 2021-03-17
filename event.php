@@ -25,7 +25,7 @@
 			<div class="card-header">
 				<h1 class="text-center" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"><?php echo $event["e_name"]; ?></h1>
 			</div>
-			<img src="/uploadFiles/images/<?php echo $event["e_image"]; ?>" alt="Event Image" class="card-img-top" style="transform: none;">
+			<img src="uploadFiles/images/<?php echo $event["e_image"]; ?>" alt="Event Image" class="card-img-top" style="transform: none;">
                 <div class="card-body">
                     <div class="row" >
 						<h6  style="font-size: 1em; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Post date:<?php echo $event["e_postDate"]; ?> </h6>

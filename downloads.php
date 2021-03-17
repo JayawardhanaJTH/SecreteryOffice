@@ -35,7 +35,7 @@
                             <p class="card-text">Downloads: <?php echo $file['downloads'] ?></p>
                         </div>
                         <div class="col text-center">
-                            <a href="/php/downloads_add.php?file_download=<?php echo $file['id'] ?>" class="text-decoration-none text-dark" data-toggle="tooltip" data-placement="top" title="Download">
+                            <a href="php/downloads_add.php?file_download=<?php echo $file['id'] ?>" class="text-decoration-none text-dark" data-toggle="tooltip" data-placement="top" title="Download">
                                 <span class="download_icon text-primary"><i class="fa fa-download"></i></span>
                             </a>
                         </div>
@@ -48,7 +48,7 @@
                                 </a>
                             </div>
                             <div class="col text-center">
-                                <a href="/php/downloads_add.php?file_delete=<?php echo $file['id'] ?>" class="text-decoration-none text-dark" data-toggle="tooltip" data-placement="top" title="Delete">
+                                <a href="php/downloads_add.php?file_delete=<?php echo $file['id'] ?>" class="text-decoration-none text-dark" data-toggle="tooltip" data-placement="top" title="Delete">
                                     <span class="download_icon text-danger"><i class="fa fa-trash-alt"></i></span>
                                 </a>
                             </div>
@@ -77,7 +77,7 @@
                             <p class="card-text">Downloads: <?php echo $file['downloads'] ?></p>
                         </div>
                         <div class="col text-center">
-                            <a href="/php/downloads_add.php?file_download=<?php echo $file['id'] ?>" class="text-decoration-none text-dark" data-toggle="tooltip" data-placement="top" title="Download">
+                            <a href="php/downloads_add.php?file_download=<?php echo $file['id'] ?>" class="text-decoration-none text-dark" data-toggle="tooltip" data-placement="top" title="Download">
                                 <span class="download_icon text-primary"><i class="fa fa-download"></i></span>
                             </a>
                         </div>
@@ -90,7 +90,7 @@
                                 </a>
                             </div>
                             <div class="col text-center">
-                                <a href="/php/downloads_add.php?file_delete=<?php echo $file['id'] ?>" class="text-decoration-none text-dark" data-toggle="tooltip" data-placement="top" title="Delete">
+                                <a href="php/downloads_add.php?file_delete=<?php echo $file['id'] ?>" class="text-decoration-none text-dark" data-toggle="tooltip" data-placement="top" title="Delete">
                                     <span class="download_icon text-danger"><i class="fa fa-trash-alt"></i></span>
                                 </a>
                             </div>
@@ -126,7 +126,7 @@ if($_SESSION['TYPE'] == '1' || $_SESSION['TYPE'] == '2'){
     <div class="container border p-1 mb-2">
         <h5 class="text-center">Add File</h5>
 
-        <form action="/php/downloads_add.php" method="POST" enctype="multipart/form-data" class="m-1" onsubmit="return validateForm_down()">
+        <form action="php/downloads_add.php" method="POST" enctype="multipart/form-data" class="m-1" onsubmit="return validateForm_down()">
             <div class="form-group">
                 <label for="fileName">File Name</label>
                 <input type="text" name="fileName" id="fileName" class="form-control" value="<?php if(isset($fileEdit)){ echo $fileEdit['name'];}?>">

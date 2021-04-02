@@ -125,7 +125,7 @@
 	?>
 			<script type='text/javascript'>
 					error_popup('<?php echo $Err ?>');
-				</script>;
+				</script>
 	<?php	
 			unset($_SESSION['login_err']);
 		}

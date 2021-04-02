@@ -39,7 +39,7 @@
 
 <!-- Begin of body -->
 
-<body id="top" onload="activeLink('<?php echo $page; ?>')">
+<body id="top">
 
 	<!-- Top header -->
 	<div class="wrapper row0">

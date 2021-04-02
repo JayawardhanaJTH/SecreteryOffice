@@ -75,7 +75,7 @@
 						</article>
 					</div>
 					<div class="col-md-6">
-						<article><a class="ringcon btmspace-50" href="aboutUs.php"><i class="fas fa-hands-helping"></i></a>
+						<article><a class="ringcon btmspace-50" href="welfare.php"><i class="fas fa-hands-helping"></i></a>
 							<h6 class="heading">List of welfare</h6>
 							<p>Our social interactions</p>
 						</article>
@@ -96,15 +96,15 @@
 			<div class="card-deck owl-carousel">
 				<div class="card">
 					<div class="post-image">
-						<a href="#"><img class="card-img-top" src="images/carosal1.jpg"></a>
+						<img class="card-img-top" src="images/water_cut.jpeg">
 					</div>
 
 					<div class="card-body p-3">
-						<h5 class="card-title">Title</h5>
-						<p class="card-text">Body</p>
+						<h5 class="card-title">Water cut</h5>
+						<p class="card-text">6 hour water cut for Wattala & surrounding areas</p>
 
 						<ul style="list-style: none;">
-							<li><i class="fa fa-calendar"></i> June 6, 2020</li>
+							<li><i class="fa fa-calendar"></i> March 22, 2021</li>
 							<li><i class="fa fa-pencil-alt"></i> Admin</li>
 						</ul>
 					</div>
@@ -115,14 +115,15 @@
 
 				<div class="card">
 					<div class="post-image">
-						<a href="#"><img class="card-img-top" src="images/carosal2.jpg"></a>
+						<img class="card-img-top" src="images/corona.jpeg">
 					</div>
 					<div class="card-body">
-						<h5 class="card-title">Title</h5>
-						<p class="card-text">Body</p>
+						<h5 class="card-title">Corona</h5>
+						<p class="card-text">18 more COVID-19 patients have been identified in Wattala, Hendala,Bopitiya & 
+							Uswetakeiyyawa areas.</p>
 
 						<ul style="list-style: none;">
-							<li><i class="fa fa-calendar"></i> June 6, 2020</li>
+							<li><i class="fa fa-calendar"></i> October 14, 2020</li>
 							<li><i class="fa fa-pencil-alt"></i> Admin</li>
 						</ul>
 					</div>
@@ -131,7 +132,7 @@
 					</div>
 				</div>
 
-				<div class="card">
+				<!-- <div class="card">
 					<div class="post-image">
 						<a href="#"><img class="card-img-top" src="images/carosal3.jpg"></a>
 					</div>
@@ -147,7 +148,7 @@
 					<div class="card-footer">
 						<a href="#">Read more <i class="fas fa-arrow-circle-right"></i></a> 
 					</div>
-				</div>
+				</div> -->
 
 				<!-- <div class="card">
 					<div class="post-image">

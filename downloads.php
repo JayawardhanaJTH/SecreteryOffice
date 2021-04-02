@@ -23,9 +23,10 @@
             ?>
             <div class="col-sm-12 col-md-6">
                 <?php
-                    for( ;$i<$count/2;$i++)
+                    for( ;$i<$count/2;)
                     {
                         $file = $fileSet[$i];
+                        $i++;
                 ?>
                 <div class="download_item card m-1">
                     <div class="row no-gutters card-body align-items-center">
@@ -63,8 +64,8 @@
             </div>
             <div class="col-sm-12 col-md-6">
             <?php
-                    $count = $count/2;
-
+                    $count = round($count/2);
+                   
                     for( ;$i<=$count;$i++)
                     {
                         $file = $fileSet[$i];

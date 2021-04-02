@@ -69,7 +69,7 @@
 				<!-- Second line -->
 				<div class="row service1">
 					<div class="col-md-6 justify-content-center">
-						<article><a class="ringcon btmspace-50" href="contact.php"><i class="fas fa-user-cog"></i></a>
+						<article><a class="ringcon btmspace-50" href="our_works.php"><i class="fas fa-user-cog"></i></a>
 							<h6 class="heading">Our works</h6>
 							<p>Come and see our works</p>
 						</article>

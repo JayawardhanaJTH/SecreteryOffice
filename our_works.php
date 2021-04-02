@@ -23,7 +23,7 @@
            
             <div class="col-md-6 mb-2">
                 <div>
-                    <img src="images/our_works/Beach cleanup workshop.jpeg" alt="Beach cleanup workshop">
+                    <img src="images/our_works/Beach cleanup workshop.jpg" alt="Beach cleanup workshop">
                 </div>
                 <div class="text-center">
                     <span class="text-muted h4"><i>Beach cleanup workshop</i></span>
@@ -39,7 +39,7 @@
             </div>
             <div class="col-md-6 mb-2">
                 <div>
-                    <img src="images/our_works/Providing flood relief.jpeg" alt="Providing flood relief">
+                    <img src="images/our_works/Providing flood relief.jpg" alt="Providing flood relief">
                 </div>
                 <div class="text-center">
                     <span class="text-muted h4"><i>Providing flood relief</i></span>
@@ -47,7 +47,7 @@
             </div>
             <div class="col-md-6 mb-2">
                 <div>
-                    <img src="images/our_works/Subsidies.jpeg" alt="Subsidies">
+                    <img src="images/our_works/Subsidies.jpg" alt="Subsidies">
                 </div>
                 <div class="text-center">
                     <span class="text-muted h4"><i>Subsidies</i></span>
@@ -55,7 +55,7 @@
             </div>
             <div class="col-md-6 mb-2">
                 <div>
-                    <img src="images/our_works/Subsidy distribution program.jpeg" alt="Subsidy distribution program">
+                    <img src="images/our_works/Subsidy distribution program.jpg" alt="Subsidy distribution program">
                 </div>
                 <div class="text-center">
                     <span class="text-muted h4"><i>Subsidy distribution program</i></span>

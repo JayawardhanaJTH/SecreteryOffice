@@ -3,27 +3,25 @@
 
     require_once(__DIR__.'/../connection/connection.php');
 
-    $emailErr = '';
-    $passwordErr = '';
+    $Err = '';
 
 			if(isset($_POST['login_btn'])){
 				// get user entered email and password to variables
 				$email = $_POST['email'];
 				$password = $_POST['password'];
 
-				$emailErr = '';
-				$passwordErr = '';
+				$Err = '';
                 $errflag = false;
 
 				if(empty($email)){
-					$emailErr = "Please input email";
+					$Err = "Please input email";
                     $errflag = true;
 				}else if(!filter_var($email,FILTER_VALIDATE_EMAIL)){
-					$emailErr = "Invalid email format";
+					$Err = "Invalid email format";
                     $errflag = true;
 				}
 				if(empty($password)){
-					$passwordErr = "Please input password";
+					$Err = "Please input password";
                     $errflag = true;
 				}
 
@@ -79,10 +77,9 @@
                             header("Location: ../index.php");
                             exit();
                         }
-						else{
-							echo "<script> alert('User is not Valid'); </script>"; 
-
-							$emailErr = "Invalid email or password";
+						else{						 
+							$Err = "Invalid email or password";
+							$_SESSION['login_err'] = $Err;
 
 							session_write_close();
 
@@ -93,9 +90,12 @@
 					
 				}
                 else{
+
+					$_SESSION['login_err'] = $Err;
+
                     session_write_close();
 
-                    header("Location: ../index.php");
+                    header("Location: ../login.php");
                     exit();
                 }
 			}

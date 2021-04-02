@@ -101,14 +101,34 @@
 	<script src="layout/scripts/jquery.backtotop.js"></script>
 	<script src="layout/scripts/jquery.mobilemenu.js"></script>
 	<script src="layout/scripts/scroll.js"></script>
-	<script src="layout/scripts/alertBox.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 	<!-- JavaScript Libraries -->
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
 	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js" integrity="sha512-CEiA+78TpP9KAIPzqBvxUv8hy41jyI3f2uHi7DGp/Y/Ka973qgSdybNegWFciqh6GrN2UePx2KkflnQUbUhNIA==" crossorigin="anonymous"></script>
-
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="js/event_add.js"></script>
+    <script src="js/downloads_add.js"></script>
+    <script src="js\popup_msgs.js"></script>
+    <script src="layout\scripts\activeLinks.js"></script>
+	
+    <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script> 
+	
+	<script>
+		var s = skrollr.init();
+	</script>
+	<?php
+		if(isset($_SESSION['login_err'])){
+			$Err = $_SESSION['login_err'];
+	?>
+			<script type='text/javascript'>
+					error_popup('<?php echo $Err ?>');
+				</script>;
+	<?php	
+			unset($_SESSION['login_err']);
+		}
+	?>
 </body>
 </html>

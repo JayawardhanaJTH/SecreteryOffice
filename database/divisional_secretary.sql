@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 15, 2021 at 11:22 AM
+-- Generation Time: Apr 02, 2021 at 07:25 PM
 -- Server version: 10.1.33-MariaDB
 -- PHP Version: 7.2.6
 
@@ -30,20 +30,20 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `applications` (
   `id` int(11) NOT NULL,
-  `name` varchar(100) NOT NULL,
+  `name` varchar(100) CHARACTER SET latin1 NOT NULL,
   `description` varchar(500) NOT NULL,
   `upload_Name` varchar(100) NOT NULL,
-  `downloads` int(11) NOT NULL,
+  `downloads` smallint(11) NOT NULL,
   `upload_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `applications`
 --
 
 INSERT INTO `applications` (`id`, `name`, `description`, `upload_Name`, `downloads`, `upload_date`) VALUES
-(1, 'Application for get income tax', 'à¶†à¶¯à·à¶ºà¶¸à·Š à·ƒà·„à¶­à·’à¶šà¶ºà¶šà·Š à¶½à¶¶à· à¶œà·à¶±à·“à¶¸ à·ƒà¶¯à·„à· à¶…à¶ºà¶¯à·”à¶¸à·Š à¶´à¶­', 'à¶†à¶¯à¶ºà¶¸_à·ƒà·„à¶­à¶š_à¶…à¶ºà¶¯à¶¸à¶´à¶­.pdf', 13, '2021-03-02 21:35:06'),
-(5, 'Application for cutting down trees', 'à¶šà·œà·ƒà·Š à¶œà·ƒà·Š à¶šà·à¶´à·“à¶¸ à·ƒà¶¯à·„à· à¶…à¶ºà¶¯à·”à¶¸à·Š à¶´à¶­', 'à¶šà·ƒà¶œà·ƒ_à¶šà¶´à¶¸_à¶…à¶ºà¶¯à¶¸à¶´à¶­.pdf', 0, '2021-03-03 21:47:23');
+(1, 'Application for get income tax', 'ආදායම් සහතිකයක් ලබා ගැනීම සදහා අයදුම් පත', 'ආදයම_සහතක_අයදමපත.pdf', 38, '2021-03-02 21:35:06'),
+(5, 'Application for cutting down trees', 'කොස් ගස් කැපීම සදහා අයදුම් පත', 'කසගස_කපම_අයදමපත.pdf', 30, '2021-03-03 21:47:23');
 
 -- --------------------------------------------------------
 
@@ -78,26 +78,27 @@ CREATE TABLE `business_registration` (
   `b_emp_count` int(11) NOT NULL,
   `b_sub_name` varchar(200) NOT NULL DEFAULT 'No',
   `b_owner_address` varchar(300) NOT NULL,
-  `b_contact` varchar(15) NOT NULL,
+  `b_contact` varchar(15) CHARACTER SET latin1 NOT NULL,
   `b_citizenship` varchar(200) NOT NULL,
-  `b_email` varchar(200) NOT NULL,
+  `b_email` varchar(200) CHARACTER SET latin1 NOT NULL,
   `b_ownership` varchar(200) NOT NULL,
-  `b_grama_division` varchar(200) NOT NULL,
+  `b_grama_division` varchar(200) CHARACTER SET latin1 NOT NULL,
   `grama_niladhari_approval` int(11) DEFAULT '0',
   `secretary_approval` int(11) DEFAULT '0',
   `submitted_by` int(11) NOT NULL,
   `date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `approved_date` datetime DEFAULT NULL,
-  `grama_niladhari_sign` varchar(200) DEFAULT NULL,
-  `secretary_sign` varchar(200) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `grama_niladhari_sign` varchar(200) CHARACTER SET latin1 DEFAULT NULL,
+  `secretary_sign` varchar(200) CHARACTER SET latin1 DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `business_registration`
 --
 
 INSERT INTO `business_registration` (`f_id`, `b_name`, `b_form`, `b_address`, `b_date`, `b_emp_count`, `b_sub_name`, `b_owner_address`, `b_contact`, `b_citizenship`, `b_email`, `b_ownership`, `b_grama_division`, `grama_niladhari_approval`, `secretary_approval`, `submitted_by`, `date`, `approved_date`, `grama_niladhari_sign`, `secretary_sign`) VALUES
-(19, 'Abhiru', 'Software company', '0', '2021-03-27', 5, 'aaa', 'Deepthi', '2147483647', 'Sri lankan', 'tiranharsha2323@gmail.com', 'Own business', '165 Bopitiya', 1, 1, 1, '2021-03-10 21:01:45', '2021-03-11 07:16:12', 'IT18208672', 'Samantha');
+(19, 'Abhiru', 'Software company', '0', '2021-03-27', 5, 'aaa', 'Deepthi', '2147483647', 'Sri lankan', 'tiranharsha2323@gmail.com', 'Own business', '165 Bopitiya', 1, 1, 1, '2021-03-10 21:01:45', '2021-03-11 07:16:12', 'IT18208672', 'Samantha'),
+(23, 'Abhiru', 'Software development', 'Deepthi Adhikarigoda Kalutara Sri Lanka', '2021-03-15', 10, 'no', 'Deepthi Adhikarigoda Kalutara Sri Lanka', '+94769036197', 'Sri Lankan', 'tiran2323@gmail.com', 'Own', '166 Nugape', 0, 0, 1, '2021-03-17 15:39:44', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -109,18 +110,18 @@ CREATE TABLE `events` (
   `e_id` int(11) NOT NULL,
   `e_name` varchar(50) NOT NULL,
   `e_date` date NOT NULL,
-  `e_image` varchar(500) NOT NULL,
+  `e_image` varchar(500) CHARACTER SET latin1 NOT NULL,
   `e_description` varchar(500) NOT NULL,
   `e_postDate` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `events`
 --
 
 INSERT INTO `events` (`e_id`, `e_name`, `e_date`, `e_image`, `e_description`, `e_postDate`) VALUES
-(1, 'Event', '2021-03-12', 'Screenshot 2021-02-26 195933.png', ' Event', '2021-03-02 20:48:27'),
-(2, 'Event2', '2021-03-19', '1.jpg', ' Event2', '2021-03-03 20:24:38');
+(2, 'සමෘද්ධි සහනාධාර', '2021-04-03', 'samurdi.jpg', 'සමෘද්ධි සහනාධාර ලබා දෙන දිනය 2021.4.3\r\n ', '2021-03-03 20:24:38'),
+(3, 'අධ්‍යයාපන ආධාර ලබා දීම ', '2021-04-25', 'donation.jpg', 'අඩු ආදායම් ලාභී පවුල් වල ළමුන්ට අධ්‍යයාපන ආධාර ලබා දෙන දිනය 2021.4.25\r\n', '2021-03-17 15:11:48');
 
 -- --------------------------------------------------------
 
@@ -146,7 +147,8 @@ INSERT INTO `income` (`id`, `application_id`, `application_type`, `amount`, `dat
 (6, 5, 1, 120, '2021-03-15 14:52:50'),
 (7, 6, 2, 120, '2021-03-15 14:54:58'),
 (8, 7, 2, 120, '2021-03-15 14:59:54'),
-(9, 8, 2, 120, '2021-03-15 15:01:28');
+(9, 8, 2, 120, '2021-03-15 15:01:28'),
+(10, 23, 1, 120, '2021-03-17 15:39:44');
 
 -- --------------------------------------------------------
 
@@ -172,7 +174,8 @@ CREATE TABLE `people` (
 
 INSERT INTO `people` (`pid`, `first_name`, `last_name`, `email`, `grama_niladhari_division`, `gender`, `contact_number`, `address`, `password`) VALUES
 (1, 'Janage Tiran', 'Jayawardana', 'tiran2323@gmail.com', '164/A Maha Pamunugama', 'male', 2147483647, '12379', 'tiran123'),
-(6, 'Tiran', 'Harsha', 'tiranharsha2323@gmail.com', '164/A Maha Pamunugama', 'male', 2147483647, 'Deepthi', '9FJ_kF<*2j');
+(6, 'Tiran', 'Harsha', 'tiranharsha2323@gmail.com', '164/A Maha Pamunugama', 'male', 2147483647, 'Deepthi', '9FJ_kF<*2j'),
+(7, 'Tiran', 'Harsha', 'tiranharsha2323@gmail.com', '164 Pamunugama', 'male', 2147483647, 'Deepthi', 'A^:AA<bf2^');
 
 -- --------------------------------------------------------
 
@@ -202,9 +205,9 @@ CREATE TABLE `requirement_application` (
 --
 
 INSERT INTO `requirement_application` (`f_id`, `full_name`, `division`, `address`, `contact`, `email`, `requirement`, `nic`, `gender`, `grama_approval`, `submitted_by`, `date`, `approved_date`, `grama_niladhari_sign`) VALUES
-(3, 'Tiran Harsha', '166 Nugape', 'Deepthi', '+10769036197', 'tiranharsha2323@gmail.com', 'To register company', '962841180v', 'Male', 0, 1, '2021-03-09 20:21:44', NULL, NULL),
+(3, 'Tiran Harsha', '166 Nugape', 'Deepthi', '+10769036197', 'tiranharsha2323@gmail.com', 'To register company', '962841180v', 'Male', 0, 1, '2021-03-09 20:21:44', '2021-03-17 00:00:00', NULL),
 (5, 'Janage Tiran Harsha Jayawardana', '164 Pamunugama', 'Deepthi', '+10769036197', 'it18216974@my.sliit.lk', 'To register company', '962841180v', 'Male', 0, 1, '2021-03-15 14:52:49', NULL, NULL),
-(6, 'Tiran Harsha', '165/A Bopitiya', 'Deepthi', '+10769036197', 'tiranharsha2323@gmail.com', 'To register company', '962841180v', 'Male', 0, 1, '2021-03-15 14:54:58', NULL, NULL),
+(6, 'Tiran Harsha', '165/A Bopitiya', 'Deepthi', '+10769036197', 'tiranharsha2323@gmail.com', 'To register company', '962841180v', 'Male', 1, 1, '2021-03-15 14:54:58', '2021-03-17 00:00:00', 'Aruna'),
 (7, 'Tiran Harsha', '164/A Maha Pamunugama', 'Deepthi', '+10769036197', 'tiranharsha2323@gmail.com', 'To register company', '962841180v', 'Male', 0, 1, '2021-03-15 14:59:52', NULL, NULL);
 
 -- --------------------------------------------------------
@@ -234,7 +237,7 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`id`, `firstname`, `lastname`, `username`, `email`, `contact`, `nic`, `password`, `type`, `division`, `approved`, `date`) VALUES
 (1, 'Samantha', 'Perera', 'samantha', 'tiran2323@gmail.com', '761234567', '962841180V', 'samantha123@gmail.com', 2, '', 1, '2021-03-10 21:21:01'),
-(2, 'Janage Tiran', 'Jayawardana', 'IT18216974', 'tiranharsha2323@gmail.com', '2147483647', '962841180V', 'samantha123@', 2, 'ASAS', 0, '2021-03-10 21:21:01'),
+(2, 'Janage Tiran', 'Jayawardana', 'IT18216974', 'tiranharsha2323@gmail.com', '2147483647', '962841180V', 'samantha123@', 2, 'ASAS', 1, '2021-03-10 21:21:01'),
 (3, 'Janage Tiran', 'Jayawardana', 'IT18208672', 'samantha@gmail.com', '2147483647', '', 'samantha123@', 2, '', 0, '2021-03-10 21:21:01'),
 (4, 'Janage Tiran', 'Jayawardana', 'Tiran Harsha', 'samantha@gmail.com', '2147483647', '', 'CC', 2, '164 Pamunugama', 0, '2021-03-10 21:21:01'),
 (5, 'Tiran', 'Harsha', 'IT18216974', 'samantha@gmail.com', '+1076903619', '', 'AA', 2, '167 Uswetakriyyawa', 0, '2021-03-10 21:21:01'),
@@ -260,6 +263,7 @@ CREATE TABLE `user_login` (
 
 INSERT INTO `user_login` (`id`, `username`, `email`, `password`, `type`) VALUES
 (1, 'Samantha', 'samantha@gmail.com', 'samantha123@', 1),
+(2, 'IT18216974', 'tiranharsha2323@gmail.com', 'samantha123@', 2),
 (6, 'Aruna', 'aruna@gmail.com', 'aruna123', 2);
 
 --
@@ -336,31 +340,31 @@ ALTER TABLE `applications`
 -- AUTO_INCREMENT for table `business_registration`
 --
 ALTER TABLE `business_registration`
-  MODIFY `f_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `f_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `events`
 --
 ALTER TABLE `events`
-  MODIFY `e_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `e_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `income`
 --
 ALTER TABLE `income`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `people`
 --
 ALTER TABLE `people`
-  MODIFY `pid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `pid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `requirement_application`
 --
 ALTER TABLE `requirement_application`
-  MODIFY `f_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `f_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `user`

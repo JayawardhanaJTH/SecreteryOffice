@@ -67,7 +67,7 @@
 } 
 .day div{
     margin: 0.3rem;
-    width: calc(38rem/7);
+    width: calc(37rem/7);
     height: 5rem;
     display: flex;
     justify-content: center;
@@ -85,4 +85,22 @@
 .today{
     background-color: darkgreen;
     color:white
+}
+
+@media screen and (max-width:1440px){
+    .day{
+        width: 90%;
+    } 
+}
+
+@media screen and (max-width:1280px){
+    .day{
+        width: 100%;
+    } 
+}
+
+@media screen and (max-width:360px){
+    .day div{
+        width: calc(20rem/7);
+    }
 }

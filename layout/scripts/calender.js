@@ -1,4 +1,19 @@
 let date = new Date()
+var eventsDates = [];
+var eventsIDs = [];
+var counter = 0;
+
+function loadDates(dates,ids){
+
+    for(let i = 0;i<dates.length; i++){
+        eventsDates.push(dates[i]);
+    }
+    for(let i = 0;i<ids.length; i++){
+        eventsIDs.push(ids[i]);
+    }
+
+    dateGenerate();
+}
 
 let dateGenerate = function(){
     const year = new Date(date.getFullYear(),date.getMonth()).getFullYear();
@@ -47,10 +62,31 @@ let dateGenerate = function(){
 
     for(let i = 1; i <= cmlastDay;i++){
         if(i === today){
-            days += '<div class="today">'+i+'</div>';
+            let flag = false;
+
+            for(let j = 0;j<eventsDates['length']; j++){
+                if(i == eventsDates[j]  && counter == 0){
+                    flag = true;
+                    days += '<a href="php/event-add.php?view_id='+eventsIDs[j]+'" > <div class="today">'+i+'</div></a>';
+                }
+            }
+            if(!flag){
+
+                days += '<div class="today">'+i+'</div>';
+            }
         }
         else{
-            days += '<div>'+i+'</div>';
+            let flag = false;
+
+            for(let j = 0;j<eventsDates['length']; j++){
+                if(i == eventsDates[j] && counter == 0){
+                    flag = true;
+                    days += '<a href="php/event-add.php?view_id='+eventsIDs[j]+'" > <div class="bg-info">'+i+'</div></a>';
+                }
+            }
+            if(!flag){
+                days += '<div>'+i+'</div>';
+            }
         }
     }
 
@@ -81,13 +117,14 @@ let dateGenerate = function(){
 
 
 $('.pre').click(function(){
+    counter--;
     date.setMonth(date.getMonth()-1);
     dateGenerate();
 });
 
 $('.next').click(function(){
+    counter++;
     date.setMonth(date.getMonth()+1);
     dateGenerate();
 })
 
-dateGenerate();

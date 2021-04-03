@@ -207,6 +207,8 @@
 			<div class="event col-md-6">
 		<?php
 				$events = array();
+				$dates = array();
+				$ids = array();
 
 				$sql = "SELECT * FROM events LIMIT 5";
 
@@ -225,6 +227,9 @@
 						$day = date('d', strtotime($date));
 						$dayName = date('D', strtotime($date));
 						$description = $event->e_description;
+
+						$dates[] = $day;
+						$ids[] = $event->e_id;
 		?>
 				<div class="row row-striped">
 					<div class="col-2 text-center">
@@ -256,6 +261,9 @@
 	?>
 
 	<script src="layout/scripts/calender.js"></script>
+	<script>
+		loadDates(<?php  echo json_encode($dates); ?>,<?php  echo json_encode($ids); ?>);
+	</script>
 	
 </body>
 

@@ -15,7 +15,6 @@
         $sql = "SELECT * FROM events WHERE e_id ='$id'";
         $result = mysqli_query($conn,$sql);
 
-        mail("tiran2323@gmail.com","Hello","hello","From:tiran2323@gmail.com");
         if($result){
             $event = mysqli_fetch_assoc($result);
         

@@ -1,21 +1,29 @@
 let date = new Date();
 var eventsDates = [];
+var eventsMonths = new Set();
+var eventsYears = new Set();
 var eventsIDs = [];
 var counter = 0;
 
-function loadDates(dates, ids) {
+function loadDates(dates, months, years, ids) {
   for (let i = 0; i < dates.length; i++) {
     eventsDates.push(dates[i]);
   }
   for (let i = 0; i < ids.length; i++) {
     eventsIDs.push(ids[i]);
   }
-
+  for (let i = 0; i < months.length; i++) {
+    eventsMonths.add(months[i]);
+  }
+  for (let i = 0; i < years.length; i++) {
+    eventsYears.add(years[i]);
+  }
   dateGenerate();
 }
 
 let dateGenerate = function () {
-  const year = new Date(date.getFullYear(), date.getMonth()).getFullYear();
+  const year = date.getFullYear();
+  const month = date.getMonth() + 1;
 
   //past month last day
   const pmlastDay = new Date(date.getFullYear(), date.getMonth(), 0).getDate();
@@ -74,7 +82,11 @@ let dateGenerate = function () {
       let flag = false;
 
       for (let j = 0; j < eventsDates["length"]; j++) {
-        if (i == eventsDates[j] && counter == 0) {
+        if (
+          i == eventsDates[j] &&
+          eventsMonths.has(month.toString()) &&
+          eventsYears.has(year.toString())
+        ) {
           flag = true;
           days +=
             '<a href="php/event-add.php?view_id=' +
@@ -91,7 +103,11 @@ let dateGenerate = function () {
       let flag = false;
 
       for (let j = 0; j < eventsDates["length"]; j++) {
-        if (i == eventsDates[j] && counter == 0) {
+        if (
+          i == eventsDates[j] &&
+          eventsMonths.has(month.toString()) &&
+          eventsYears.has(year.toString())
+        ) {
           flag = true;
           days +=
             '<a class="bg-info" href="php/event-add.php?view_id=' +

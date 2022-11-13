@@ -208,6 +208,8 @@
 		<?php
 				$events = array();
 				$dates = array();
+				$months = array();
+				$years = array();
 				$ids = array();
 
 				$sql = "SELECT * FROM events LIMIT 5";
@@ -223,12 +225,17 @@
 					foreach($events as $event){
 
 						$date = $event->e_date;
+
+						$year = date('Y', strtotime($date));
 						$month = date('M', strtotime($date));
+						$month_num = date('n', strtotime($date));
 						$day = date('d', strtotime($date));
 						$dayName = date('D', strtotime($date));
 						$description = $event->e_description;
 
 						$dates[] = $day;
+						$months[] = $month_num;
+						$years[] = $year;
 						$ids[] = $event->e_id;
 		?>
 				<div class="row row-striped">
@@ -262,7 +269,8 @@
 
 	<script src="layout/scripts/calender.js"></script>
 	<script>
-		loadDates(<?php  echo json_encode($dates); ?>,<?php  echo json_encode($ids); ?>);
+		loadDates(<?php  echo json_encode($dates); ?>,<?php echo json_encode($months) ?>, <?php echo json_encode($years) ?>,
+				<?php  echo json_encode($ids); ?>);
 	</script>
 	
 </body>

@@ -144,8 +144,7 @@ include "support/header.php";
             <div class="col-lg-4 col-sm-12 col-12 mb-5">
                 <div class="content"><a href="#">
                         <div class="content-overlay"></div>
-                        <img class="content-image"
-                            src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1557246503/3_zoom_1.jpg">
+                        <img class="content-image" src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1557246503/3_zoom_1.jpg">
                         <div class="content-details fadeIn-bottom">
                             <h3 class="content-title">Mr. P.L. Gunasinghe</h3>
                             <p class="content-text">Since 1991-1993</p>
@@ -155,8 +154,7 @@ include "support/header.php";
             <div class="col-lg-4 col-sm-12 col-12 mb-5">
                 <div class="content"><a href="#">
                         <div class="content-overlay"></div>
-                        <img class="content-image"
-                            src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1557246502/test_zoom.jpg">
+                        <img class="content-image" src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1557246502/test_zoom.jpg">
                         <div class="content-details fadeIn-bottom">
                             <h3 class="content-title">Mr. Gunasiri Dharmapala</h3>
                             <p class="content-text">Since 1993-1998</p>
@@ -166,8 +164,7 @@ include "support/header.php";
             <div class="col-lg-4 col-sm-12 col-12 mb-5">
                 <div class="content"><a href="#">
                         <div class="content-overlay"></div>
-                        <img class="content-image"
-                            src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1557246499/3_zoom_2.jpg">
+                        <img class="content-image" src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1557246499/3_zoom_2.jpg">
                         <div class="content-details fadeIn-bottom">
                             <h3 class="content-title">Mr. hatharasinghe </h3>
                             <p class="content-text">1998-2000</p>
@@ -180,8 +177,7 @@ include "support/header.php";
             <div class="col-lg-4 col-sm-12 col-12 mb-5">
                 <div class="content"><a href="#">
                         <div class="content-overlay"></div>
-                        <img class="content-image"
-                            src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1557246503/3_zoom_1.jpg">
+                        <img class="content-image" src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1557246503/3_zoom_1.jpg">
                         <div class="content-details fadeIn-bottom">
                             <h3 class="content-title">Mrs. H.D.S. Malkanthi</h3>
                             <p class="content-text">Since 2000-2005</p>
@@ -191,8 +187,7 @@ include "support/header.php";
             <div class="col-lg-4 col-sm-12 col-12 mb-5">
                 <div class="content"><a href="#">
                         <div class="content-overlay"></div>
-                        <img class="content-image"
-                            src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1557246502/test_zoom.jpg">
+                        <img class="content-image" src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1557246502/test_zoom.jpg">
                         <div class="content-details fadeIn-bottom">
                             <h3 class="content-title">Mrs. N. Nimalka Dias</h3>
                             <p class="content-text">Since 2005-2009</p>
@@ -202,8 +197,7 @@ include "support/header.php";
             <div class="col-lg-4 col-sm-12 col-12 mb-5">
                 <div class="content"><a href="#">
                         <div class="content-overlay"></div>
-                        <img class="content-image"
-                            src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1557246499/3_zoom_2.jpg">
+                        <img class="content-image" src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1557246499/3_zoom_2.jpg">
                         <div class="content-details fadeIn-bottom">
                             <h3 class="content-title">Mrs. C.L.W. Dissanayake </h3>
                             <p class="content-text">2009-2014</p>
@@ -215,8 +209,7 @@ include "support/header.php";
             <div class="col-lg-4 col-sm-12 col-12 mb-5">
                 <div class="content"><a href="#">
                         <div class="content-overlay"></div>
-                        <img class="content-image"
-                            src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1557246503/3_zoom_1.jpg">
+                        <img class="content-image" src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1557246503/3_zoom_1.jpg">
                         <div class="content-details fadeIn-bottom">
                             <h3 class="content-title">Mr. W.G.Premalal</h3>
                             <p class="content-text">Since 2014-2017</p>
@@ -226,8 +219,7 @@ include "support/header.php";
             <div class="col-lg-4 col-sm-12 col-12 mb-5">
                 <div class="content"><a href="#">
                         <div class="content-overlay"></div>
-                        <img class="content-image"
-                            src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1557246502/test_zoom.jpg">
+                        <img class="content-image" src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1557246502/test_zoom.jpg">
                         <div class="content-details fadeIn-bottom">
                             <h3 class="content-title">Mrs.P.V.D.C. Rajika</h3>
                             <p class="content-text">Since 2017-Up to Now</p>
@@ -257,32 +249,28 @@ include "support/header.php";
             <div class="col-sm-3 col-12">
                 <div>
                     <i class="fas fa-users mb-4" style="color: #95103b; font-size: 3rem"></i><br>
-                    <span class="count" style="font-size: 1.5rem; font-weight: bold">1500</span><span
-                        style="font-size: 1.5rem; font-weight: bold">k</span>
+                    <span class="count" style="font-size: 1.5rem; font-weight: bold">1500</span><span style="font-size: 1.5rem; font-weight: bold">k</span>
                     <p class="mt-2" style="font-size: 1.5rem;">Members</p>
                 </div>
             </div>
             <div class="col-sm-3 col-12">
                 <div>
                     <i class="fas fas fa-building mb-4" style="color: #95103b; font-size: 3rem"></i><br>
-                    <span class="count" style="font-size: 1.5rem; font-weight: bold">10</span><span
-                        style="font-size: 1.5rem; font-weight: bold">k</span>
+                    <span class="count" style="font-size: 1.5rem; font-weight: bold">10</span><span style="font-size: 1.5rem; font-weight: bold">k</span>
                     <p class="mt-2" style="font-size: 1.5rem;">Office</p>
                 </div>
             </div>
             <div class="col-sm-3 col-12">
                 <div>
                     <i class="fas fa-user-friends mb-4" style="color: #95103b; font-size: 3rem"></i><br>
-                    <span class="count" style="font-size: 1.5rem; font-weight: bold">100</span><span
-                        style="font-size: 1.5rem; font-weight: bold">k</span>
+                    <span class="count" style="font-size: 1.5rem; font-weight: bold">100</span><span style="font-size: 1.5rem; font-weight: bold">k</span>
                     <p class="mt-2" style="font-size: 1.5rem;">Grama Niladhari</p>
                 </div>
             </div>
             <div class="col-sm-3 col-12">
                 <div>
                     <i class="fas fa-award mb-4" style="color: #95103b; font-size: 3rem"></i><br>
-                    <span class="count" style="font-size: 1.5rem; font-weight: bold">60</span><span
-                        style="font-size: 1.5rem; font-weight: bold">k</span>
+                    <span class="count" style="font-size: 1.5rem; font-weight: bold">60</span><span style="font-size: 1.5rem; font-weight: bold">k</span>
                     <p class="mt-2" style="font-size: 1.5rem;">Awards</p>
                 </div>
             </div>

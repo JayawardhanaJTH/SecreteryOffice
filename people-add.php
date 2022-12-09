@@ -1,11 +1,10 @@
 <?php
-    session_start();
-    if(!isset($_SESSION['logged'])){
-		header("location: login.php");
-		
-	}
-    require "connection/connection.php";
-    include "support/header.php";
+session_start();
+if (!isset($_SESSION['logged'])) {
+    header("location: login.php");
+}
+require "connection/connection.php";
+include "support/header.php";
 ?>
 
 <div class="container-fluid p-3">
@@ -105,16 +104,13 @@
                             </div>
                             <input type="password" id="password" name="password" class="form-control" placeholder="Password" disabled>
                             <div class="col-3">
-                                <input type="button"
-                                       class="btn form-control"
-                                       value="Generate" onClick="randomPassword(10);"
-                                       tabindex="2">
+                                <input type="button" class="btn form-control" value="Generate" onClick="randomPassword(10);" tabindex="2">
                             </div>
                         </div>
                     </div>
                     <br>
                     <div>
-                        <input type="button" class="btn" id="add_people" value="Add People" >
+                        <input type="button" class="btn" id="add_people" value="Add People">
                     </div>
                 </form>
             </div>
@@ -122,10 +118,11 @@
     </div>
 </div>
 <?php
-    include "support/footer.php";
+include "support/footer.php";
 ?>
 <script src="layout/scripts/alertBox.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="js\people-add.js"></script>
 <script src="js\people-update.js"></script>
-<script src="jjs\people-delete.js"></script>
+<script src="js\people-delete.js"></script>
+<script src="js\password-generator.js"></script>

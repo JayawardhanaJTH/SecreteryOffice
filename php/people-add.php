@@ -5,16 +5,16 @@ $dbUsername = 'root';
 $database = 'divisional_secretary';
 
 try {
-    $conn = new mysqli($hostname,$dbUsername,$dbPassword,$database);
+    $conn = new mysqli($hostname, $dbUsername, $dbPassword, $database);
 
-    if($conn->connect_error){
-        die ("Connection failed " .$conn->connect_error);
+    if ($conn->connect_error) {
+        die("Connection failed " . $conn->connect_error);
     }
 } catch (\Throwable $th) {
-    echo("Error on database server!");
+    echo ("Error on database server!");
 }
 
-if($_POST['id'] == "insert"){
+if ($_POST['id'] == "insert") {
 
     $first_name = $_POST['first_name'];
     $last_name = $_POST['last_name'];
@@ -34,23 +34,23 @@ if($_POST['id'] == "insert"){
 
     $sen = mail($to, $mailSubject, $emailBody, $header);
 
-    if ($sen){
+    if ($sen) {
         echo "1";
-    }else{
+    } else {
         echo "not send";
     }
 
-    $sql = "INSERT INTO people( first_name, last_name, email, grama_niladhari_division, gender, contact_number, address, password) 
-	VALUES ('$first_name','$last_name','$email', '$grama_niladhari_division', '$gender', '$contact_number', '$address', '$password')";
+        $sql = "INSERT INTO people( first_name, last_name, email, grama_niladhari_division, gender, contact_number, address, password) 
+    	VALUES ('$first_name','$last_name','$email', '$grama_niladhari_division', '$gender', '$contact_number', '$address', '$password')";
 
 
-    if (mysqli_query($conn, $sql)) {
-//        echo json_encode(array("statusCode"=>200));
-    }
-    else {
-//        echo json_encode(array("statusCode"=>201));
-    }
-    mysqli_close($conn);
+        if (mysqli_query($conn, $sql)) {
+    //        echo json_encode(array("statusCode"=>200));
+        }
+        else {
+    //        echo json_encode(array("statusCode"=>201));
+        }
+        mysqli_close($conn);
 }
 
 if ($_POST['id'] == "show") {
@@ -78,9 +78,9 @@ if ($_POST['id'] == "show") {
 
     $rs = $conn->query($query);
 
-    while ($row = $rs->fetch_assoc()){
+    while ($row = $rs->fetch_assoc()) {
         $pid = $row['pid'];
-        $first_name= $row['first_name'];
+        $first_name = $row['first_name'];
         $last_name = $row['last_name'];
         $email = $row['email'];
         $grama_niladhari_division = $row['grama_niladhari_division'];
@@ -88,7 +88,7 @@ if ($_POST['id'] == "show") {
         $contact_number = $row['contact_number'];
         $address = $row['address'];
 
-        $output.= "
+        $output .= "
             <tr>
                 <td hidden>$pid</td>
                 <td>$first_name</td>
@@ -106,7 +106,7 @@ if ($_POST['id'] == "show") {
         ";
     }
 
-    $output.='
+    $output .= '
         </tbody>
     </table>
 
@@ -122,10 +122,9 @@ if ($_POST['id'] == "show") {
     ';
 
     echo $output;
-
 }
 
-if ($_POST['id'] == "update"){
+if ($_POST['id'] == "update") {
 
     $update_pid = $_POST['update_pid'];
     $update_first_name = $_POST['update_first_name'];
@@ -141,26 +140,23 @@ if ($_POST['id'] == "update"){
 
 
     if (mysqli_query($conn, $sql)) {
-//        echo json_encode(array("statusCode"=>200));
+        //        echo json_encode(array("statusCode"=>200));
         echo 1;
-    }
-    else {
-//        echo json_encode(array("statusCode"=>201));
+    } else {
+        //        echo json_encode(array("statusCode"=>201));
     }
     mysqli_close($conn);
 }
 
-if ($_POST['id'] == "delete"){
+if ($_POST['id'] == "delete") {
 
     $pid = $_POST['pid'];
 
     $sql = "delete from people where pid='$pid'";
     if (mysqli_query($conn, $sql)) {
         echo 1;
-    }
-    else {
+    } else {
         echo 2;
     }
     mysqli_close($conn);
-
 }

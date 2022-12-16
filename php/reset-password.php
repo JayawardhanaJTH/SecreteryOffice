@@ -1,5 +1,3 @@
-<script src="..\js\password-generator.js"></script>
-
 <?php
 session_start();
 
@@ -26,13 +24,19 @@ if (isset($_POST['reset_btn'])) {
     mysqli_stmt_execute($statement);
     mysqli_stmt_bind_result($statement, $userId);
     mysqli_stmt_fetch($statement);
+    mysqli_stmt_close($statement);
 
     if ($userId) {
-?>
-        <script>
-            randomPassword(10);
-        </script>
-<?php
+        $chars = "21q1ul17*uU3X*c@xnWrm*1wyS@db#j3zvkO@oesKLz45Ar9erLqHRmQ#d17#rvcbpgEmWeijbPV9CqrWxGSpYrz1vqfSxEIWv@l";
+        $pass = "";
+
+
+        for ($i = 0; $i < 8; $i++) {
+            $x = floor(rand(0, 20) * 2 / 40.2 * strlen($chars));
+            $pass .= (string)$chars[$x - 1];
+        }
+
+
         $subject = "Reset Password";
         $headers = array(
             "From: secraterywththala@gmail.com",
@@ -40,10 +44,15 @@ if (isset($_POST['reset_btn'])) {
             "X-Mailer: PHP/" . PHP_VERSION
         );
         $headers = implode("\r\n", $headers);
-        $password = $_COOKIE["reset_pass"];
+        $password = $pass;
         $emailBody = "Your password is rested! use this for login.\n\nPassword: " . $password;
 
         if (mail($sanitized_email, $subject, $emailBody, "From: secraterywththala@gmail.com")) {
+
+            //update database
+            $updateUserPasswordQuery = "UPDATE people SET password='$pass' WHERE pid = '$userId'";
+            mysqli_query($conn, $updateUserPasswordQuery);
+
             $_SESSION['reset_password_send'] = true;
             session_write_close();
 
@@ -64,4 +73,3 @@ if (isset($_POST['reset_btn'])) {
         exit();
     }
 }
-?>

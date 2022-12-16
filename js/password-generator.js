@@ -10,9 +10,11 @@ function randomPassword(length) {
   }
   if (document.getElementById("password")) {
     document.getElementById("password").value = pass;
+    console.log("element",pass)
+
   } else {
     document.cookie = "reset_pass = " + pass;
-    
+    console.log("cookie",pass)
   }
   // alert(pass);
 }

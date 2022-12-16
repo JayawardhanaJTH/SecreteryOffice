@@ -1,5 +1,9 @@
 <?php
 session_start();
+
+if (isset($_SESSION['logged'])) {
+	header("location: index.php");
+}
 require "connection/connection.php";
 include 'support/header.php';
 ?>
@@ -20,7 +24,7 @@ include 'support/header.php';
 							<div class="input-group-prepend">
 								<div class="input-group-text"><i class="fas fa-at"></i></div>
 							</div>
-							<input class="form-control" type="email" name="email" placeholder="Email">
+							<input class="form-control" type="email" name="email" placeholder="Email" required>
 						</div>
 						<span class="text-muted h6">Your new password will send to your email!</span>
 						<span class="text-danger font-weight-bold"> </span>
@@ -106,6 +110,7 @@ include 'support/header.php';
 <script src="layout/scripts/jquery.mobilemenu.js"></script>
 <script src="layout/scripts/scroll.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<script src="js/password-generator.js"></script>
 <!-- JavaScript Libraries -->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>

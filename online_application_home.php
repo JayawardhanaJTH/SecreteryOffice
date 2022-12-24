@@ -33,7 +33,7 @@ include "support/header.php";
                         </div>
                     </a>
                 </div>
-                <div class="col-md-6 col-sm-12 mb-3">
+                <!-- <div class="col-md-6 col-sm-12 mb-3">
                     <a href="online_application2.php">
 
                         <div class="card">
@@ -47,7 +47,7 @@ include "support/header.php";
                             </div>
                         </div>
                     </a>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>

@@ -51,22 +51,6 @@ include 'support/header.php';
 			<!-- First line -->
 			<div class="row service1">
 				<div class="col-md-6 justify-content-center">
-					<article class="first"><a class="ringcon btmspace-50" href="downloads.php"><i class="fas fa-download"></i></a>
-						<h6 class="heading">Download application</h6>
-						<p>Here are all applications</p>
-					</article>
-				</div>
-				<div class="col-md-6">
-					<article><a class="ringcon btmspace-50" href="online_application_home.php"><i class="fas fa-file-invoice"></i></a>
-						<h6 class="heading">Online application</h6>
-						<p>Here can submit applications</p>
-					</article>
-				</div>
-			</div>
-			<br>
-			<!-- Second line -->
-			<div class="row service1">
-				<div class="col-md-6 justify-content-center">
 					<article><a class="ringcon btmspace-50" href="our_works.php"><i class="fas fa-user-cog"></i></a>
 						<h6 class="heading">Our works</h6>
 						<p>Come and see our works</p>
@@ -76,6 +60,23 @@ include 'support/header.php';
 					<article><a class="ringcon btmspace-50" href="welfare.php"><i class="fas fa-hands-helping"></i></a>
 						<h6 class="heading">List of welfare</h6>
 						<p>Our social interactions</p>
+					</article>
+				</div>
+			</div>
+
+			<br>
+			<!-- Second line -->
+			<div class="row service1 justify-content-center">
+				<!-- <div class="col-md-6 justify-content-center">
+					<article class="first"><a class="ringcon btmspace-50" href="downloads.php"><i class="fas fa-download"></i></a>
+						<h6 class="heading">Download application</h6>
+						<p>Here are all applications</p>
+					</article>
+				</div> -->
+				<div class="col-md-6">
+					<article><a class="ringcon btmspace-50" href="online_application_home.php"><i class="fas fa-file-invoice"></i></a>
+						<h6 class="heading">Online application</h6>
+						<p>Here can submit applications</p>
 					</article>
 				</div>
 			</div>

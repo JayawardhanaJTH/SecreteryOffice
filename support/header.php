@@ -93,9 +93,9 @@
 										<hr class="hrhome">
 									</a>
 
-									<a href="downloads.php" class="nav-item nav-link product" id="downloads" onclick="activeLink('downloads')">Downloads
+									<!-- <a href="downloads.php" class="nav-item nav-link product" id="downloads" onclick="activeLink('downloads')">Downloads
 										<hr class="hrproducts">
-									</a>
+									</a> -->
 									<a href="online_application_home.php" class="nav-item nav-link prode" id="forms" onclick="activeLink('forms')">Online Forums
 										<hr class="hrproductDetail">
 									</a>
@@ -178,11 +178,11 @@
 			</div>
 			<div id="searchform" class="col-md-6">
 				<div style="border: 2px solid white; border-radius: 4px;" class="mt-2 mb-2">
-					<form action="#" method="post">
+					<form action="../php/search.php" method="post">
 						<fieldset>
 							<legend>Quick Search:</legend>
 							<input class="text-white" type="text" name="searchText" placeholder="Enter search term&hellip;">
-							<button type="submit"><i class="fas fa-search"></i></button>
+							<button  type="submit"><i class="fas fa-search"></i></button>
 						</fieldset>
 					</form>
 				</div>

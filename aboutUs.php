@@ -1,5 +1,8 @@
 <?php
+session_start();
+
 $page = "about";
+setcookie("pageName", $page, time() + (86400 * 30), "/");
 require "connection/connection.php";
 include "support/header.php";
 ?>
@@ -8,7 +11,7 @@ include "support/header.php";
 
 
 <!--banner section-->
-<section class="masthead">
+<!-- <section class="masthead">
     <div class="container h-100">
         <div class="row h-100 align-items-center">
             <div class="col-12 text-center">
@@ -17,9 +20,9 @@ include "support/header.php";
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
-<section class="container">
+<!-- <section class="container">
     <div class="learn_content">
         <h3>What you'll learn</h3>
         <div class="row pt-3">
@@ -83,28 +86,21 @@ include "support/header.php";
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
 <SECTION class="vision-sec">
     <div class="info-area pb-5">
         <div class="">
             <div class="row align-items-center">
                 <div class="col-lg-6 no-padding info-area-left">
-                    <img class="img-fluid" src="images/carosal2.jpg" alt="">
+                    <img class="img-fluid" src="images/about1.jpg" alt="about">
                 </div>
                 <div class="col-lg-6 info-area-right p-5">
-                    <h1 class="display-3">Our Vision</h1>
-                    <p>To be the premier service provider of the Gampaha district</p>
+                    <h1 class="display-3">Premnath C. Dolawatta | Attorney at Law</h1>
+                    <!-- <p>To be the premier service provider of the Gampaha district</p> -->
                     <br>
                     <p>
-                        inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct
-                        standards especially in the workplace. That’s why it’s crucial that, as women, our behavior on
-                        the
-                        job is beyond reproach. inappropriate behavior is often laughed off as “boys will be boys,”
-                        women
-                        face higher conduct standards especially in the workplace. That’s why it’s crucial that, as
-                        women,
-                        our behavior on the job is beyond reproach.
+                        Premnath Dolawatte is straight-forward in his approach and is determined to do his duty by his country. He is a risk taker, who does not hesitate to represent those who he feels need his assistance. Premnath Dolawatte came into the limelight in the recent years due to his legal representation and vocal support to those who lost power in the previous Government. He was not benefited from them during their time in power and his association with the Rajapaksa family began only after 2015. He works according to his conscience and in his own words, is controversial. He strongly believes that respect cannot be bought but in fact, has to be earned.
                     </p>
                 </div>
             </div>
@@ -112,30 +108,27 @@ include "support/header.php";
         <div class="">
             <div class="row align-items-center">
                 <div class="col-lg-6 info-area-right p-5">
-                    <h1 class="display-3">Our Mission</h1>
-                    <p>Fulfill the needs of the people of Wattala division to satisfy in an efficient and productive
-                        manner, conforming with the policies of the government and principles of Good Government</p>
+                    <h1 class="display-3">Duty Before Self</h1>
+                    <!-- <p>Fulfill the needs of the people of Wattala division to satisfy in an efficient and productive
+                        manner, conforming with the policies of the government and principles of Good Government</p> -->
                     <br>
                     <p>
-                        inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct
-                        standards especially in the workplace. That’s why it’s crucial that, as women, our behavior on
-                        the
-                        job is beyond reproach. inappropriate behavior is often laughed off as “boys will be boys,”
-                        women
-                        face higher conduct standards especially in the workplace. That’s why it’s crucial that, as
-                        women,
-                        our behavior on the job is beyond reproach.
+                        "I am hardworking and will give my fullest to any task that I undertake. At the same time, I believe in the good of people and team work. I never hesitate to take advice from others. It is fulfilling to help people. While I am very flexible and simple in my approach, I always stand for what I believe in."
+
+                        "I strongly believe that respect cannot be bought, it has to be earned. Therefore, I am content, moved and motivated with the public response I get for all my efforts. "
+
+                        "I am willing to do whatever is required to serve society. I believe that I am doing my duty to my country and I am happy with my achievements. I do not like to think about the opportunities that I may have missed, because financial gain cannot be replaced with the respect or the perception that the people of this country have about me. "
                     </p>
                 </div>
                 <div class="col-lg-6 no-padding info-area-left">
-                    <img class="img-fluid" src="images/carosal3.jpg" alt="">
+                    <img class="img-fluid" src="images/about2.jpg" alt="about">
                 </div>
             </div>
         </div>
     </div>
 </section>
 <!--card section-->
-<section>
+<!-- <section>
     <div class="container">
         <div class="text-center" id="card_head">
             <h1 class="text mb-5">Wattala Divisional Secretaries who worked since 1991</h1>
@@ -228,7 +221,11 @@ include "support/header.php";
             </div>
         </div>
     </div>
-</section>
+</section> -->
+
+<span>
+    <h5 class="pl-5"> <u> Premnath C Dolawatte | Attorney at Law</u></h5>
+</span>
 
 <!--reach section-->
 <section class="project p-5" style="background-color: #f4f4f4">

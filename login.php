@@ -36,7 +36,7 @@ include 'support/header.php';
 							<div class="input-group-prepend">
 								<div class="input-group-text"><i class="fas fa-key"></i></div>
 							</div>
-							<input class="form-control" type="password" id="password" name="password" placeholder="Password">
+							<input class="form-control" type="password" id="password" name="password" autocomplete="false" placeholder="Password">
 
 						</div>
 						<span class="text-danger font-weight-bold"> </span>

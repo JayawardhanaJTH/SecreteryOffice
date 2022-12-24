@@ -1,7 +1,12 @@
 <?php
+session_start();
+
 $page = "contact";
+setcookie("pageName", $page, time() + (86400 * 30), "/");
+
 require "connection/connection.php";
 include "support/header.php";
+
 ?>
 <!-- Start of contact page -->
 <div class="container-fluid">

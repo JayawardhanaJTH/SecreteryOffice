@@ -41,14 +41,14 @@
 	<div class="wrapper row0">
 		<header id="header" class="hoc clear text-md-left">
 			<!-- Start of header -->
-			<div class="row">
-				<div id="logo" class="col-md-2 text-center">
+			<div class="row justify-content-center text-center">
+				<!-- <div id="logo" class="col-md-2 text-center">
 					<a href="index.php"><img src="images/logo.png" class="d-flex w-50"></a>
-				</div>
-				<div class="col-md-7 text-center">
-					<h1 class="p-2 font-x3" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
-						Divisional Secretary Office <br> Waththala</h1>
-				</div>
+				</div> -->
+				<!-- <div class="col-md-7 "> -->
+				<h1 class="p-2 font-x3" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+					Divisional Secretary Office <br> Waththala</h1>
+				<!-- </div> -->
 				<!-- <div class="col-md-3 text-center " >
 						<div class="avilability " style="border:2px solid #95103B; border-radius: 10px;">
 						<?php
@@ -86,12 +86,13 @@
 						<!-- Main menu -->
 						<div class="collapse navbar-collapse justify-content-between " id="navbarCollapse">
 							<div class="navbar-nav nav-tabs mr-auto">
-								<a href="index.php" class="nav-item nav-link home " id="home" onclick="activeLink('home')">Home
-									<hr class="hrhome">
-								</a>
 								<?php
 								if (isset($_SESSION['logged'])) {
 								?>
+									<a href="index.php" class="nav-item nav-link home " id="home" onclick="activeLink('home')">Home
+										<hr class="hrhome">
+									</a>
+
 									<a href="downloads.php" class="nav-item nav-link product" id="downloads" onclick="activeLink('downloads')">Downloads
 										<hr class="hrproducts">
 									</a>
@@ -140,7 +141,7 @@
 									<div class="nav-item dropdown">
 										<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Logout</a>
 										<div class="dropdown-menu">
-											<a href="logout.php" class="dropdown-item">Logout</a>
+											<a href="logout.php" onclick="activeLink('reset')" class="dropdown-item">Logout</a>
 										</div>
 									</div>
 
@@ -151,8 +152,8 @@
 									<div class="nav-item dropdown">
 										<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">User Account</a>
 										<div class="dropdown-menu">
-											<a href="login.php" class="dropdown-item">Login</a>
-											<a href="register.php" class="dropdown-item">Register as Grama Niladhari</a>
+											<a href="login.php" onclick="activeLink('reset')" class="dropdown-item">Login</a>
+											<!-- <a href="register.php" class="dropdown-item">Register as Grama Niladhari</a> -->
 										</div>
 
 									</div>

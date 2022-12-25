@@ -9,6 +9,8 @@
 
 	<?php
 	header('Content-Type: text/html; charset=utf-8');
+	// set the default timezone to use.
+	date_default_timezone_set('Asia/Colombo');
 	?>
 
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -182,7 +184,7 @@
 						<fieldset>
 							<legend>Quick Search:</legend>
 							<input class="text-white" type="text" name="searchText" placeholder="Enter search term&hellip;">
-							<button  type="submit"><i class="fas fa-search"></i></button>
+							<button type="submit"><i class="fas fa-search"></i></button>
 						</fieldset>
 					</form>
 				</div>

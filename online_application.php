@@ -95,16 +95,21 @@ include 'support/header.php';
                             <label for="elecSeat">(මැතිවරණ ආසනය)</label>
                             <select name="elecSeat" id="elecSeat" class="form-control">
                                 <option value="">Select Electoral seat</option>
-                                <option value="164 Pamunugama">164 Pamunugama</option>
-                                <option value="164/A Maha Pamunugama">164/A Maha Pamunugama</option>
-                                <option value="165/A Bopitiya">165/A Bopitiya</option>
-                                <option value="165 Bopitiya">165 Bopitiya</option>
-                                <option value="166 Nugape">166 Nugape</option>
-                                <option value="167 Uswetakriyyawa">167 Uswetakriyyawa</option>
-                                <option value="168 Palliyawatta">168 Palliyawatta</option>
-                                <option value="169 Hekiththa">169 Hekiththa</option>
-                                <option value="169/A kurunduheena">169/A kurunduheena</option>
-                                <option value="176 Wattala">176 Wattala</option>
+                                <option value="AW">Avissawella</option>
+                                <option value="BO">Borella</option>
+                                <option value="CC">Colombo Central</option>
+                                <option value="CE">Colombo East</option>
+                                <option value="CN">Colombo North</option>
+                                <option value="CW">Colombo West</option>
+                                <option value="DE">Dehiwala</option>
+                                <option value="HO">Homagama</option>
+                                <option value="KA">Kaduwela</option>
+                                <option value="KE">Kesbewa</option>
+                                <option value="KL">Kolonnawa</option>
+                                <option value="KO">Kotte</option>
+                                <option value="MA">Maharagama</option>
+                                <option value="MO">Moratuwa</option>
+                                <option value="RA">Rathmalana</option>
                             </select>
                         </div>
                     </li>
@@ -176,9 +181,7 @@ include 'support/header.php';
                     eligible for registration.</p>
             </div>
             <div class="row justify-content-center mb-5">
-                <!-- <div class="col-md-6">
-                    <p>Checked by:</p>
-                </div> -->
+
                 <div class="col-md-3">
                     <p>Date: <?php echo date('D, d M Y') ?></p>
                 </div>
@@ -186,60 +189,9 @@ include 'support/header.php';
                     <p>Time:<?php echo date('H:i:s') ?></p>
                 </div>
             </div>
-            <!-- <div class="row justify-content-center">
-                <div class="col-5 ml-md-5">
-                    <p>-------------------<br>
-                        Divisional secretary<br>
-                        ප්‍රාදේශීය ලේකම්</p>
-                </div>
-                <div class="col-5 ml-md-5 ">
-                    <p>-------------------<br>
-                        Grama Niladhari <br>
-                        ග්‍රාම නිලධාරී</p>
-                </div>
-            </div> -->
 
-            <!-- Payment Section -->
             <hr>
-            <!--
-            <h1>Payment Section</h1>
-             <div class="row no-gutters">
 
-                <div class="form-group col-md-4 mr-md-5 ">
-                    <label for="card_num">Credit card details</label>
-                    <div class="input-group">
-                        <input class="form-control" type="number" id="card_num" name="card_num" placeholder="1234 1234 1234 1234" required>
-                    </div>
-                    <span><i class="fab fa-cc-visa display-4"></i> <i class="fab fa-cc-mastercard display-4"></i> <i class="fab fa-cc-amex display-4"></i></span>
-                </div>
-
-
-                <div class="form-group col-md-6">
-                    <label for="name">Card holder name</label>
-
-                    <input type="text" name="name" id="name" placeholder="Card holder name" class="form-control" required>
-                </div>
-
-            </div>
-            <div class="row no-gutters">
-
-                <div class="form-group col-md-3 mr-md-5">
-                    <label for="card_date">Credit card expire date</label>
-                    <div class="input-group">
-                        <input class="form-control" type="text" id="card_date" name="card_date" placeholder="MM/YY" required>
-                    </div>
-                </div>
-
-
-                <div class="form-group col-md-3">
-                    <label for="name">Amount</label>
-                    Rs.
-                    <input type="hidden" name="amount" id="amount" value="120.00" class="form-control">
-                    <input type="text" name="amount" id="amount" value="120.00" class="form-control" disabled>
-                </div>
-
-            </div>
--->
             <div class="form-group">
                 <input type="submit" value="Save" name="application_save" class="btn">
             </div>

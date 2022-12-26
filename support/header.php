@@ -5,7 +5,7 @@
 <head>
 
 	<!-- Site title -->
-	<title>Divisional Secretary Office - Home</title>
+	<title>PCDOffice</title>
 
 	<?php
 	header('Content-Type: text/html; charset=utf-8');
@@ -49,26 +49,8 @@
 				</div> -->
 				<!-- <div class="col-md-7 "> -->
 				<h1 class="p-2 font-x3" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
-					Divisional Secretary Office <br> Waththala</h1>
-				<!-- </div> -->
-				<!-- <div class="col-md-3 text-center " >
-						<div class="avilability " style="border:2px solid #95103B; border-radius: 10px;">
-						<?php
-						// $sql = "SELECT status FROM availability";
-						// $result = mysqli_query($conn, $sql);
-
-						// $status = mysqli_fetch_assoc($result);
-						// $text = "Not Available";
-
-						// if ($status['status'] == '1') {
-						// 	$text = "Available";
-						// }
-						?>
-							<h5 class="mt-3">Secretary | <?php
-															// echo $text 
-															?> </h5>
-						</div>
-				</div> -->
+					PCDOffice</h1>
+				
 			</div>
 		</header>
 	</div>

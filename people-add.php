@@ -88,6 +88,15 @@ include "support/header.php";
                         </div>
                     </div>
                     <div class="form-group">
+                        <label for="nic">NIC number</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text"><i class="fas fa-id-card"></i></div>
+                            </div>
+                            <input type="text" id="nic" name="nic" class="form-control" placeholder="123456789V">
+                        </div>
+                    </div>
+                    <div class="form-group">
                         <label for="address">Address</label>
                         <div class="input-group">
                             <div class="input-group-prepend">

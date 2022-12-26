@@ -23,31 +23,17 @@ include "support/header.php";
                     <a href="online_application.php">
                         <div class="card">
                             <div class="text-center">
-                                <h1>Business Registration</h1>
+                                <h1>Application Form</h1>
                             </div>
                             <div class="card-body text-center">
                                 <div class="details">
-                                    <p>Application for Business Registration</p>
+                                    <p>Application for Inquiries</p>
                                 </div>
                             </div>
                         </div>
                     </a>
                 </div>
-                <!-- <div class="col-md-6 col-sm-12 mb-3">
-                    <a href="online_application2.php">
 
-                        <div class="card">
-                            <div class="text-center">
-                                <h1>Requirement Application</h1>
-                            </div>
-                            <div class="card-body text-center">
-                                <div class="details">
-                                    <p> Application for request requirement application</p>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div> -->
             </div>
         </div>
     </div>

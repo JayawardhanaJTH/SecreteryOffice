@@ -44,10 +44,7 @@
 		<header id="header" class="hoc clear text-md-left">
 			<!-- Start of header -->
 			<div class="row justify-content-center text-center">
-				<!-- <div id="logo" class="col-md-2 text-center">
-					<a href="index.php"><img src="images/logo.png" class="d-flex w-50"></a>
-				</div> -->
-				<!-- <div class="col-md-7 "> -->
+				
 				<h1 class="p-2 font-x3" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
 					PCDOffice</h1>
 				
@@ -77,30 +74,28 @@
 										<hr class="hrhome">
 									</a>
 
-									<!-- <a href="downloads.php" class="nav-item nav-link product" id="downloads" onclick="activeLink('downloads')">Downloads
-										<hr class="hrproducts">
-									</a> -->
-									<a href="online_application_home.php" class="nav-item nav-link prode" id="forms" onclick="activeLink('forms')">Online Forums
-										<hr class="hrproductDetail">
+									
+									<a href="online_application_home.php" class="nav-item nav-link forms" id="forms" onclick="activeLink('forms')">Online Forums
+										<hr class="hrforms">
 									</a>
 
 									<?php
 									if (isset($_SESSION['TYPE'])) {
 										if ($_SESSION['TYPE'] == '1' || $_SESSION['TYPE'] == '2') {
 									?>
-											<a href="dashboard.php" class="nav-item nav-link cart" id="dashboard" onclick="activeLink('dashboard')">Dashboard
-												<hr class="hrcart">
+											<a href="dashboard.php" class="nav-item nav-link dashboard" id="dashboard" onclick="activeLink('dashboard')">Dashboard
+												<hr class="hrdashboard">
 											</a>
 								<?php
 										}
 									}
 								}
 								?>
-								<a href="contact.php" class="nav-item nav-link chk" id="contact" onclick="activeLink('contact')">Contact
-									<hr class="hrchec">
+								<a href="contact.php" class="nav-item nav-link contact" id="contact" onclick="activeLink('contact')">Contact
+									<hr class="hrcontact">
 								</a>
-								<a href="aboutUs.php" class="nav-item nav-link acc" id="about" onclick="activeLink('about')">About Us
-									<hr class="hracc">
+								<a href="aboutUs.php" class="nav-item nav-link about" id="about" onclick="activeLink('about')">About Us
+									<hr class="hrabout">
 								</a>
 
 							</div>
@@ -137,7 +132,6 @@
 										<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">User Account</a>
 										<div class="dropdown-menu">
 											<a href="login.php" onclick="activeLink('reset')" class="dropdown-item">Login</a>
-											<!-- <a href="register.php" class="dropdown-item">Register as Grama Niladhari</a> -->
 										</div>
 
 									</div>

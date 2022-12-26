@@ -14,7 +14,7 @@
     if($_SESSION['TYPE'] == '1'){
         $sql1  = "SELECT * FROM business_registration WHERE grama_niladhari_approval= '1' && secretary_approval='0'";
     }else{
-        $division = $_SESSION['DIVISION'];
+        $division = $_SESSION['ELEC_SEAT'];
         
         $sql1  = "SELECT * FROM business_registration WHERE grama_niladhari_approval= '0' && b_grama_division = '$division'";
         $sql2  = "SELECT * FROM requirement_application WHERE grama_approval= '0' && division = '$division'";

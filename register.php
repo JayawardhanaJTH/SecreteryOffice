@@ -56,7 +56,7 @@ include "support/header.php";
                             </div>
                             <input class="form-control" type="email" id="email" name="email" placeholder="Email" required>
                             <div class="invalid-feedback">
-                                Please enter email.
+                                Please enter valid email.
                             </div>
                         </div>
                     </div>
@@ -66,11 +66,13 @@ include "support/header.php";
                             <div class="input-group-prepend">
                                 <div class="input-group-text"><i class="fas fa-phone"></i></div>
                             </div>
-                            <input type="tel" id="phone" name="phone" class="form-control" placeholder="079 1234 56" required>
+                            <input type="tel" id="phone" name="phone" minlength="10" maxlength="10" pattern="[0-9]{10}" class="form-control" placeholder="079123456" required>
+
                             <div class="invalid-feedback">
-                                Please enter contact number.
+                                Please enter valid contact number between 0-9.
                             </div>
                         </div>
+                        <small id="info" class="form-text text-muted">Enter your 10 digits mobile number.</small>
                     </div>
                     <div class="form-group">
                         <label for="phone">NIC number</label>
@@ -78,9 +80,9 @@ include "support/header.php";
                             <div class="input-group-prepend">
                                 <div class="input-group-text"><i class="fas fa-id-card"></i></div>
                             </div>
-                            <input type="tel" id="nic" name="nic" class="form-control" placeholder="123456789V" required>
+                            <input type="text" id="nic" name="nic" maxlength='10' minlength='10' pattern='[0-9]{9}[A-Z]{1}' class="form-control" placeholder="123456789V" required>
                             <div class="invalid-feedback">
-                                Please enter NIC number.
+                                Please enter valid NIC number.
                             </div>
                         </div>
                     </div>
@@ -89,7 +91,7 @@ include "support/header.php";
                         <div class="input-group-prepend">
                             <div class="input-group-text"><i class="fas fa-user"></i></div>
                             <div class="input-group">
-                                <select name="elecSeat" id="elecSeat" class="form-control">
+                                <select name="elecSeat" id="elecSeat" class="form-control" required>
                                     <option value="">Select Electoral seat</option>
                                     <option value="AW">Avissawella</option>
                                     <option value="BO">Borella</option>
@@ -128,7 +130,7 @@ include "support/header.php";
                             <input type="checkbox" class="form-check" id="showPass" onClick="showPassword()">
                             <label for="showPass"> Show Password</label>
                         </div>
-                        <small id="info" class="form-text text-muted">Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.</small>
+                        <small id="info" class="form-text text-muted">Your password must be 8-20 characters long, contain letters, special characters and numbers, and must not contain spaces, or emoji.</small>
                     </div>
                     <div class="form-group">
                         <label for="repassword">Confirm Password</label>

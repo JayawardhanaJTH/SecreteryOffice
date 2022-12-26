@@ -16,53 +16,32 @@ include "support/header.php";
 			<div class="alert-info topic_bar">
 				<h1 class="ml-5 topic">Office Contact Details</h1>
 			</div>
+
 			<div class="card-container">
 				<div class="card-deck mb-2 ">
 					<div class="card">
 						<div class="card-body">
-							<h3 class="card-header">Divisional Secretary
+							<h3 class="card-header">Office
 							</h3>
-							<p class="card-text">0112 931 193</p>
+							<p class="card-text">011-2142882</p>
+							<p class="card-text">Fax - 011-2142882</p>
+							<p class="card-text">No.50 , Ihala Bomiriya Kaduwela</p>
 						</div>
 					</div>
 					<div class="card">
 						<div class="card-body">
-							<h3 class="card-header">Additional secretary
+							<h3 class="card-header">Private Secretary - Kasun Bodhiwaruna
 							</h3>
-							<p class="card-text">0112 942 928</p>
+							<p class="card-text">071-8768381</p>
 						</div>
 					</div>
 					<div class="card">
 						<div class="card-body">
-							<h3 class="card-header">Accounts Branch
+							<h3 class="card-header">Cordinating Secretary - Akalanka Pabashi
 							</h3>
-							<p class="card-text">0112 943 333 </p>
+							<p class="card-text">071-6408420</p>
 						</div>
 					</div>
-				</div>
-				<div class="card-deck mb-4">
-					<div class="card">
-						<div class="card-body">
-							<h3 class="card-header">Land Branch
-							</h3>
-							<p class="card-text">0112 182 988</p>
-						</div>
-					</div>
-					<div class="card">
-						<div class="card-body">
-							<h3 class="card-header">Planning Branch
-							</h3>
-							<p class="card-text">0112 980 700</p>
-						</div>
-					</div>
-					<div class="card">
-						<div class="card-body">
-							<h3 class="card-header">Samurdhi
-							</h3>
-							<p class="card-text">0112 981 467</p>
-						</div>
-					</div>
-
 				</div>
 
 			</div>
@@ -95,160 +74,178 @@ include "support/header.php";
 		<!-- Gramaniladari contacts -->
 		<div class="container-fluid">
 			<div class="alert-secondary topic_bar">
-				<h1 class="ml-5 topic">Grama niladhari Contact Details</h1>
+				<h1 class="ml-5 topic">Electoral Seat Agents Details</h1>
 			</div>
+
 			<div class="card-container">
+				<h2 class="ml-5 topic h4 text-center">Avissawella</h2>
 				<div class="profile">
 					<span class="profile_img">
 						<img src="images/user.png" alt="user image">
 					</span>
 					<div class="profile_text">
-						<h4 class="profile_name">Mr. T.H.D Chandana</h4>
-						<span class="profile_title">164 Pamunugama </span>
-						<span class="profile_title">071-4898663
+						<h4 class="profile_name">Mr. Priyantha Hewarathna</h4>
+						<span class="profile_title">071 1990064
 						</span>
 					</div>
 				</div>
+				<h2 class="ml-5 topic h4 text-center">Kaduwela</h2>
 				<div class="profile">
 					<span class="profile_img">
 						<img src="images/user.png" alt="user image">
 					</span>
 					<div class="profile_text">
-						<h4 class="profile_name">Mrs.M.L.D.C Niranjani </h4>
-						<span class="profile_title">164/A maha pamunugama </span>
-						<span class="profile_title">071-8783887 </span>
+						<h4 class="profile_name">Mr. Manjula Lanka Darmapala</h4>
+						<span class="profile_title">071 5678661</span>
 					</div>
 				</div>
+				<h2 class="ml-5 topic h4 text-center">Homagama</h2>
 				<div class="profile">
 					<span class="profile_img">
 						<img src="images/user.png" alt="user image">
 					</span>
 					<div class="profile_text">
-						<h4 class="profile_name">B.O.S.I Rodrigo </h4>
-						<span class="profile_title">165 Bopitiya </span>
-						<span class="profile_title">071-8137714
+						<h4 class="profile_name">Mr. Sajith Maduranga</h4>
+						<span class="profile_title">077 4640062
 						</span>
 					</div>
 				</div>
-				<div class="profile">
-					<span class="profile_img">
-						<img src="images/user.png" alt="user image">
-					</span>
-					<div class="profile_text">
-						<h4 class="profile_name">Mr. M.D.A. Chathuranga </h4>
-						<span class="profile_title">165/A Bopitiya </span>
-						<span class="profile_title">077-1000229
-						</span>
-					</div>
-				</div>
-				<div class="profile">
-					<span class="profile_img">
-						<img src="images/user.png" alt="user image">
-					</span>
-					<div class="profile_text">
-						<h4 class="profile_name">Mr. J.M.D.D.R Gayan </h4>
-						<span class="profile_title">166 Nugape </span>
-						<span class="profile_title">0776961377
+				<h2 class="ml-5 topic h4 text-center">Kolonnawa</h2>
 
-						</span>
-					</div>
-				</div>
 				<div class="profile">
 					<span class="profile_img">
 						<img src="images/user.png" alt="user image">
 					</span>
 					<div class="profile_text">
-						<h4 class="profile_name">Mr. P.D.N.P. Lal </h4>
-						<span class="profile_title">167 Uswetakeiyyawa </span>
-						<span class="profile_title">071-8266337
+						<h4 class="profile_name">Mr. Asanka Ralapanawa</h4>
+						<span class="profile_title">077 9886192
+						</span>
+					</div>
+				</div>
+				<h2 class="ml-5 topic h4 text-center">Maharagama</h2>
+				<div class="profile">
+					<span class="profile_img">
+						<img src="images/user.png" alt="user image">
+					</span>
+					<div class="profile_text">
+						<h4 class="profile_name">Mr. Lahiru Deldeniya</h4>
+						<span class="profile_title">070 3207004
+						</span>
+					</div>
+				</div>
+				<h2 class="ml-5 topic h4 text-center">Kasbawa</h2>
+				<div class="profile">
+					<span class="profile_img">
+						<img src="images/user.png" alt="user image">
+					</span>
+					<div class="profile_text">
+						<h4 class="profile_name">Mr. Lahiru Mohan</h4>
+						<span class="profile_title">070 1300211
+						</span>
+					</div>
+				</div>
+
+				<h2 class="ml-5 topic h4 text-center">Boralla</h2>
+				<div class="profile">
+					<span class="profile_img">
+						<img src="images/user.png" alt="user image">
+					</span>
+					<div class="profile_text">
+						<h4 class="profile_name"></h4>
+						<span class="profile_title">
+						</span>
+					</div>
+				</div>
+				<h2 class="ml-5 topic h4 text-center">Kotte</h2>
+				<div class="profile">
+					<span class="profile_img">
+						<img src="images/user.png" alt="user image">
+					</span>
+					<div class="profile_text">
+						<h4 class="profile_name"></h4>
+						<span class="profile_title">
+						</span>
+					</div>
+				</div>
+				<h2 class="ml-5 topic h4 text-center">Dehiwala</h2>
+				<div class="profile">
+					<span class="profile_img">
+						<img src="images/user.png" alt="user image">
+					</span>
+					<div class="profile_text">
+						<h4 class="profile_name">Mr. Arjuna</h4>
+						<span class="profile_title">070 2103034
+						</span>
+					</div>
+				</div>
+				<h2 class="ml-5 topic h4 text-center">Rathmalana</h2>
+				<div class="profile">
+					<span class="profile_img">
+						<img src="images/user.png" alt="user image">
+					</span>
+					<div class="profile_text">
+						<h4 class="profile_name">Mr. Sanjaya</h4>
+						<span class="profile_title">077 7771702
+						</span>
+					</div>
+				</div>
+				<h2 class="ml-5 topic h4 text-center">Colombo Central</h2>
+				<div class="profile">
+					<span class="profile_img">
+						<img src="images/user.png" alt="user image">
+					</span>
+					<div class="profile_text">
+						<h4 class="profile_name"></h4>
+						<span class="profile_title">
+						</span>
+					</div>
+				</div>
+				<h2 class="ml-5 topic h4 text-center">Colombo West</h2>
+				<div class="profile">
+					<span class="profile_img">
+						<img src="images/user.png" alt="user image">
+					</span>
+					<div class="profile_text">
+						<h4 class="profile_name"></h4>
+						<span class="profile_title">
+						</span>
+					</div>
+				</div>
+				<h2 class="ml-5 topic h4 text-center">Colombo North</h2>
+				<div class="profile">
+					<span class="profile_img">
+						<img src="images/user.png" alt="user image">
+					</span>
+					<div class="profile_text">
+						<h4 class="profile_name"></h4>
+						<span class="profile_title">
+						</span>
+					</div>
+				</div>
+				<h2 class="ml-5 topic h4 text-center">Colombo East</h2>
+				<div class="profile">
+					<span class="profile_img">
+						<img src="images/user.png" alt="user image">
+					</span>
+					<div class="profile_text">
+						<h4 class="profile_name"></h4>
+						<span class="profile_title">
+						</span>
+					</div>
+				</div>
+				<h2 class="ml-5 topic h4 text-center">Moratuwa</h2>
+				<div class="profile">
+					<span class="profile_img">
+						<img src="images/user.png" alt="user image">
+					</span>
+					<div class="profile_text">
+						<h4 class="profile_name">Mr. Samantha Silva</h4>
+						<span class="profile_title">077 7663160
 						</span>
 					</div>
 				</div>
 			</div>
 		</div>
-
-		<!-- Essential contacts -->
-		<div class="container-fluid">
-			<div class="alert-warning topic_bar">
-				<h1 class="ml-5 topic">Essential Contact Details</h1>
-			</div>
-			<div class="essential">
-				<div class="row essential_text align-items-baseline">
-					<h4 class="col-6 ess_name">Government Service Center (Secretary) </h4>
-					<h4 class="col-1"> | </h4>
-					<h4 class="col-5 ess_number">0112 958 492</h4>
-				</div>
-
-			</div>
-			<div class="essential">
-				<div class="row essential_text align-items-baseline">
-					<h4 class="col-6 ess_name">Register Division (Mrs. H.D.N. Ranjala) </h4>
-					<h4 class="col-1"> | </h4>
-					<h4 class="col-5 ess_number">0773080343
-					</h4>
-				</div>
-
-			</div>
-			<div class="essential">
-				<h4 class="pl-1 text-center">District management</h4>
-				<div class=" essential_text align-items-baseline row">
-					<div class="col-md-6">
-						<h4 class=" ess_name">Disaster management </h4>
-						<h4 class=" ess_number">0112 695 013</h4>
-					</div>
-					<div class="col-md-6">
-						<h4 class=" ess_name">National Disaster Relief Service
-
-							<h4 class=" ess_number">0112 665 258</h4>
-					</div>
-
-				</div>
-
-			</div>
-			<div class="essential">
-				<h4 class="pl-1 text-center">Post office </h4>
-				<div class=" essential_text align-items-baseline row">
-					<div class="col-md-6">
-						<h4 class=" ess_name">Main Post Office </h4>
-						<h4 class=" ess_number">0114 949 986</h4>
-					</div>
-					<div class="col-md-6">
-						<h4 class=" ess_name">Welisara Post office
-
-							<h4 class=" ess_number">0112 956 271</h4>
-					</div>
-
-				</div>
-
-			</div>
-
-			<div class="essential">
-				<h4 class="pl-1 text-center">Police Station</h4>
-				<div class=" essential_text row justify-content-around">
-					<div class="col-md-6">
-						<h4 class=" ess_name">Pamunugama </h4>
-						<h4 class=" ess_number">0112 930 222</h4>
-					</div>
-					<div class="col-md-6">
-						<h4 class=" ess_name">Mahabage </h4>
-						<h4 class=" ess_number">0112 243 492</h4>
-					</div>
-
-
-
-				</div>
-
-			</div>
-			<div class="essential">
-				<div class="row essential_text align-items-baseline">
-					<h4 class="col-6 ess_name">Samurdhi Division (Mrs. Nimali Rupika) </h4>
-					<h4 class="col-1"> | </h4>
-					<h4 class="col-5 ess_number">0779175085</h4>
-				</div>
-
-			</div>
-		</div>
-
 	</div>
 </div>
 

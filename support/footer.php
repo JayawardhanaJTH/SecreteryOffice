@@ -2,7 +2,7 @@
 <div class="wrapper row4">
 	<footer id="footer" class="hoc clear">
 		<div class="one_third first">
-			<h6 class="heading">Divisional Secretary</h6>
+			<h6 class="heading">PCDOffice</h6>
 			<p></p>
 			<p class="btmspace-30"></p>
 			<ul class="faico clear">
@@ -17,9 +17,9 @@
 		<div class="one_third">
 			<h6 class="heading">Contact Us</h6>
 			<ul class="nospace clear ">
-				<li><i class="fas fa-phone-square"></i> Give us a call : 0112 931 193</li>
+				<li><i class="fas fa-phone-square"></i> Give us a call : 011-2142882</li>
 				<li><i class="fas fa-at"></i> Send us a email : secretaryoffice@gmail.com</li>
-				<li><i class="fas fa-envelope"></i> Send us a mail : Divisional Secretary, Waththala</li>
+				<li><i class="fas fa-envelope"></i> No.50 , Ihala Bomiriya Kaduwela</li>
 			</ul>
 		</div>
 		<div class="one_third">
@@ -67,22 +67,6 @@
 <script>
 	var s = skrollr.init();
 </script>
-<!-- <script>
-		$(document).ready(function(){
-
-			$('.service1').waypoint(function(direction){
-				$('.service1').addClass('animated zoomIn visible')
-			}, {
-				offset: '50%'
-			});
-
-			$('.service1').waypoint(function(direction){
-				$('.service1').removeClass('animated zoomIn visible')
-			}, {
-				offset: '-50%'
-			});
-		});
-	</script> -->
 
 </body>
 

@@ -119,36 +119,26 @@ include 'support/header.php';
                             <label for="division">(ප්‍රාද්ශීය ලේකම් කොට්ඨාසය)</label>
                             <select name="division" id="division" class="form-control">
                                 <option value="">Select Regional Secretariat Division</option>
-                                <option value="164 Pamunugama">164 Pamunugama</option>
-                                <option value="164/A Maha Pamunugama">164/A Maha Pamunugama</option>
-                                <option value="165/A Bopitiya">165/A Bopitiya</option>
-                                <option value="165 Bopitiya">165 Bopitiya</option>
-                                <option value="166 Nugape">166 Nugape</option>
-                                <option value="167 Uswetakriyyawa">167 Uswetakriyyawa</option>
-                                <option value="168 Palliyawatta">168 Palliyawatta</option>
-                                <option value="169 Hekiththa">169 Hekiththa</option>
-                                <option value="169/A kurunduheena">169/A kurunduheena</option>
-                                <option value="176 Wattala">176 Wattala</option>
+                                <option value="Seethawaka">Seethawaka</option>
+                                <option value="Padukka">Padukka</option>
+                                <option value="Kaduwela">Kaduwela</option>
+                                <option value="Maharagama">Maharagama</option>
+                                <option value="Kesbewa">Kesbewa</option>
+                                <option value="Dehiwala">Dehiwala</option>
+                                <option value="Rathmalana">Rathmalana</option>
+                                <option value="Kotte">Kotte</option>
+                                <option value="Kolonnawa">Kolonnawa</option>
+                                <option value="Moratuwa">Moratuwa</option>
+                                <option value="Colombo">Colombo</option>
+                                <option value="Thibirigasyaya">Thibirigasyaya</option>
                             </select>
                         </div>
                     </li>
                     <li class="col-md-4">
                         <div class="form-group">
-                            <label for="domain">Village Officer Domains</label>
+                            <label for="domain">Village Officer Domain</label>
                             <label for="domain">(ග්‍රාම නිලධාරී වසම)</label>
-                            <select name="domain" id="domain" class="form-control">
-                                <option value="">Select Village Officer Domains</option>
-                                <option value="164 Pamunugama">164 Pamunugama</option>
-                                <option value="164/A Maha Pamunugama">164/A Maha Pamunugama</option>
-                                <option value="165/A Bopitiya">165/A Bopitiya</option>
-                                <option value="165 Bopitiya">165 Bopitiya</option>
-                                <option value="166 Nugape">166 Nugape</option>
-                                <option value="167 Uswetakriyyawa">167 Uswetakriyyawa</option>
-                                <option value="168 Palliyawatta">168 Palliyawatta</option>
-                                <option value="169 Hekiththa">169 Hekiththa</option>
-                                <option value="169/A kurunduheena">169/A kurunduheena</option>
-                                <option value="176 Wattala">176 Wattala</option>
-                            </select>
+                            <input type="text" name="domain" id="domain" class="form-control" placeholder="Village Officer Domain" />
                         </div>
                     </li>
                 </div>

@@ -25,6 +25,8 @@ if ($_POST['id'] == "insert") {
     $address = $_POST['address'];
     $password = $_POST['password'];
 
+    $encPassword = md5($password);
+
     $to = $email;
     $mailSubject =  "Secretary Divisions Account Created..";
     $emailBody = "Your <b>Username :</b> $email <br>";
@@ -40,17 +42,16 @@ if ($_POST['id'] == "insert") {
         echo "not send";
     }
 
-        $sql = "INSERT INTO people( first_name, last_name, email, grama_niladhari_division, gender, contact_number, address, password) 
-    	VALUES ('$first_name','$last_name','$email', '$grama_niladhari_division', '$gender', '$contact_number', '$address', '$password')";
+    $sql = "INSERT INTO people( first_name, last_name, email, grama_niladhari_division, gender, contact_number, address, password) 
+    	VALUES ('$first_name','$last_name','$email', '$grama_niladhari_division', '$gender', '$contact_number', '$address', '$encPassword')";
 
 
-        if (mysqli_query($conn, $sql)) {
-    //        echo json_encode(array("statusCode"=>200));
-        }
-        else {
-    //        echo json_encode(array("statusCode"=>201));
-        }
-        mysqli_close($conn);
+    if (mysqli_query($conn, $sql)) {
+        //        echo json_encode(array("statusCode"=>200));
+    } else {
+        //        echo json_encode(array("statusCode"=>201));
+    }
+    mysqli_close($conn);
 }
 
 if ($_POST['id'] == "show") {

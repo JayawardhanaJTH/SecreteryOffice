@@ -1,12 +1,8 @@
 <?php
-session_start();
-if (!isset($_SESSION['logged'])) {
-    header("location: login.php");
-}
+
 $page = "downloads";
 setcookie("pageName", $page, time() + (86400 * 30), "/");
 
-require_once("connection/connection.php");
 include 'support/header.php';
 
 ?>

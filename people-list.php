@@ -1,16 +1,11 @@
 <?php
-    session_start();
-    if(!isset($_SESSION['logged'])){
-		header("location: login.php");
-		
-	}
-    require "connection/connection.php";
-    include "support/header.php";
+$page = "people-list";
+include "support/header.php";
 ?>
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Source+Code+Pro:700,900&display=swap" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css" />
 <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.23/datatables.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
 
 <div class="container">
     <div class="text-center mb-5">
@@ -117,16 +112,14 @@
                         </div>
                     </div>
                     <br>
-<!--                    <div>-->
-<!--                        <input type="submit" class="btn btn-success" id="add_people" value="Add People">-->
-<!--                    </div>-->
+                    <!--                    <div>-->
+                    <!--                        <input type="submit" class="btn btn-success" id="add_people" value="Add People">-->
+                    <!--                    </div>-->
                 </form>
             </div>
             <div class="modal-footer justify-content-end">
                 <div class="">
-                    <input class="btn btn-" id="update_people_details"
-                           type="submit"
-                           value="Update People Details">
+                    <input class="btn btn-" id="update_people_details" type="submit" value="Update People Details">
                 </div>
             </div>
         </div>
@@ -139,7 +132,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <?php
-    include "support/footer.php";
+include "support/footer.php";
 ?>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>

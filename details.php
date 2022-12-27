@@ -1,18 +1,15 @@
 <?php
-    session_start();
-    if(!isset($_SESSION['logged'])){
-		header("location: login.php");
-	}
-    require "connection/connection.php";
-    include "support/header.php";
+$page = "details";
+
+include "support/header.php";
 ?>
 
 <?php
-	$sql = "SELECT status FROM availability";
-	$result = mysqli_query($conn, $sql);
+$sql = "SELECT status FROM availability";
+$result = mysqli_query($conn, $sql);
 
-	$status = mysqli_fetch_assoc($result);
-	
+$status = mysqli_fetch_assoc($result);
+
 ?>
 <div class="container">
     <div class="row justify-content-center border p-5 m-5">
@@ -20,11 +17,15 @@
             <h2>Change Availability</h2>
             <div class="form-group text-center">
                 <label for="availability1">Available</label>
-                <input type="radio" name="availability" id="availability1" <?php if($status['status']=='1'){ echo "checked=true";} ?>  value="available" class="form-control">
+                <input type="radio" name="availability" id="availability1" <?php if ($status['status'] == '1') {
+                                                                                echo "checked=true";
+                                                                            } ?> value="available" class="form-control">
             </div>
             <div class="form-group text-center">
                 <label for="availability2">Not Available</label>
-                <input type="radio" name="availability" id="availability2" <?php if($status['status']=='0'){ echo "checked=true";} ?> value="notAvailable" class="form-control">
+                <input type="radio" name="availability" id="availability2" <?php if ($status['status'] == '0') {
+                                                                                echo "checked=true";
+                                                                            } ?> value="notAvailable" class="form-control">
             </div>
 
             <div class="form-group">
@@ -34,5 +35,5 @@
     </div>
 </div>
 <?php
-    include "support/footer.php";
+include "support/footer.php";
 ?>

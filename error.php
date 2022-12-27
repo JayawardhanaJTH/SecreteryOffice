@@ -1,8 +1,6 @@
 <?php
-session_start();
-if (!isset($_SESSION['logged'])) {
-	header("location: login.php");
-}
+$page = "error";
+
 include "support/header.php";
 ?>
 

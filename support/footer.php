@@ -6,19 +6,16 @@
 			<p></p>
 			<p class="btmspace-30"></p>
 			<ul class="faico clear">
-				<li><a class="faicon-dribble" href="#"><i class="fab fa-dribbble"></i></a></li>
-				<li><a class="faicon-facebook" href="#"><i class="fab fa-facebook"></i></a></li>
-				<li><a class="faicon-google-plus" href="#"><i class="fab fa-google-plus-g"></i></a></li>
-				<li><a class="faicon-linkedin" href="#"><i class="fab fa-linkedin"></i></a></li>
-				<li><a class="faicon-twitter" href="#"><i class="fab fa-twitter"></i></a></li>
-				<li><a class="faicon-vk" href="#"><i class="fab fa-vk"></i></a></li>
+				<li><a class="faicon-facebook" href="https://www.facebook.com/PremnathSL"><i class="fab fa-facebook"></i></a></li>
+				<li><a class="faicon-youtube" href="https://www.youtube.com/channel/UC-95HQVyrY1oMu7yqIKRCQg"><i class="fab fa-youtube"></i></a></li>
+				<li><a class="faicon-twitter" href="https://twitter.com/dolawattec?lang=en"><i class="fab fa-twitter"></i></a></li>
 			</ul>
 		</div>
 		<div class="one_third">
 			<h6 class="heading">Contact Us</h6>
 			<ul class="nospace clear ">
 				<li><i class="fas fa-phone-square"></i> Give us a call : 011-2142882</li>
-				<li><i class="fas fa-at"></i> Send us a email : secretaryoffice@gmail.com</li>
+				<li><i class="fas fa-at"></i> Send us a email : pcdsecretaryoffice@gmail.com</li>
 				<li><i class="fas fa-envelope"></i> No.50 , Ihala Bomiriya Kaduwela</li>
 			</ul>
 		</div>

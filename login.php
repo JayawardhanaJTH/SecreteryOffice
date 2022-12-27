@@ -1,12 +1,7 @@
 <?php
-session_start();
+$page = 'login';
 
-if (isset($_SESSION['logged'])) {
-	header("location: index.php");
-}
-require "connection/connection.php";
 include 'support/header.php';
-
 ?>
 
 <div class="container-fluid p-3">
@@ -61,7 +56,7 @@ include 'support/header.php';
 		</div>
 	</div>
 </div>
-
+<script src="js/register.js"></script>
 <?php
 include "support/footer.php";
 ?>
@@ -86,6 +81,7 @@ if (isset($_SESSION['reset_password_send'])) {
 			success_popup("Your new password is sent to your email!");
 		</script>
 	<?php
+		unset($_SESSION['reset_password_send']);
 	} else {
 	?>
 		<script type='text/javascript'>

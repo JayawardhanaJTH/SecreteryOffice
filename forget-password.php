@@ -1,10 +1,5 @@
 <?php
-session_start();
-
-if (isset($_SESSION['logged'])) {
-	header("location: index.php");
-}
-require "connection/connection.php";
+$page = "resetPassword";
 include 'support/header.php';
 ?>
 

@@ -1,3 +1,26 @@
+<?php
+session_start();
+
+// check is logged or not
+if (!isset($_SESSION['logged']) && !($page == "about" || $page == "contact" || $page == 'login' || $page == 'resetPassword' || $page == "register")) {
+	header("location: login.php");
+}
+
+//check the cookies is expired or not
+//if expired close the sessions and redirect to login
+if (!isset($_COOKIE['loginSession']) && ($page != "login")) {
+	session_unset();
+	session_destroy();
+	session_write_close();
+	echo '<script> if(!alert("Your session time out...")) { document.location = "login.php"}</script>';
+}
+
+if (isset($_SESSION['logged']) && ($page == "login" ||  $page == 'resetPassword')) {
+	header("location: index.php");
+}
+
+require_once("connection/connection.php");
+?>
 <!DOCTYPE html>
 
 <html lang="eng">
@@ -44,10 +67,10 @@
 		<header id="header" class="hoc clear text-md-left">
 			<!-- Start of header -->
 			<div class="row justify-content-center text-center">
-				
+
 				<h1 class="p-2 font-x3" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
 					PCDOffice</h1>
-				
+
 			</div>
 		</header>
 	</div>
@@ -74,7 +97,7 @@
 										<hr class="hrhome">
 									</a>
 
-									
+
 									<a href="online_application_home.php" class="nav-item nav-link forms" id="forms" onclick="activeLink('forms')">Online Forums
 										<hr class="hrforms">
 									</a>

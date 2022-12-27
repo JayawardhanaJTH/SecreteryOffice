@@ -45,12 +45,13 @@ if (isset($_POST['reset_btn'])) {
         );
         $headers = implode("\r\n", $headers);
         $password = $pass;
+        $encPass = md5($password);
         $emailBody = "Your password is rested! use this for login.\n\nPassword: " . $password;
 
         if (mail($sanitized_email, $subject, $emailBody, "From: secraterywththala@gmail.com")) {
 
             //update database
-            $updateUserPasswordQuery = "UPDATE people SET password='$pass' WHERE pid = '$userId'";
+            $updateUserPasswordQuery = "UPDATE people SET password='$encPass' WHERE pid = '$userId'";
             mysqli_query($conn, $updateUserPasswordQuery);
 
             $_SESSION['reset_password_send'] = true;

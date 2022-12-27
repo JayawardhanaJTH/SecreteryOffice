@@ -1,9 +1,5 @@
 <?php
-session_start();
-if (!isset($_SESSION['logged'])) {
-    header("location: login.php");
-}
-require "connection/connection.php";
+$page = "people-add";
 include "support/header.php";
 ?>
 

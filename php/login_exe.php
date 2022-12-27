@@ -27,11 +27,11 @@ if (isset($_POST['login_btn'])) {
 
 	if (!$errflag) {
 
-		
+
 		// avoid sql injection
 		$email = mysqli_real_escape_string($conn, trim($email));
 		$password = mysqli_real_escape_string($conn, trim($password));
-		
+
 		$encPassword = md5($password);
 
 		// query to check is user valid or not
@@ -50,6 +50,9 @@ if (isset($_POST['login_btn'])) {
 				$_SESSION['username'] = $user['username'];
 				$_SESSION['TYPE'] = $user['type'];
 				$_SESSION['USER_ID'] = $user['id'];
+
+				//set cookie to 1 hour
+				setcookie("loginSession", md5($use['id']), time() + (3600), '/');
 
 				if ($user['type'] == '2') {
 					$uer_id = $user['id'];
@@ -73,6 +76,9 @@ if (isset($_POST['login_btn'])) {
 				$_SESSION['username'] = $user['first_name'];
 				$_SESSION['TYPE'] = '0';
 				$_SESSION['USER_ID'] = $user['pid'];
+
+				//set cookie to 1 hour
+				setcookie("loginSession", md5($use['id']), time() + (3600), '/');
 
 				session_write_close();
 

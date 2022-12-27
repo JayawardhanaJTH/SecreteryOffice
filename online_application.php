@@ -1,9 +1,8 @@
 <?php
-session_start();
-if (!isset($_SESSION['logged'])) {
-    header("location: login.php");
-}
-require_once("connection/connection.php");
+
+$page = "forms";
+setcookie("pageName", $page, time() + (86400 * 30), "/");
+
 include 'support/header.php';
 ?>
 <div class="container p-1">

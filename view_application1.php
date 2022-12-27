@@ -1,9 +1,5 @@
 <?php
-session_start();
-if (!isset($_SESSION['logged'])) {
-    header("location: login.php");
-}
-require_once("connection/connection.php");
+$page = "application-view";
 include 'support/header.php';
 ?>
 <?php

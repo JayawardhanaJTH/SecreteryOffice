@@ -1,92 +1,12 @@
 <?php
-session_start();
 
 $page = "about";
 setcookie("pageName", $page, time() + (86400 * 30), "/");
-require "connection/connection.php";
 include "support/header.php";
 ?>
 
 <link href="layout/styles/aboutus.css" rel="stylesheet">
 
-
-<!--banner section-->
-<!-- <section class="masthead">
-    <div class="container h-100">
-        <div class="row h-100 align-items-center">
-            <div class="col-12 text-center">
-                <h1 class="text">Vertically Centered Masthead Content</h1>
-                <p class="lead">Home -> About Us</p>
-            </div>
-        </div>
-    </div>
-</section> -->
-
-<!-- <section class="container">
-    <div class="learn_content">
-        <h3>What you'll learn</h3>
-        <div class="row pt-3">
-            <div class="col-lg-6 col-sm-6 col-12">
-                <div class="row">
-                    <div class="col-1">
-                        <span><i class='fas fa-check' style="color: #95103b;"></i></span>
-                    </div>
-                    <div class="col-11">
-                        <p class="text-left">
-                            Transform your own life while at the same time learn practical steps
-                            and knowledge to become a powerful and successful Spiritual Life
-                            coach.
-                        </p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-1">
-                        <span><i class='fas fa-check' style="color: #95103b;"></i></span>
-                    </div>
-                    <div class="col-11">
-                        <p class="text-left">
-                            Discover and identify your personal gifts to lead on purpose and
-                            with clarity. </p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-1">
-                        <span><i class='fas fa-check' style="color: #95103b;"></i></span>
-                    </div>
-                    <div class="col-11">
-                        <p class="text-left">
-                            Set a price point that creates and sustains a lucrative,
-                            freedom-based career.
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 col-sm-6 col-12">
-                <div class="row">
-                    <div class="col-1">
-                        <span><i class='fas fa-check' style="color: #95103b;"></i></span>
-                    </div>
-                    <div class="col-11">
-                        <p class="text-left">
-                            aspects of the self to bring yourself into balance, in order to be a
-                            congruent coach, and use this process to lead clients into lasting
-                            transformations.
-                        </p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-1">
-                        <span><i class='fas fa-check' style="color: #95103b;"></i></span>
-                    </div>
-                    <div class="col-11">
-                        <p class="text-left">
-                            Connect with clients beyond the logic, by tapping into intuitive
-                            awareness. </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> -->
 
 <SECTION class="vision-sec">
     <div class="info-area pb-5">

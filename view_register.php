@@ -1,12 +1,9 @@
 <?php
-    session_start();
-    if(!isset($_SESSION['logged'])){
-		header("location: login.php");
-		
-	}else if($_SESSION['TYPE'] != '1'){
+   if($_SESSION['TYPE'] != '1'){
         header("location: support/error.php");
     }
-    require "connection/connection.php";
+    $page = "application-view";
+
     include "support/header.php";
 ?>
 <?php

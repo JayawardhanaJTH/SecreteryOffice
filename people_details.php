@@ -1,11 +1,6 @@
 <?php
-    session_start();
-    if(!isset($_SESSION['logged'])){
-		header("location: login.php");
-		
-	}
-    require "connection/connection.php";
-    include "support/header.php";
+$page = "people-details";
+include "support/header.php";
 ?>
 <link href="layout/styles/dashboard.css" rel="stylesheet" type="text/css" media="all">
 <div class="d-flex">
@@ -108,7 +103,7 @@
     </div>
 </div>
 <?php
-    include "support/footer.php";
+include "support/footer.php";
 ?>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
- <script src="layout/scripts/alertBox.js"></script>
+<script src="layout/scripts/alertBox.js"></script>

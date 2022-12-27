@@ -1,6 +1,5 @@
 <?php
-session_start();
-require "connection/connection.php";
+$page = "register";
 include "support/header.php";
 ?>
 <div class="container-fluid p-3">

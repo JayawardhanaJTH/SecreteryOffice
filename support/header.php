@@ -8,14 +8,14 @@ if (!isset($_SESSION['logged']) && !($page == "about" || $page == "contact" || $
 
 //check the cookies is expired or not
 //if expired close the sessions and redirect to login
-if (!isset($_COOKIE['loginSession']) && ($page != "login")) {
+if (!isset($_COOKIE['loginSession']) && ($page != "login" && $page != 'resetPassword' && $page != "register")) {
 	session_unset();
 	session_destroy();
 	session_write_close();
 	echo '<script> if(!alert("Your session time out...")) { document.location = "login.php"}</script>';
 }
 
-if (isset($_SESSION['logged']) && ($page == "login" ||  $page == 'resetPassword')) {
+if (isset($_SESSION['logged']) && ($page == "login" ||  $page == 'resetPassword' || $page == "register")) {
 	header("location: index.php");
 }
 

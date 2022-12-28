@@ -13,21 +13,30 @@ include "support/header.php";
 
                 <form style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
                     <div class="form-group">
-                        <label for="username">First Name</label>
+                        <label for="firstName">First Name</label>
                         <div class="input-group">
                             <div class="input-group-prepend">
                                 <div class="input-group-text"><i class="fas fa-user"></i></div>
                             </div>
-                            <input class="form-control" type="text" id="first_name" name="first_name" placeholder="First name" required>
+                            <input class="form-control" type="text" id="firstName" name="firstName" placeholder="First name" required>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="username">Last Name</label>
+                        <label for="lastName">Last Name</label>
                         <div class="input-group">
                             <div class="input-group-prepend">
                                 <div class="input-group-text"><i class="fas fa-user"></i></div>
                             </div>
-                            <input class="form-control" type="text" id="last_name" name="lastname" placeholder="Last name">
+                            <input class="form-control" type="text" id="lastName" name="lastName" placeholder="Last name">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text"><i class="fas fa-user"></i></div>
+                            </div>
+                            <input class="form-control" type="text" id="username" name="username" placeholder="username">
                         </div>
                     </div>
 
@@ -40,27 +49,7 @@ include "support/header.php";
                             <input class="form-control" type="email" id="email" name="email" placeholder="Email">
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label for="grama_niladhari_division">Grama Niladhari Division</label>
-                        <div class="input-group-prepend">
-                            <div class="input-group-text"><i class="fas fa-user"></i></div>
-                            <div class="input-group">
-                                <select id="grama_niladhari_division" class="form-control">
-                                    <option value="">Select Grama Niladhari Division</option>
-                                    <option value="164 Pamunugama">164 Pamunugama</option>
-                                    <option value="164/A Maha Pamunugama">164/A Maha Pamunugama</option>
-                                    <option value="165/A Bopitiya">165/A Bopitiya</option>
-                                    <option value="165 Bopitiya">165 Bopitiya</option>
-                                    <option value="166 Nugape">166 Nugape</option>
-                                    <option value="167 Uswetakriyyawa">167 Uswetakriyyawa</option>
-                                    <option value="168 Palliyawatta">168 Palliyawatta</option>
-                                    <option value="169 Hekiththa">169 Hekiththa</option>
-                                    <option value="169/A kurunduheena">169/A kurunduheena</option>
-                                    <option value="176 Wattala">176 Wattala</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
+
                     <div class="form-group">
                         <label for="gender">Gender</label>
                         <div class="input-group-prepend">
@@ -75,15 +64,6 @@ include "support/header.php";
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="contact_number">Contact Number</label>
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <div class="input-group-text"><i class="fas fa-phone"></i></div>
-                            </div>
-                            <input type="tel" id="contact_number" name="contact_number" class="form-control" placeholder="079 1234 56">
-                        </div>
-                    </div>
-                    <div class="form-group">
                         <label for="nic">NIC number</label>
                         <div class="input-group">
                             <div class="input-group-prepend">
@@ -91,6 +71,20 @@ include "support/header.php";
                             </div>
                             <input type="text" id="nic" name="nic" class="form-control" placeholder="123456789V">
                         </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Contact Number</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text"><i class="fas fa-phone"></i></div>
+                            </div>
+                            <input type="tel" id="phone" name="phone" minlength="10" maxlength="10" pattern="[0-9]{10}" class="form-control" placeholder="079123456" required>
+
+                            <div class="invalid-feedback">
+                                Please enter valid contact number between 0-9.
+                            </div>
+                        </div>
+                        <small id="info" class="form-text text-muted">Enter your 10 digits mobile number.</small>
                     </div>
                     <div class="form-group">
                         <label for="address">Address</label>
@@ -102,10 +96,10 @@ include "support/header.php";
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="address">Password</label>
+                        <label for="password">Password</label>
                         <div class="input-group">
                             <div class="input-group-prepend">
-                                <div class="input-group-text"><i class="fas fa-envelope"></i></div>
+                                <div class="input-group-text"><i class="fas fa-key"></i></div>
                             </div>
                             <input type="password" id="password" name="password" class="form-control" placeholder="Password" disabled>
                             <div class="col-3">

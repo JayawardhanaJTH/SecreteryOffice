@@ -35,47 +35,47 @@ if (isset($_POST['login_btn'])) {
 		$encPassword = md5($password);
 
 		// query to check is user valid or not
-		$query = "SELECT * FROM user_login WHERE email = '$email' AND password = '$encPassword' ";
-		$query2 = "SELECT * FROM people WHERE email = '$email' AND password = '$encPassword' ";
+		$staff_query = "SELECT * FROM staff WHERE email = '$email' AND password = '$encPassword' ";
+		$people_query = "SELECT * FROM people WHERE email = '$email' AND password = '$encPassword' ";
 
-		$result = mysqli_query($conn, $query);
-		$result2 = mysqli_query($conn, $query2);
+		$staff = mysqli_query($conn, $staff_query);
+		$people = mysqli_query($conn, $people_query);
 
-		if ($result) {
-			if (mysqli_num_rows($result) == 1) {
+		if ($staff) {
+			if (mysqli_num_rows($staff) == 1) {
 				session_regenerate_id();
-				$user = mysqli_fetch_assoc($result);
+				$user = mysqli_fetch_assoc($staff);
 
 				$_SESSION['logged'] = true;
 				$_SESSION['username'] = $user['username'];
 				$_SESSION['TYPE'] = $user['type'];
-				$_SESSION['USER_ID'] = $user['id'];
+				$_SESSION['USER_ID'] = $user['staffId'];
 
 				//set cookie to 1 hour
-				setcookie("loginSession", md5($use['id']), time() + (3600), '/');
+				setcookie("loginSession", md5($use['staffId']), time() + (3600), '/');
 
-				if ($user['type'] == '2') {
-					$uer_id = $user['id'];
+				// if ($user['type'] == '2') {
+				// 	$uer_id = $user['id'];
 
-					$sql = "SELECT electoralseat FROM user WHERE id = '$uer_id'";
+				// 	$sql = "SELECT electoralseat FROM user WHERE id = '$uer_id'";
 
-					$result3 = mysqli_query($conn, $sql);
-					$electoralseat = mysqli_fetch_assoc($result3);
+				// 	$result3 = mysqli_query($conn, $sql);
+				// 	$electoralseat = mysqli_fetch_assoc($result3);
 
-					$_SESSION['ELEC_SEAT'] = $electoralseat['electoralseat'];
-				}
+				// 	$_SESSION['ELEC_SEAT'] = $electoralseat['electoralseat'];
+				// }
 				session_write_close();
 
 				header("Location: ../index.php");
 				exit();
-			} else if (mysqli_num_rows($result2) == 1) {
+			} else if (mysqli_num_rows($people) == 1) {
 				session_regenerate_id();
-				$user = mysqli_fetch_assoc($result2);
+				$user = mysqli_fetch_assoc($people);
 
 				$_SESSION['logged'] = true;
-				$_SESSION['username'] = $user['first_name'];
+				$_SESSION['username'] = $user['username'];
 				$_SESSION['TYPE'] = '0';
-				$_SESSION['USER_ID'] = $user['pid'];
+				$_SESSION['USER_ID'] = $user['peopleId'];
 
 				//set cookie to 1 hour
 				setcookie("loginSession", md5($use['id']), time() + (3600), '/');

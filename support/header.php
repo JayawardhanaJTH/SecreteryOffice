@@ -2,13 +2,13 @@
 session_start();
 
 // check is logged or not
-if (!isset($_SESSION['logged']) && !($page == "about" || $page == "contact" || $page == 'login' || $page == 'resetPassword' || $page == "register")) {
+if (!isset($_SESSION['logged']) && !($page == "about" || $page == "contact" || $page == 'login' || $page == 'resetPassword' || $page == "register" || $page == 'submitForms')) {
 	header("location: login.php");
 }
 
 //check the cookies is expired or not
 //if expired close the sessions and redirect to login
-if (!isset($_COOKIE['loginSession']) && ($page != "login" && $page != 'resetPassword' && $page != "register")) {
+if (!isset($_COOKIE['loginSession']) && ($page != "login" && $page != 'resetPassword' && $page != "register" && $page != 'submitForms' && $page != 'contact' && $page != 'about')) {
 	session_unset();
 	session_destroy();
 	session_write_close();
@@ -96,12 +96,9 @@ require_once("connection/connection.php");
 									<a href="index.php" class="nav-item nav-link home " id="home" onclick="activeLink('home')">Home
 										<hr class="hrhome">
 									</a>
-
-
-									<a href="online_application_home.php" class="nav-item nav-link forms" id="forms" onclick="activeLink('forms')">Online Forums
+									<a href="online_application_home.php" class="nav-item nav-link forms" id="forms" onclick="activeLink('forms')">Online Application
 										<hr class="hrforms">
 									</a>
-
 									<?php
 									if (isset($_SESSION['TYPE'])) {
 										if ($_SESSION['TYPE'] == '1' || $_SESSION['TYPE'] == '2') {
@@ -112,6 +109,16 @@ require_once("connection/connection.php");
 								<?php
 										}
 									}
+								}
+								?>
+
+								<?php
+								if (!isset($_SESSION['logged'])) {
+								?>
+									<a href="online_application.php" class="nav-item nav-link forms" id="forms" onclick="activeLink('forms')">Submit Application
+										<hr class="hrforms">
+									</a>
+								<?php
 								}
 								?>
 								<a href="contact.php" class="nav-item nav-link contact" id="contact" onclick="activeLink('contact')">Contact

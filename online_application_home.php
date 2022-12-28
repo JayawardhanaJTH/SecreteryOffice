@@ -38,14 +38,11 @@ include "support/header.php";
     if ($_SESSION['TYPE'] == '0') {
         $id = $_SESSION['USER_ID'];
 
-        $sql1  = "SELECT * FROM business_registration WHERE submitted_by= '$id'";
-        $sql2  = "SELECT * FROM requirement_application WHERE submitted_by= '$id'";
+        $sql1  = "SELECT * FROM application WHERE peopleId= '$id'";
 
-        $result_business = mysqli_query($conn, $sql1);
-        $result_requirement = mysqli_query($conn, $sql2);
+        $result_application = mysqli_query($conn, $sql1);
 
-        $business = mysqli_fetch_all($result_business, MYSQLI_ASSOC);
-        $requirement = mysqli_fetch_all($result_requirement, MYSQLI_ASSOC);
+        $application = mysqli_fetch_all($result_application, MYSQLI_ASSOC);
 
     ?>
         <div class="dash">
@@ -55,70 +52,50 @@ include "support/header.php";
             <div class="panel">
                 <div class="row justify-content-center">
                     <?php
-                    foreach ($business as $obj) {
-                        $grama = $obj['grama_niladhari_approval'];
-                        $sec = $obj['secretary_approval'];
-                        $g_status = "Not Approved";
-                        $s_status = "Not Approved";
-
-                        if ($grama == '1') {
-                            $g_status = "Approved";
-                        } else if ($grama == '3') {
-                            $g_status = "Rejected";
-                        }
-
-                        if ($sec == '1') {
-                            $s_status = "Approved";
-                        } else if ($sec == '3') {
-                            $s_status = "Rejected";
-                        }
+                    if ($application == null) {
                     ?>
-                        <div class="col-md-6 col-sm-12 mb-3">
-                            <a href="view_application1.php?id=<?php echo $obj['f_id'] ?>">
-                                <div class="card">
-                                    <div class="text-center">
-                                        <h1>Application Type : Business Registration</h1>
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="details">
-                                            <p>Status : Grama Niladhari - <?php echo $g_status ?></p>
-                                            <p>Status : Secretary - <?php echo $s_status ?></p>
+                        <div class="card">
+                            <div class="text-center p-2">
+                                <h1>No submitted applications</h1>
+                            </div>
+                        </div>
+                        <?php
+                    } else {
+                        foreach ($application as $obj) {
+                            $grama = $obj['grama_niladhari_approval'];
+                            $sec = $obj['secretary_approval'];
+                            $g_status = "Not Approved";
+                            $s_status = "Not Approved";
+
+                            if ($grama == '1') {
+                                $g_status = "Approved";
+                            } else if ($grama == '3') {
+                                $g_status = "Rejected";
+                            }
+
+                            if ($sec == '1') {
+                                $s_status = "Approved";
+                            } else if ($sec == '3') {
+                                $s_status = "Rejected";
+                            }
+                        ?>
+                            <div class="col-md-6 col-sm-12 mb-3">
+                                <a href="view_application1.php?id=<?php echo $obj['f_id'] ?>">
+                                    <div class="card">
+                                        <div class="text-center">
+                                            <h1>Application Type : Business Registration</h1>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="details">
+                                                <p>Status : Grama Niladhari - <?php echo $g_status ?></p>
+                                                <p>Status : Secretary - <?php echo $s_status ?></p>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </a>
-                        </div>
+                                </a>
+                            </div>
                     <?php
-                    }
-
-                    foreach ($requirement as $obj) {
-                        $grama = $obj['grama_approval'];
-
-                        $g_status = "Not Approved";
-
-
-                        if ($grama == '1') {
-                            $g_status = "Approved";
-                        } else if ($grama == '3') {
-                            $g_status = "Rejected";
                         }
-                    ?>
-                        <div class="col-md-6 col-sm-12 mb-3">
-                            <a href="view_application2.php?id=<?php echo $obj['f_id'] ?>">
-                                <div class="card">
-                                    <div class="text-center">
-                                        <h1>Application Type : Requirement Application</h1>
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="details">
-                                            <p>Status : Grama Niladhari - <?php echo $g_status ?></p>
-                                            <p> </P>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    <?php
                     }
                     ?>
                 </div>

@@ -1,6 +1,6 @@
 <?php
 
-$page = "forms";
+$page = "submitForms";
 setcookie("pageName", $page, time() + (86400 * 30), "/");
 
 include 'support/header.php';
@@ -27,14 +27,17 @@ include 'support/header.php';
                     <div class="form-group">
                         <label for="address">Address</label>
                         <label for="address">(ලිපිනය)</label>
-                        <input type="text" name="address" id="address" class="form-control">
+                        <input type="text" name="address" id="address" class="form-control" required>
+                        <div class="invalid-feedback">
+                            Please enter your address.
+                        </div>
                     </div>
                 </li>
                 <li>
                     <div class="form-group">
                         <label for="contact">Phone number</label>
                         <label for="contact">(දුරකතන අංකය)</label>
-                        <input type="text" name="contact" id="contact" class="form-control">
+                        <input type="text" name="contact" minlength="10" maxlength="10" pattern="[0-9]{10}" id="contact" class="form-control">
                     </div>
                 </li>
                 <div class="row">
@@ -42,14 +45,20 @@ include 'support/header.php';
                         <div class="form-group">
                             <label for="birthday">Date of birth</label>
                             <label for="birthday">(උපන්දිනය)</label>
-                            <input type="date" name="birthday" id="birthday" class="form-control">
+                            <input type="date" name="birthday" id="birthday" class="form-control" required>
+                            <div class="invalid-feedback">
+                                Please select your birthday.
+                            </div>
                         </div>
                     </li>
                     <li class="col-md-6">
                         <div class="form-group">
                             <label for="nic">N.I.C Number</label>
                             <label for="nic">(ජා.හැ.අ.)</label>
-                            <input type="text" name="nic" id="nic" class="form-control">
+                            <input type="text" name="nic" maxlength='10' minlength='10' pattern='[0-9]{9}[A-Z|a-z]{1}' id="nic" class="form-control" placeholder="123456789V" required>
+                            <div class="invalid-feedback">
+                                Please enter valid NIC number.
+                            </div>
                         </div>
                     </li>
                 </div>
@@ -60,18 +69,20 @@ include 'support/header.php';
                         <label for="status">(විවාහක අවිවාහක බව)</label>
 
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="status" id="status1" value="1">
+                            <input class="form-check-input" type="radio" name="status" id="status1" value="1" required>
                             <label class="form-check-label" for="status1">
                                 Married (විවාහක)
                             </label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="status" id="status2" value="2">
+                            <input class="form-check-input" type="radio" name="status" id="status2" value="0" required>
                             <label class="form-check-label" for="status2">
                                 Unmarried (අවිවාහක)
                             </label>
                         </div>
-
+                        <div class="invalid-feedback">
+                            Please choose marital status.
+                        </div>
                     </li>
                     <li class="col-md-6">
                         <label for="bCitizenship">Children</label>
@@ -92,7 +103,7 @@ include 'support/header.php';
                         <div class="form-group">
                             <label for="elecSeat">Electoral seat</label>
                             <label for="elecSeat">(මැතිවරණ ආසනය)</label>
-                            <select name="elecSeat" id="elecSeat" class="form-control">
+                            <select name="elecSeat" id="elecSeat" class="form-control" required>
                                 <option value="">Select Electoral seat</option>
                                 <option value="AW">Avissawella</option>
                                 <option value="BO">Borella</option>
@@ -110,13 +121,16 @@ include 'support/header.php';
                                 <option value="MO">Moratuwa</option>
                                 <option value="RA">Rathmalana</option>
                             </select>
+                            <div class="invalid-feedback">
+                                Please choose your electoral seat.
+                            </div>
                         </div>
                     </li>
                     <li class="col-md-4">
                         <div class="form-group">
                             <label for="division">Regional Secretariat Division</label>
                             <label for="division">(ප්‍රාද්ශීය ලේකම් කොට්ඨාසය)</label>
-                            <select name="division" id="division" class="form-control">
+                            <select name="division" id="division" class="form-control" required>
                                 <option value="">Select Regional Secretariat Division</option>
                                 <option value="Seethawaka">Seethawaka</option>
                                 <option value="Padukka">Padukka</option>
@@ -131,13 +145,19 @@ include 'support/header.php';
                                 <option value="Colombo">Colombo</option>
                                 <option value="Thibirigasyaya">Thibirigasyaya</option>
                             </select>
+                            <div class="invalid-feedback">
+                                Please choose your regional secretariat division.
+                            </div>
                         </div>
                     </li>
                     <li class="col-md-4">
                         <div class="form-group">
                             <label for="domain">Village Officer Domain</label>
                             <label for="domain">(ග්‍රාම නිලධාරී වසම)</label>
-                            <input type="text" name="domain" id="domain" class="form-control" placeholder="Village Officer Domain" />
+                            <input type="text" name="domain" id="domain" class="form-control" placeholder="Village Officer Domain" required />
+                            <div class="invalid-feedback">
+                                Please enter your village officer domain.
+                            </div>
                         </div>
                     </li>
                 </div>
@@ -145,7 +165,10 @@ include 'support/header.php';
                     <div class="form-group">
                         <label for="referrer">Referred person</label>
                         <label for="referrer">(යොමු කල පුද්ගලයා)</label>
-                        <input type="text" name="referrer" id="referrer" class="form-control">
+                        <input type="text" name="referrer" id="referrer" class="form-control" required>
+                        <div class="invalid-feedback">
+                            Please enter a name.
+                        </div>
                     </div>
                 </li>
                 <li>

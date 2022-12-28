@@ -31,17 +31,7 @@ include "support/header.php";
 			<div class="card">
 				<div class="card-body">
 					<h1>Total income of this month</h1>
-					<?php
-					$sql = "select sum(amount) as total from income";
-					$rs = mysqli_query($conn, $sql);
-
-					$total = '0';
-
-					if ($row = mysqli_fetch_array($rs)) {
-						$total = $row["total"];
-						echo "<h5>Rs : $total</h5>";
-					}
-					?>
+					
 
 				</div>
 			</div>

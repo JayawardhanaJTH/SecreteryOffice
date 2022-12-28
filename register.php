@@ -79,7 +79,7 @@ include "support/header.php";
                             <div class="input-group-prepend">
                                 <div class="input-group-text"><i class="fas fa-id-card"></i></div>
                             </div>
-                            <input type="text" id="nic" name="nic" maxlength='10' minlength='10' pattern='[0-9]{9}[A-Z]{1}' class="form-control" placeholder="123456789V" required>
+                            <input type="text" id="nic" name="nic" maxlength='10' minlength='10' pattern='[0-9]{9}[A-Z|a-z]{1}' class="form-control" placeholder="123456789V" required>
                             <div class="invalid-feedback">
                                 Please enter valid NIC number.
                             </div>

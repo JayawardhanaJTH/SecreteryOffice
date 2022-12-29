@@ -60,7 +60,7 @@ CREATE TABLE `application` (
 --
 
 INSERT INTO `application` (`applicationId`, `applicationNo`, `applicantName`, `nic`, `address`, `birthday`, `maritalStatus`, `childAbove18`, `childBelow18`, `contact`, `electoralSeat`, `referredPerson`, `villageDomain`, `regionalDivision`, `reason`, `description`, `grama_niladhari_approval`, `secretary_approval`, `date`, `approved_date`, `grama_niladhari_sign`, `secretary_sign`) VALUES
-(28, 'PCD/KE/test/22/12/29/1', 'Test', '111111111G', 'test address', '2022-12-16', b'1', 1, 1, '1111111111', 'KE', 'test', 'aa', 'Kotte', 'test', ' test', 0, 0, '2022-12-29 23:20:19', NULL, NULL, NULL);
+(28, 'PCD/KE/SC/22/12/29/1', 'Test', '111111111G', 'test address', '2022-12-16', b'1', 1, 1, '1111111111', 'KE', 'test', 'aa', 'Kotte', 'SC', ' test', 0, 0, '2022-12-29 23:20:19', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 

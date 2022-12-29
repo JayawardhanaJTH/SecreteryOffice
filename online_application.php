@@ -171,11 +171,28 @@ include 'support/header.php';
                         </div>
                     </div>
                 </li>
+                <?php
+                $category_sql = "SELECT * FROM application_category";
+                $result = mysqli_query($conn, $category_sql);
+                $dataSet = mysqli_fetch_all($result);
+                ?>
                 <li>
                     <div class="form-group">
                         <label for="reason">Reason</label>
                         <label for="reason">(කාරණය)</label>
-                        <input type="text" name="reason" id="reason" class="form-control">
+                        <select name="reason" id="reason" class="form-control" required>
+                            <option value="">Select Reason</option>
+                            <?php
+                            if (count($dataSet) > 0) {
+                                foreach ($dataSet as $category) {
+                            ?>
+                                    <option value="<?php echo $category[2] ?>"><?php echo $category[1] ?></option>
+                            <?php
+                                }
+                            }
+                            ?>
+
+                        </select>
                     </div>
                 </li>
                 <li>

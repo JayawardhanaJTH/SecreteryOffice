@@ -1,8 +1,8 @@
-function delete_people(pid) {
+function delete_staff(staffId) {
     // alert(pid);
 
     var id = "delete";
-    var dt = {id: id, pid: pid};
+    var dt = {id: id, staffId: staffId};
 
     Swal.fire({
         title: 'Are you sure?',
@@ -15,7 +15,7 @@ function delete_people(pid) {
     }).then((result) => {
         if (result.isConfirmed) {
             $.ajax({
-                url: 'php/people-add.php',
+                url: 'php/staff-add.php',
                 method: 'POST',
                 data: dt,
                 success: function (msg) {

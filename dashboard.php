@@ -15,9 +15,9 @@ include "support/header.php";
 		<div class="card-deck">
 			<div class="card">
 				<div class="card-body">
-					<h1>Total registered peoples</h1>
+					<h1>Total registered staff</h1>
 					<?php
-					$sql = "select count(*) as total from people";
+					$sql = "select count(*) as total from staff";
 					$rs = mysqli_query($conn, $sql);
 
 					if ($row = mysqli_fetch_array($rs)) {
@@ -47,14 +47,14 @@ include "support/header.php";
 	<div class="panel">
 		<div class="row justify-content-center">
 			<div class="col-md-6 col-sm-12 mb-3">
-				<a href="people_details.php">
+				<a href="staff_details.php">
 					<div class="card">
 						<div class="card-header text-center">
-							<h1><i class="fa fa-users"> People</i></h1>
+							<h1><i class="fa fa-users"> Staff</i></h1>
 						</div>
 						<div class="card-body text-center">
 							<div class="details">
-								<p>About people in the divisional area</p>
+								<p>About staff in the office</p>
 							</div>
 						</div>
 					</div>

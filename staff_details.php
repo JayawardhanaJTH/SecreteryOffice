@@ -1,5 +1,5 @@
 <?php
-$page = "people-details";
+$page = "staff-details";
 include "support/header.php";
 ?>
 <link href="layout/styles/dashboard.css" rel="stylesheet" type="text/css" media="all">
@@ -12,15 +12,15 @@ include "support/header.php";
                 <img src="images/people.png" alt="Background image" class="card-img">
                 <div class="card-img-overlay">
                     <div class="card-body ">
-                        <h4>Add People</h4>
+                        <h4>Add Staff</h4>
                         <div class="p-2">
                             <p>
-                                Here 'Grama sewaka' will add people to the system who are in his/ her division.
+                                Here will add staff to the system who are work in office.
 
                             </p>
                             <div>
                                 <?php
-                                $sql = "select count(*) as total from people";
+                                $sql = "select count(*) as total from staff";
                                 $rs = mysqli_query($conn, $sql);
 
                                 if ($row = mysqli_fetch_array($rs)) {
@@ -31,7 +31,7 @@ include "support/header.php";
 
                             </div>
                         </div>
-                        <a href="people-add.php">
+                        <a href="staff-add.php">
                             <div class="p_button">
                                 Add <i class="fa fa-plus"></i>
                             </div>
@@ -43,15 +43,15 @@ include "support/header.php";
                 <img src="images/people.png" alt="Background image" class="card-img">
                 <div class="card-img-overlay">
                     <div class="card-body ">
-                        <h4>Edit details</h4>
+                        <h4>Edit staff details</h4>
                         <div>
                             <p>
-                                Here 'Grama sewaka' will correct details about the people who are in his/ her division
+                                Here will correct details about the staff
                                 or
-                                they can delete people data if they are not longer live in the own division.
+                                they can delete staff data if they are not longer work in the office.
                             </p>
                         </div>
-                        <a href="people-list.php">
+                        <a href="staff-list.php">
                             <div class="p_button">
                                 Edit <i class="fa fa-edit"></i>
                             </div>
@@ -69,10 +69,10 @@ include "support/header.php";
                         <h4>View details</h4>
                         <div>
                             <p>
-                                Here can see people details in category wise. User can search and find about the people.
+                                Here can see staff details in category wise. User can search and find about the staff.
                             </p>
                         </div>
-                        <a href="people-list.php">
+                        <a href="staff-list.php">
                             <div class="p_button">
                                 View <i class="fa fa-list"></i>
                             </div>
@@ -81,22 +81,7 @@ include "support/header.php";
                 </div>
             </div>
             <div class="card m-2 overflow-hidden">
-                <!-- <img src="images/people.png" alt="Background image" class="card-img">
-                <div class="card-img-overlay">
-                    <div class="card-body ">
-                        <h4>Notice</h4>
-                        <div>
-                            <p>
-                                Here appear notices about added, updated and deleted data about the people.
-                            </p>
-                        </div>
-                        <a href="#">
-                            <div class="p_button">
-                                View <i class="fa fa-list-alt"></i>
-                            </div>
-                        </a>
-                    </div>
-                </div> -->
+                
             </div>
 
         </div>

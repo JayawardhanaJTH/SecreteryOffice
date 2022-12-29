@@ -1,5 +1,5 @@
 <?php
-$page = "people-add";
+$page = "staff-add";
 include "support/header.php";
 ?>
 
@@ -73,12 +73,12 @@ include "support/header.php";
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="phone">Contact Number</label>
+                        <label for="contactNumber">Contact Number</label>
                         <div class="input-group">
                             <div class="input-group-prepend">
                                 <div class="input-group-text"><i class="fas fa-phone"></i></div>
                             </div>
-                            <input type="tel" id="phone" name="phone" minlength="10" maxlength="10" pattern="[0-9]{10}" class="form-control" placeholder="079123456" required>
+                            <input type="tel" id="contactNumber" name="contactNumber" minlength="10" maxlength="10" pattern="[0-9]{10}" class="form-control" placeholder="079123456" required>
 
                             <div class="invalid-feedback">
                                 Please enter valid contact number between 0-9.
@@ -92,7 +92,7 @@ include "support/header.php";
                             <div class="input-group-prepend">
                                 <div class="input-group-text"><i class="fas fa-envelope"></i></div>
                             </div>
-                            <input type="tel" id="address" name="address" class="form-control" placeholder="Address">
+                            <input type="text" id="address" name="address" class="form-control" placeholder="Address">
                         </div>
                     </div>
                     <div class="form-group">
@@ -109,7 +109,7 @@ include "support/header.php";
                     </div>
                     <br>
                     <div>
-                        <input type="button" class="btn" id="add_people" value="Add People">
+                        <input type="button" class="btn" id="add_staff" value="Add Staff">
                     </div>
                 </form>
             </div>
@@ -121,7 +121,7 @@ include "support/footer.php";
 ?>
 <script src="layout/scripts/alertBox.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="js\people-add.js"></script>
-<script src="js\people-update.js"></script>
-<script src="js\people-delete.js"></script>
+<script src="js\staff-add.js"></script>
+<script src="js\staff-update.js"></script>
+<script src="js\staff-delete.js"></script>
 <script src="js\password-generator.js"></script>
